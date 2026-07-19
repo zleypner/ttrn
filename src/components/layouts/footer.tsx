@@ -143,7 +143,7 @@ export function Footer() {
                     href="/services"
                     className="bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80 rounded-full px-3 py-1.5 text-xs transition-colors"
                   >
-                    Precios
+                    Servicios
                   </Link>
                   <Link
                     href="/#galeria"

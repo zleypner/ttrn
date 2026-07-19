@@ -55,13 +55,6 @@ const timeline: TimelineItem[] = [
   },
 ];
 
-const certifications = [
-  "Certificación en Bioseguridad y Control de Infecciones",
-  "Diploma en Técnicas Avanzadas de Tatuaje",
-  "Certificación en Primeros Auxilios",
-  "Miembro de la Asociación de Tatuadores Profesionales",
-];
-
 const philosophy = [
   {
     title: "Arte con Propósito",
@@ -184,44 +177,6 @@ export function ArtistStory() {
             </motion.div>
           </div>
         </div>
-
-        {/* Certifications Section */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={scrollViewport}
-          variants={fadeInUp}
-          className={cn(
-            "relative rounded-2xl p-8 md:p-12",
-            "from-card via-card/80 to-card bg-gradient-to-br",
-            "border border-white/5"
-          )}
-        >
-          <div className="absolute top-0 right-0 h-40 w-40 overflow-hidden rounded-2xl">
-            <div className="from-olive/10 to-copper/10 absolute -top-20 -right-20 h-40 w-40 rotate-45 bg-gradient-to-br" />
-          </div>
-
-          <div className="relative z-10">
-            <h3 className="font-heading text-foreground mb-6 text-2xl font-semibold">
-              Certificaciones y Credenciales
-            </h3>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {certifications.map((cert, index) => (
-                <motion.div
-                  key={cert}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="bg-olive h-2 w-2 flex-shrink-0 rounded-full" />
-                  <span className="text-muted-foreground text-sm">{cert}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
