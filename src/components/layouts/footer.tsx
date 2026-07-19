@@ -140,12 +140,6 @@ export function Footer() {
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   <Link
-                    href="/services"
-                    className="bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80 rounded-full px-3 py-1.5 text-xs transition-colors"
-                  >
-                    Servicios
-                  </Link>
-                  <Link
                     href="/#galeria"
                     className="bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80 rounded-full px-3 py-1.5 text-xs transition-colors"
                   >
