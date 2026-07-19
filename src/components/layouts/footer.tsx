@@ -6,6 +6,7 @@ import { MapPin, Clock, Phone, ArrowUpRight } from "lucide-react";
 import { Logo } from "@/components/shared/logo";
 import { SocialLinks } from "@/components/shared/social-links";
 import { siteConfig } from "@/config/site";
+import { WhatsAppIcon } from "@/components/shared";
 import { footerLinks } from "@/lib/constants/navigation";
 import { fadeInUp, scrollViewport } from "@/lib/animations/variants";
 
@@ -126,8 +127,9 @@ export function Footer() {
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hola, me gustaría agendar una cita para un tatuaje.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-gold inline-flex rounded-full px-6 py-2.5 text-sm"
+                className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm"
               >
+                <WhatsAppIcon size={16} />
                 WhatsApp
               </a>
 

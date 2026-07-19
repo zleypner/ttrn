@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, MessageCircle, Calendar } from "lucide-react";
+import { ChevronDown, Calendar } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import { WhatsAppIcon } from "@/components/shared";
 import {
   heroTitle,
   heroSubtitle,
@@ -279,7 +280,7 @@ export function HeroSection() {
             >
               {/* Shine effect */}
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-              <MessageCircle
+              <WhatsAppIcon
                 size={20}
                 className="transition-transform group-hover:scale-110"
               />

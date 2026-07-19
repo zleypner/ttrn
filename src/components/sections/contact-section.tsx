@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, Mail, MapPin, Clock, Phone } from "lucide-react";
+import { Mail, MapPin, Clock, Phone } from "lucide-react";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { siteConfig } from "@/config/site";
+import { WhatsAppIcon } from "@/components/shared";
 import { fadeInUp, scrollViewport } from "@/lib/animations/variants";
 
 export function ContactSection() {
@@ -37,7 +38,10 @@ export function ContactSection() {
                   className="group flex items-center gap-4"
                 >
                   <div className="rounded-xl bg-green-500/10 p-3 transition-colors group-hover:bg-green-500/20">
-                    <MessageCircle className="h-5 w-5 text-green-500" />
+                    <WhatsAppIcon
+                      className="h-5 w-5 text-green-500"
+                      size={20}
+                    />
                   </div>
                   <div>
                     <p className="text-muted-foreground text-sm">WhatsApp</p>

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -10,27 +10,46 @@ interface LogoProps {
 
 export function Logo({ className, variant = "default" }: LogoProps) {
   return (
-    <Link
-      href="/"
-      className={cn(
-        "group flex items-center gap-2 transition-opacity hover:opacity-80",
-        className
-      )}
+    <motion.div
+      className={cn("flex items-center", className)}
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       {variant === "default" ? (
-        <div className="flex flex-col">
-          <span className="font-heading text-gradient-gold text-xl font-semibold tracking-[0.2em] sm:text-2xl">
-            RENÉ RUIZ
+        <div className="flex flex-col items-start">
+          {/* Main Name - Increased size, better kerning */}
+          <span
+            className={cn(
+              "font-heading text-2xl font-semibold tracking-[0.25em] sm:text-[1.75rem]",
+              "bg-gradient-to-r from-white via-white to-neutral-400 bg-clip-text text-transparent",
+              "transition-all duration-300"
+            )}
+          >
+            TATA-U
           </span>
-          <span className="text-muted-foreground text-[10px] tracking-[0.3em] uppercase sm:text-xs">
+          {/* Subtitle - More spacing from name */}
+          <span
+            className={cn(
+              "mt-1 text-[10px] font-medium tracking-[0.35em] uppercase sm:text-[11px]",
+              "text-neutral-500"
+            )}
+          >
             Tattoo Artist
           </span>
         </div>
       ) : (
-        <span className="font-heading text-gradient-gold text-lg font-semibold tracking-[0.15em]">
-          RR
-        </span>
+        <motion.span
+          className={cn(
+            "font-heading text-xl font-semibold tracking-[0.2em]",
+            "bg-gradient-to-r from-white via-white to-neutral-400 bg-clip-text text-transparent"
+          )}
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.2 }}
+        >
+          TATA-U
+        </motion.span>
       )}
-    </Link>
+    </motion.div>
   );
 }

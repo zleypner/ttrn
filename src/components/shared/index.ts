@@ -5,3 +5,4 @@ export { MotionWrapper, StaggerWrapper, StaggerChild } from "./motion-wrapper";
 export { ImageWithLoader } from "./image-with-loader";
 export { AnimatedCard } from "./animated-card";
 export { WhatsAppFloat } from "./whatsapp-float";
+export { WhatsAppIcon } from "./whatsapp-icon";

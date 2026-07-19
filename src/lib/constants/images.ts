@@ -27,8 +27,7 @@ export const galleryImages = [
     id: "g4",
     title: "Rosa Delicada",
     category: "Fine Line",
-    image:
-      "https://images.unsplash.com/photo-1542556398-95fb5b9f9b48?w=800&q=80",
+    image: "/images/tattoo-back.jpg",
   },
   {
     id: "g5",
@@ -41,8 +40,7 @@ export const galleryImages = [
     id: "g6",
     title: "Retrato Familiar",
     category: "Retratos",
-    image:
-      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80",
+    image: "/images/tattoo-back.jpg",
   },
   {
     id: "g7",
@@ -62,29 +60,25 @@ export const galleryImages = [
     id: "g9",
     title: "Flor de Loto",
     category: "Ornamental",
-    image:
-      "https://images.unsplash.com/photo-1604869515882-4d10fa4b0492?w=800&q=80",
+    image: "/images/tattoo-back.jpg",
   },
   {
     id: "g10",
     title: "Mariposa Minimalista",
     category: "Fine Line",
-    image:
-      "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=800&q=80",
+    image: "/images/tattoo-back.jpg",
   },
   {
     id: "g11",
     title: "Patrón Sagrado",
     category: "Geométrico",
-    image:
-      "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=800&q=80",
+    image: "/images/tattoo-back.jpg",
   },
   {
     id: "g12",
     title: "Mascota Querida",
     category: "Retratos",
-    image:
-      "https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=800&q=80",
+    image: "/images/tattoo-back.jpg",
   },
 ] as const;
 
@@ -117,8 +111,7 @@ export const featuredWorkImages = [
     id: "f4",
     title: "Flores Fine Line",
     category: "Fine Line",
-    image:
-      "https://images.unsplash.com/photo-1542556398-95fb5b9f9b48?w=600&q=80",
+    image: "/images/tattoo-back.jpg",
     size: "small" as const,
   },
   {
@@ -133,8 +126,7 @@ export const featuredWorkImages = [
     id: "f6",
     title: "Retrato Mascota",
     category: "Retratos",
-    image:
-      "https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=600&q=80",
+    image: "/images/tattoo-back.jpg",
     size: "small" as const,
   },
 ] as const;
@@ -144,10 +136,8 @@ export const styleImages = {
     "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=800&q=80",
   realism:
     "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&q=80",
-  "fine-line":
-    "https://images.unsplash.com/photo-1542556398-95fb5b9f9b48?w=800&q=80",
-  portrait:
-    "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80",
+  "fine-line": "/images/tattoo-back.jpg",
+  portrait: "/images/tattoo-back.jpg",
   geometric:
     "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?w=800&q=80",
   ornamental:

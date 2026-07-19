@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "./whatsapp-icon";
 import { siteConfig } from "@/config/site";
 
 export function WhatsAppFloat() {
@@ -20,7 +20,7 @@ export function WhatsAppFloat() {
       whileTap={{ scale: 0.95 }}
       aria-label="Contactar por WhatsApp"
     >
-      <MessageCircle className="h-7 w-7 text-white" />
+      <WhatsAppIcon className="h-7 w-7 text-white" size={28} />
 
       {/* Pulse animation */}
       <span className="absolute inset-0 animate-ping rounded-full bg-green-500 opacity-25" />

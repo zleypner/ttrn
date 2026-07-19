@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Info, MessageCircle } from "lucide-react";
+import { Check, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { siteConfig } from "@/config/site";
+import { WhatsAppIcon } from "@/components/shared";
 import {
   staggerContainer,
   staggerChild,
@@ -155,7 +156,7 @@ export function PricingSection() {
                   "text-sm font-medium"
                 )}
               >
-                <MessageCircle size={16} />
+                <WhatsAppIcon size={16} />
                 Consultar
               </a>
             </motion.div>

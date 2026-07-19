@@ -7,6 +7,7 @@ import { MapPin, Clock, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { siteConfig } from "@/config/site";
+import { WhatsAppIcon } from "@/components/shared";
 import { aboutImages } from "@/lib/constants/images";
 import {
   staggerContainer,
@@ -218,6 +219,7 @@ export function StudioGallery() {
               "text-base font-medium"
             )}
           >
+            <WhatsAppIcon size={20} />
             Agenda una Visita
           </a>
         </motion.div>
