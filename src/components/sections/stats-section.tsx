@@ -120,7 +120,7 @@ function StatCounter({
 
         {/* Value with blur effect during counting */}
         <motion.p
-          className="font-heading text-gradient-gold mb-2 text-4xl font-bold sm:text-5xl md:text-6xl"
+          className="font-heading text-accent-red mb-2 text-4xl font-bold sm:text-5xl md:text-6xl"
           animate={{
             filter: isAnimating ? "blur(2px)" : "blur(0px)",
           }}

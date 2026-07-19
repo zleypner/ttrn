@@ -22,11 +22,11 @@ export function Logo({ className, variant = "default" }: LogoProps) {
           <span
             className={cn(
               "font-heading text-2xl font-semibold tracking-[0.25em] sm:text-[1.75rem]",
-              "bg-gradient-to-r from-white via-white to-neutral-400 bg-clip-text text-transparent",
               "transition-all duration-300"
             )}
           >
-            TATA-U
+            <span className="text-foreground">TATA</span>
+            <span className="text-accent-red">-U</span>
           </span>
           {/* Subtitle - More spacing from name */}
           <span
@@ -40,14 +40,12 @@ export function Logo({ className, variant = "default" }: LogoProps) {
         </div>
       ) : (
         <motion.span
-          className={cn(
-            "font-heading text-xl font-semibold tracking-[0.2em]",
-            "bg-gradient-to-r from-white via-white to-neutral-400 bg-clip-text text-transparent"
-          )}
+          className={cn("font-heading text-xl font-semibold tracking-[0.2em]")}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
         >
-          TATA-U
+          <span className="text-foreground">TATA</span>
+          <span className="text-accent-red">-U</span>
         </motion.span>
       )}
     </motion.div>

@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { aboutImages } from "@/lib/constants/images";
 import { fadeInUp, fadeInLeft, fadeInRight } from "@/lib/animations/variants";
+import { ColorText } from "../shared/color-text";
 
 export function AboutHero() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -70,7 +71,7 @@ export function AboutHero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <p className="font-heading text-gradient-gold text-4xl font-bold">
+              <p className="font-heading text-accent-red text-4xl font-bold">
                 {siteConfig.stats.yearsExperience}+
               </p>
               <p className="text-muted-foreground text-sm">
@@ -102,9 +103,7 @@ export function AboutHero() {
               variants={fadeInUp}
               className="font-heading mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl"
             >
-              <span className="text-gradient-gold">
-                {siteConfig.artistName}
-              </span>
+              <ColorText text={siteConfig.artistName} />
             </motion.h1>
 
             {/* Description */}
@@ -132,7 +131,7 @@ export function AboutHero() {
               className="bg-card/50 grid grid-cols-3 gap-6 rounded-2xl border border-white/5 p-6"
             >
               <div className="text-center">
-                <p className="font-heading text-gradient-gold text-2xl font-bold">
+                <p className="font-heading text-accent-red text-2xl font-bold">
                   {siteConfig.stats.happyClients.toLocaleString()}+
                 </p>
                 <p className="text-muted-foreground text-xs tracking-wider uppercase">
@@ -140,7 +139,7 @@ export function AboutHero() {
                 </p>
               </div>
               <div className="border-x border-white/10 text-center">
-                <p className="font-heading text-gradient-gold text-2xl font-bold">
+                <p className="font-heading text-accent-red text-2xl font-bold">
                   {siteConfig.stats.tattoosCompleted.toLocaleString()}+
                 </p>
                 <p className="text-muted-foreground text-xs tracking-wider uppercase">
@@ -148,7 +147,7 @@ export function AboutHero() {
                 </p>
               </div>
               <div className="text-center">
-                <p className="font-heading text-gradient-gold text-2xl font-bold">
+                <p className="font-heading text-accent-red text-2xl font-bold">
                   {siteConfig.stats.countriesServed}+
                 </p>
                 <p className="text-muted-foreground text-xs tracking-wider uppercase">

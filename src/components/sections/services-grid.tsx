@@ -69,7 +69,7 @@ export function ServicesGrid() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-heading text-gradient-gold mb-2 text-xl font-semibold">
+                <h3 className="font-heading text-olive mb-2 text-xl font-semibold">
                   {style.name}
                 </h3>
                 <p className="text-muted-foreground mb-4 line-clamp-2 text-sm">

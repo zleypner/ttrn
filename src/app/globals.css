@@ -171,7 +171,7 @@
 
   /* Olive gradient text */
   .text-gradient-gold {
-    @apply from-olive via-olive-light to-accent-red bg-gradient-to-r bg-clip-text text-transparent;
+    @apply text-olive;
   }
 
   /* Olive border gradient */

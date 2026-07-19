@@ -8,6 +8,8 @@ import {
   scrollViewport,
 } from "@/lib/animations/variants";
 
+import { ColorText } from "./color-text";
+
 interface SectionHeadingProps {
   title: string;
   subtitle?: string;
@@ -59,11 +61,11 @@ export function SectionHeading({
         <Tag
           className={cn(
             "font-heading text-3xl font-semibold tracking-wide md:text-4xl lg:text-5xl",
-            "text-gradient-gold text-shadow-gold",
+            "text-shadow-gold",
             titleClassName
           )}
         >
-          {title}
+          <ColorText text={title} />
         </Tag>
       </motion.div>
       {subtitle && (

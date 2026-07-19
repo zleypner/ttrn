@@ -122,7 +122,7 @@ export function PricingSection() {
                 <p className="text-muted-foreground mb-4 text-sm">
                   {tier.description}
                 </p>
-                <p className="font-heading text-gradient-gold text-3xl font-bold">
+                <p className="font-heading text-accent-red text-3xl font-bold">
                   {tier.priceRange}
                 </p>
               </div>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {
   fadeIn,
   fadeInUp,
@@ -10,25 +11,51 @@ import {
 } from "@/lib/animations/variants";
 
 function AnimatedTitle({ text }: { text: string }) {
-  const letters = text.split("");
+  const words = text.split(" ");
 
   return (
     <motion.span
       variants={letterRevealContainer}
       initial="hidden"
       animate="visible"
-      className="inline-flex flex-wrap justify-center"
+      className="inline-flex flex-wrap justify-center gap-x-[0.25em]"
     >
-      {letters.map((letter, index) => (
-        <motion.span
-          key={index}
-          variants={letterReveal}
-          className="inline-block"
-          style={{ display: letter === " " ? "inline" : "inline-block" }}
-        >
-          {letter === " " ? "\u00A0" : letter}
-        </motion.span>
-      ))}
+      {words.map((word, wordIdx) => {
+        let colorClass = "text-foreground"; // 60%
+        if (words.length === 1) {
+          colorClass = "text-olive";
+        } else if (words.length === 2) {
+          if (wordIdx === 1) colorClass = "text-olive";
+        } else if (words.length === 3) {
+          if (wordIdx === 1) colorClass = "text-olive";
+          if (wordIdx === 2) colorClass = "text-accent-red";
+        } else {
+          const percent = wordIdx / words.length;
+          if (percent >= 0.9) {
+            colorClass = "text-accent-red";
+          } else if (percent >= 0.6) {
+            colorClass = "text-olive";
+          } else {
+            colorClass = "text-foreground";
+          }
+        }
+
+        const letters = word.split("");
+
+        return (
+          <span key={wordIdx} className={cn(colorClass, "inline-flex")}>
+            {letters.map((letter, letterIdx) => (
+              <motion.span
+                key={letterIdx}
+                variants={letterReveal}
+                className="inline-block"
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </span>
+        );
+      })}
     </motion.span>
   );
 }
@@ -95,7 +122,7 @@ export function ServicesHero() {
             variants={fadeInUp}
             className="font-heading mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl"
           >
-            <span className="text-gradient-gold text-shadow-gold">
+            <span className="text-shadow-gold">
               <AnimatedTitle text="Nuestros Servicios" />
             </span>
           </motion.h1>
@@ -125,7 +152,7 @@ export function ServicesHero() {
               { label: "Garantía", value: "100%" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="font-heading text-gradient-gold text-2xl font-bold">
+                <p className="font-heading text-accent-red text-2xl font-bold">
                   {stat.value}
                 </p>
                 <p className="text-muted-foreground text-sm">{stat.label}</p>

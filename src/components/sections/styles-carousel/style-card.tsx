@@ -59,7 +59,7 @@ export function StyleCard({ style, isActive = false }: StyleCardProps) {
       <div className="relative flex h-full flex-col justify-end p-6 sm:p-8">
         {/* Style Name */}
         <motion.h3
-          className="font-heading text-gradient-gold mb-3 text-2xl font-semibold sm:text-3xl"
+          className="font-heading text-olive mb-3 text-2xl font-semibold sm:text-3xl"
           initial={false}
           animate={{ y: isActive ? 0 : 5 }}
         >
