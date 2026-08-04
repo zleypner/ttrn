@@ -44,12 +44,6 @@ export const galleryImages = [
     category: "Tribal",
     image: "/images/tribal/maori-sleeve-sol.webp",
   },
-  {
-    id: "tribal-8",
-    title: "Blackwork Espalda Geométrico",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-espalda-geometrico.webp",
-  },
   // Realismo - 14 images (removed duplicates)
   {
     id: "realismo-1",
