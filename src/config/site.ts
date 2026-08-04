@@ -16,8 +16,8 @@ export const siteConfig = {
     },
   },
   contact: {
-    phone: "+506 8888-8888",
-    whatsapp: "50688888888",
+    phone: "+506 7111 1499",
+    whatsapp: "50671111499",
     email: "info@reneruiztattoo.com",
     instagram: "reneruiztattoo",
     facebook: "reneruiztattoo",
