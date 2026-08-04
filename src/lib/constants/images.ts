@@ -3,12 +3,6 @@
 export const galleryImages = [
   // Tribal - 8 images (removed duplicates)
   {
-    id: "tribal-1",
-    title: "Blackwork Sleeve Ondas",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-sleeve-ondas-1.webp",
-  },
-  {
     id: "tribal-2",
     title: "Blackwork Antebrazo Llamas",
     category: "Tribal",
@@ -31,12 +25,6 @@ export const galleryImages = [
     title: "Blackwork Hombro Orgánico",
     category: "Tribal",
     image: "/images/tribal/blackwork-hombro-organico-1.webp",
-  },
-  {
-    id: "tribal-6",
-    title: "Blackwork Espalda Completa",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-espalda-completa.webp",
   },
   {
     id: "tribal-7",
@@ -62,12 +50,6 @@ export const galleryImages = [
     title: "Retrato Hombre Pecho",
     category: "Realismo",
     image: "/images/realismo/retrato-hombre-pecho-1.webp",
-  },
-  {
-    id: "realismo-4",
-    title: "Sleeve Perro con Lettering",
-    category: "Realismo",
-    image: "/images/realismo/sleeve-perro-lettering.webp",
   },
   {
     id: "realismo-5",
