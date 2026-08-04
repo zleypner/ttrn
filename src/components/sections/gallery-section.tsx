@@ -3,7 +3,14 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ZoomIn,
+  MessageCircle,
+} from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { galleryImages } from "@/lib/constants/images";
@@ -15,12 +22,11 @@ import {
 
 const categories = [
   "Todos",
+  "Tribal",
   "Realismo",
-  "Black & Grey",
-  "Fine Line",
-  "Ornamental",
-  "Geométrico",
   "Retratos",
+  "Japonés",
+  "Otros",
 ];
 
 export function GallerySection() {
@@ -179,6 +185,28 @@ export function GallerySection() {
               </motion.div>
             ))}
           </AnimatePresence>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={scrollViewport}
+          variants={staggerChild}
+          className="mt-12 text-center"
+        >
+          <p className="text-muted-foreground mb-4">
+            ¿Te gustó algún diseño? Agenda tu cita ahora
+          </p>
+          <a
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Vi tu galería y me interesa agendar una cita para un tatuaje.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-3"
+          >
+            <MessageCircle size={18} />
+            Agendar Cita por WhatsApp
+          </a>
         </motion.div>
 
         {/* Lightbox */}

@@ -8,7 +8,9 @@ import {
   Heart,
   Clock,
   MessageSquare,
+  MessageCircle,
 } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
 import {
@@ -120,6 +122,25 @@ export function WhyChooseSection() {
               />
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={scrollViewport}
+          variants={staggerChild}
+          className="mt-12 text-center"
+        >
+          <a
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría conocer más sobre tus servicios de tatuaje.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-3"
+          >
+            <MessageCircle size={18} />
+            Conversemos Sobre Tu Idea
+          </a>
         </motion.div>
       </div>
     </section>

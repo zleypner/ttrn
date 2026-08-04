@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageSquare, Pencil, Palette } from "lucide-react";
+import { MessageSquare, Pencil, Palette, MessageCircle } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
 import {
@@ -129,6 +130,22 @@ export function ProcessSection() {
               </motion.div>
             ))}
           </div>
+
+          {/* CTA */}
+          <motion.div variants={staggerChild} className="mt-16 text-center">
+            <p className="text-muted-foreground mb-4">
+              ¿Listo para comenzar tu proyecto?
+            </p>
+            <a
+              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Quiero iniciar el proceso para mi tatuaje. ¿Podemos agendar una consulta?")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-3"
+            >
+              <MessageCircle size={18} />
+              Iniciar Mi Proyecto
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>

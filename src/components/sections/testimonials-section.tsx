@@ -4,7 +4,14 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Star,
+  Quote,
+  MessageCircle,
+} from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { testimonials, type Testimonial } from "@/lib/constants/testimonials";
@@ -183,6 +190,22 @@ export function TestimonialsSection() {
             >
               <ChevronRight size={24} className="text-olive" />
             </button>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-10 text-center">
+            <p className="text-muted-foreground mb-4">
+              Únete a cientos de clientes satisfechos
+            </p>
+            <a
+              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría agendar una consulta para un tatuaje.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-3"
+            >
+              <MessageCircle size={18} />
+              Agenda Tu Consulta Gratis
+            </a>
           </div>
         </motion.div>
       </div>

@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { siteConfig } from "@/config/site";
 import {
   staggerContainer,
   staggerChild,
@@ -177,6 +179,28 @@ export function ArtistStory() {
             </motion.div>
           </div>
         </div>
+
+        {/* CTA */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={scrollViewport}
+          variants={fadeInUp}
+          className="text-center"
+        >
+          <p className="text-muted-foreground mb-4">
+            ¿Quieres conocer más sobre mi trabajo?
+          </p>
+          <a
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría conocerte y hablar sobre un tatuaje.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-3"
+          >
+            <MessageCircle size={18} />
+            Contáctame Directamente
+          </a>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Users, Globe, Palette } from "lucide-react";
+import { Award, Users, Globe, Palette, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIntersection } from "@/hooks/use-intersection";
 import { useCounter } from "@/hooks/use-counter";
@@ -200,6 +200,25 @@ export function StatsSection() {
               index={index}
             />
           ))}
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={scrollViewport}
+          variants={staggerChild}
+          className="mt-12 text-center"
+        >
+          <a
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Quisiera ser parte de tus clientes satisfechos. ¿Podemos conversar?")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-8 py-3"
+          >
+            <MessageCircle size={18} />
+            Sé el Próximo Cliente Satisfecho
+          </a>
         </motion.div>
       </div>
     </section>
