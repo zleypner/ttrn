@@ -1,7 +1,7 @@
 // Local gallery images organized by category
 
 export const galleryImages = [
-  // Tribal - 14 images
+  // Tribal - 8 images (removed duplicates)
   {
     id: "tribal-1",
     title: "Blackwork Sleeve Ondas",
@@ -10,83 +10,47 @@ export const galleryImages = [
   },
   {
     id: "tribal-2",
-    title: "Blackwork Sleeve Ondas",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-sleeve-ondas-2.webp",
-  },
-  {
-    id: "tribal-3",
     title: "Blackwork Antebrazo Llamas",
     category: "Tribal",
     image: "/images/tribal/blackwork-antebrazo-llamas.webp",
   },
   {
-    id: "tribal-4",
+    id: "tribal-3",
     title: "Blackwork Antebrazo Fluido",
     category: "Tribal",
     image: "/images/tribal/blackwork-antebrazo-fluido.webp",
   },
   {
-    id: "tribal-5",
+    id: "tribal-4",
     title: "Blackwork Mano con Ojo",
     category: "Tribal",
     image: "/images/tribal/blackwork-mano-ojo-1.webp",
   },
   {
-    id: "tribal-6",
-    title: "Blackwork Mano con Ojo",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-mano-ojo-2.webp",
-  },
-  {
-    id: "tribal-7",
-    title: "Blackwork Mano con Ojo",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-mano-ojo-3.webp",
-  },
-  {
-    id: "tribal-8",
+    id: "tribal-5",
     title: "Blackwork Hombro Orgánico",
     category: "Tribal",
     image: "/images/tribal/blackwork-hombro-organico-1.webp",
   },
   {
-    id: "tribal-9",
-    title: "Blackwork Hombro Orgánico",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-hombro-organico-2.webp",
-  },
-  {
-    id: "tribal-10",
-    title: "Blackwork Hombro Orgánico",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-hombro-organico-3.webp",
-  },
-  {
-    id: "tribal-11",
+    id: "tribal-6",
     title: "Blackwork Espalda Completa",
     category: "Tribal",
     image: "/images/tribal/blackwork-espalda-completa.webp",
   },
   {
-    id: "tribal-12",
+    id: "tribal-7",
     title: "Maori Sleeve con Sol",
     category: "Tribal",
     image: "/images/tribal/maori-sleeve-sol.webp",
   },
   {
-    id: "tribal-13",
-    title: "Blackout Brazo Completo",
-    category: "Tribal",
-    image: "/images/tribal/blackout-brazo-completo.webp",
-  },
-  {
-    id: "tribal-14",
+    id: "tribal-8",
     title: "Blackwork Espalda Geométrico",
     category: "Tribal",
     image: "/images/tribal/blackwork-espalda-geometrico.webp",
   },
-  // Realismo - 24 images
+  // Realismo - 14 images (removed duplicates)
   {
     id: "realismo-1",
     title: "Lobo en Antebrazo",
@@ -107,131 +71,71 @@ export const galleryImages = [
   },
   {
     id: "realismo-4",
-    title: "Retrato Hombre Pecho",
-    category: "Realismo",
-    image: "/images/realismo/retrato-hombre-pecho-2.webp",
-  },
-  {
-    id: "realismo-5",
-    title: "Retrato Hombre Pecho",
-    category: "Realismo",
-    image: "/images/realismo/retrato-hombre-pecho-3.webp",
-  },
-  {
-    id: "realismo-6",
     title: "Sleeve Perro con Lettering",
     category: "Realismo",
     image: "/images/realismo/sleeve-perro-lettering.webp",
   },
   {
-    id: "realismo-7",
-    title: "Sleeve Familia Detalle",
-    category: "Realismo",
-    image: "/images/realismo/sleeve-familia-detalle.webp",
-  },
-  {
-    id: "realismo-8",
+    id: "realismo-5",
     title: "León en Brazo",
     category: "Realismo",
     image: "/images/realismo/leon-brazo.webp",
   },
   {
-    id: "realismo-9",
+    id: "realismo-6",
     title: "Águila en Brazo",
     category: "Realismo",
     image: "/images/realismo/aguila-brazo.webp",
   },
   {
-    id: "realismo-10",
+    id: "realismo-7",
     title: "Flores en Antebrazo",
     category: "Realismo",
     image: "/images/realismo/flores-antebrazo.webp",
   },
   {
-    id: "realismo-11",
+    id: "realismo-8",
     title: "Rosa en Mano",
     category: "Realismo",
     image: "/images/realismo/rosa-mano.webp",
   },
   {
-    id: "realismo-12",
+    id: "realismo-9",
     title: "Medusa en Antebrazo",
     category: "Realismo",
     image: "/images/realismo/medusa-antebrazo-1.webp",
   },
   {
-    id: "realismo-13",
-    title: "Medusa en Antebrazo",
-    category: "Realismo",
-    image: "/images/realismo/medusa-antebrazo-2.webp",
-  },
-  {
-    id: "realismo-14",
-    title: "Medusa en Antebrazo",
-    category: "Realismo",
-    image: "/images/realismo/medusa-antebrazo-3.webp",
-  },
-  {
-    id: "realismo-15",
+    id: "realismo-10",
     title: "Tigre en Brazo",
     category: "Realismo",
     image: "/images/realismo/tigre-brazo-1.webp",
   },
   {
-    id: "realismo-16",
-    title: "Tigre en Brazo",
-    category: "Realismo",
-    image: "/images/realismo/tigre-brazo-2.webp",
-  },
-  {
-    id: "realismo-17",
-    title: "Tigre en Brazo",
-    category: "Realismo",
-    image: "/images/realismo/tigre-brazo-3.webp",
-  },
-  {
-    id: "realismo-18",
+    id: "realismo-11",
     title: "Virgen en Brazo",
     category: "Realismo",
     image: "/images/realismo/virgen-brazo.webp",
   },
   {
-    id: "realismo-19",
+    id: "realismo-12",
     title: "León Realista",
     category: "Realismo",
     image: "/images/realismo/leon-realista.webp",
   },
   {
-    id: "realismo-20",
-    title: "Rostro de Mujer",
-    category: "Realismo",
-    image: "/images/realismo/rostro-mujer.webp",
-  },
-  {
-    id: "realismo-21",
+    id: "realismo-13",
     title: "Ojo Realista",
     category: "Realismo",
     image: "/images/realismo/ojo-realista.webp",
   },
   {
-    id: "realismo-22",
+    id: "realismo-14",
     title: "Ángel en Espalda",
     category: "Realismo",
     image: "/images/realismo/angel-espalda.webp",
   },
-  {
-    id: "realismo-23",
-    title: "Calavera Detalle",
-    category: "Realismo",
-    image: "/images/realismo/calavera-detalle.webp",
-  },
-  {
-    id: "realismo-24",
-    title: "Corazón Anatómico",
-    category: "Realismo",
-    image: "/images/realismo/corazon-anatomico.webp",
-  },
-  // Retratos - 5 images
+  // Retratos - 4 images (removed duplicates)
   {
     id: "retrato-1",
     title: "Retrato Familiar",
@@ -255,12 +159,6 @@ export const galleryImages = [
     title: "Retrato de Mascota",
     category: "Retratos",
     image: "/images/retratos/retrato-mascota.webp",
-  },
-  {
-    id: "retrato-5",
-    title: "Retrato Familiar",
-    category: "Retratos",
-    image: "/images/retratos/retrato-familiar-2.webp",
   },
   // Japonés - 1 image
   {
@@ -308,7 +206,7 @@ export const featuredWorkImages = [
     id: "f2",
     title: "Medusa Realista",
     category: "Realismo",
-    image: "/images/realismo/medusa-antebrazo-3.webp",
+    image: "/images/realismo/medusa-antebrazo-1.webp",
     size: "large" as const,
   },
   {
@@ -336,27 +234,27 @@ export const featuredWorkImages = [
     id: "f6",
     title: "Tigre Realista",
     category: "Realismo",
-    image: "/images/realismo/tigre-brazo-2.webp",
+    image: "/images/realismo/tigre-brazo-1.webp",
     size: "small" as const,
   },
 ] as const;
 
 export const styleImages = {
   tribal: "/images/tribal/blackwork-mano-ojo-1.webp",
-  realism: "/images/realismo/medusa-antebrazo-3.webp",
+  realism: "/images/realismo/medusa-antebrazo-1.webp",
   portrait: "/images/retratos/retrato-familiar-1.webp",
   japanese: "/images/japones/dragon-japones-espalda.webp",
 } as const;
 
 export const aboutImages = {
   artist: "/images/realismo/medusa-antebrazo-1.webp",
-  studio1: "/images/tribal/blackwork-mano-ojo-3.webp",
-  studio2: "/images/realismo/tigre-brazo-2.webp",
+  studio1: "/images/tribal/blackwork-mano-ojo-1.webp",
+  studio2: "/images/realismo/tigre-brazo-1.webp",
   studio3: "/images/retratos/retrato-mascota.webp",
-  artistWorking: "/images/realismo/retrato-hombre-pecho-3.webp",
+  artistWorking: "/images/realismo/retrato-hombre-pecho-1.webp",
 } as const;
 
-export const heroBackground = "/images/realismo/medusa-antebrazo-2.webp";
+export const heroBackground = "/images/realismo/lobo-antebrazo.webp";
 
 export type GalleryImage = (typeof galleryImages)[number];
 export type FeaturedWorkImage = (typeof featuredWorkImages)[number];
