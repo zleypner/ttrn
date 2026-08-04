@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Users, Globe, Palette, MessageCircle } from "lucide-react";
+import { Award, Users, Palette, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIntersection } from "@/hooks/use-intersection";
 import { useCounter } from "@/hooks/use-counter";
@@ -31,12 +31,6 @@ const stats: StatItem[] = [
     value: siteConfig.stats.happyClients,
     suffix: "+",
     label: "Clientes Satisfechos",
-  },
-  {
-    icon: Globe,
-    value: siteConfig.stats.countriesServed,
-    suffix: "+",
-    label: "Países",
   },
   {
     icon: Palette,
@@ -190,7 +184,7 @@ export function StatsSection() {
           whileInView="visible"
           viewport={scrollViewport}
           variants={staggerContainer}
-          className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6"
         >
           {stats.map((stat, index) => (
             <StatCounter
