@@ -52,6 +52,11 @@
   --color-bronze: var(--bronze);
   --color-burgundy: var(--burgundy);
   --color-champagne: var(--champagne);
+  /* CTA colors for conversions */
+  --color-cta: var(--cta);
+  --color-cta-light: var(--cta-light);
+  --color-cta-dark: var(--cta-dark);
+  --color-cta-hover: var(--cta-hover);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -62,10 +67,12 @@
 }
 
 :root {
-  /* ===== 60-30-10 COLOR SYSTEM =====
-   * 60% - Background (deep blacks)
-   * 30% - Secondary (warm grays, text)
-   * 10% - Accent (gold for CTAs, burgundy for highlights)
+  /* ===== MARKETING COLOR PSYCHOLOGY =====
+   * 60% - Background (deep blacks) - Sophistication, makes art pop
+   * 30% - Secondary (warm whites) - Readability, warmth
+   * 10% - Accent split:
+   *   - GOLD: Trust, premium branding, headings
+   *   - CTA (Warm Coral): Urgency, action, passion - for WhatsApp/booking
    */
 
   /* 60% - DOMINANT: Deep black backgrounds */
@@ -82,13 +89,21 @@
   --secondary: oklch(0.18 0.01 280);
   --secondary-foreground: oklch(0.92 0.02 80);
 
-  /* 10% - ACCENT: Premium gold (CTAs, highlights) */
+  /* 10% ACCENT - Split for persuasion hierarchy */
+
+  /* GOLD: Trust, premium, branding (headings, decorative) */
   --gold: oklch(0.75 0.14 85);
   --gold-light: oklch(0.82 0.12 85);
   --gold-dark: oklch(0.62 0.14 80);
   --gold-muted: oklch(0.68 0.1 85);
 
-  /* Accent colors - Burgundy for stats, Bronze for variety */
+  /* CTA: Warm coral - Urgency, action, passion (WhatsApp, booking buttons) */
+  --cta: oklch(0.65 0.19 45);
+  --cta-light: oklch(0.72 0.17 48);
+  --cta-dark: oklch(0.55 0.2 40);
+  --cta-hover: oklch(0.7 0.18 48);
+
+  /* Supporting colors */
   --bronze: oklch(0.58 0.12 50);
   --burgundy: oklch(0.45 0.18 25);
   --champagne: oklch(0.88 0.06 85);
@@ -242,13 +257,38 @@
       0 0 40px oklch(0.72 0.12 85 / 20%);
   }
 
-  /* Premium button styles */
+  /* PRIMARY CTA - High conversion (WhatsApp, Booking) */
+  .btn-cta {
+    @apply bg-gradient-to-r from-[oklch(0.65_0.19_45)] via-[oklch(0.62_0.18_42)] to-[oklch(0.55_0.20_40)] font-bold tracking-wide text-white shadow-lg transition-all duration-300;
+    box-shadow:
+      0 4px 14px oklch(0.65 0.19 45 / 35%),
+      0 2px 6px oklch(0 0 0 / 20%);
+  }
+
+  .btn-cta:hover {
+    @apply from-[oklch(0.70_0.18_48)] via-[oklch(0.68_0.17_45)] to-[oklch(0.60_0.19_42)];
+    box-shadow:
+      0 6px 20px oklch(0.65 0.19 45 / 45%),
+      0 3px 10px oklch(0 0 0 / 25%);
+    transform: translateY(-2px);
+  }
+
+  /* CTA glow effect for extra attention */
+  .btn-cta-glow {
+    animation: cta-pulse 2s ease-in-out infinite;
+  }
+
+  /* Secondary button - Gold (trust, explore) */
   .btn-gold {
     @apply bg-gradient-to-r from-[oklch(0.72_0.12_85)] via-[oklch(0.68_0.11_80)] to-[oklch(0.58_0.12_75)] font-semibold tracking-wide text-[oklch(0.08_0.005_285)] shadow-lg transition-all duration-500 hover:from-[oklch(0.78_0.10_85)] hover:via-[oklch(0.72_0.12_85)] hover:to-[oklch(0.65_0.12_80)] hover:shadow-xl;
   }
 
   .btn-outline-gold {
     @apply border border-[oklch(0.72_0.12_85/50%)] font-medium tracking-wide text-[oklch(0.72_0.12_85)] transition-all duration-300 hover:border-[oklch(0.72_0.12_85/80%)] hover:bg-[oklch(0.72_0.12_85/10%)];
+  }
+
+  .btn-outline-cta {
+    @apply border border-[oklch(0.65_0.19_45/60%)] font-medium tracking-wide text-[oklch(0.70_0.17_48)] transition-all duration-300 hover:border-[oklch(0.65_0.19_45/90%)] hover:bg-[oklch(0.65_0.19_45/15%)];
   }
 
   /* Premium glass button */
@@ -364,6 +404,22 @@ img[data-loaded="true"] {
 
 .animate-pulse-glow {
   animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* CTA pulse for urgency - warm coral */
+@keyframes cta-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 4px 14px oklch(0.65 0.19 45 / 35%),
+      0 2px 6px oklch(0 0 0 / 20%);
+  }
+  50% {
+    box-shadow:
+      0 4px 20px oklch(0.65 0.19 45 / 55%),
+      0 2px 8px oklch(0 0 0 / 25%),
+      0 0 30px oklch(0.65 0.19 45 / 25%);
+  }
 }
 
 /* Subtle breathing glow */

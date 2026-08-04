@@ -127,7 +127,7 @@ export function Footer() {
                 href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hola, me gustaría agendar una cita para un tatuaje.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-gold inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm"
+                className="btn-cta inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm"
               >
                 <WhatsAppIcon size={16} />
                 WhatsApp

@@ -208,7 +208,7 @@ export function StatsSection() {
             href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Quisiera ser parte de tus clientes satisfechos. ¿Podemos conversar?")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-8 py-3"
+            className="btn-outline-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
           >
             <MessageCircle size={18} />
             Sé el Próximo Cliente Satisfecho

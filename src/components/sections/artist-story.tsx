@@ -195,7 +195,7 @@ export function ArtistStory() {
             href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría conocerte y hablar sobre un tatuaje.")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-3"
+            className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
           >
             <MessageCircle size={18} />
             Contáctame Directamente

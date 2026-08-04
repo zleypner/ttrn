@@ -298,7 +298,7 @@ export function HeroSection() {
               rel="noopener noreferrer"
               className={cn(
                 "group relative inline-flex items-center gap-2 rounded-full px-8 py-4",
-                "btn-gold glow-gold-hover overflow-hidden",
+                "btn-cta btn-cta-glow overflow-hidden",
                 "text-base font-medium"
               )}
               whileHover={{ scale: 1.05 }}
