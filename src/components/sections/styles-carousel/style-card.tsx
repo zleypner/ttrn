@@ -7,6 +7,14 @@ import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { TattooStyle } from "@/lib/constants/tattoo-styles";
 
+// Map style IDs to gallery category names
+const styleToCategory: Record<string, string> = {
+  tribal: "Tribal",
+  realism: "Realismo",
+  portrait: "Retratos",
+  japanese: "Japonés",
+};
+
 interface StyleCardProps {
   style: TattooStyle;
   isActive?: boolean;
@@ -15,10 +23,23 @@ interface StyleCardProps {
 export function StyleCard({ style, isActive = false }: StyleCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
+  const handleClick = () => {
+    const category = styleToCategory[style.id] || style.name;
+    const gallerySection = document.querySelector("#galeria");
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: "smooth" });
+      // Dispatch custom event to set category
+      window.dispatchEvent(
+        new CustomEvent("setGalleryCategory", { detail: category })
+      );
+    }
+  };
+
   return (
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
+      onClick={handleClick}
       className={cn(
         "group relative h-[400px] overflow-hidden rounded-2xl sm:h-[450px] md:h-[500px]",
         "glass-card cursor-pointer",

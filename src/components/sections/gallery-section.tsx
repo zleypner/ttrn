@@ -39,6 +39,26 @@ export function GallerySection() {
       ? galleryImages
       : galleryImages.filter((item) => item.category === selectedCategory);
 
+  // Listen for category change events from style cards
+  useEffect(() => {
+    const handleSetCategory = (event: CustomEvent<string>) => {
+      if (categories.includes(event.detail)) {
+        setSelectedCategory(event.detail);
+      }
+    };
+
+    window.addEventListener(
+      "setGalleryCategory",
+      handleSetCategory as EventListener
+    );
+    return () => {
+      window.removeEventListener(
+        "setGalleryCategory",
+        handleSetCategory as EventListener
+      );
+    };
+  }, []);
+
   // Handle body scroll lock when lightbox is open
   useEffect(() => {
     if (lightboxIndex !== null) {
