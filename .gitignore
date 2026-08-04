@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# SEO documentation (internal use only)
+**/SEO*.md
+**/seo*.md
+SEO-*.md
+seo-*.md

@@ -7,11 +7,39 @@ import { StudioGallery } from "@/components/sections/studio-gallery";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Sobre Mí",
-  description: `Conoce a ${siteConfig.artistName}, tatuador profesional con más de ${siteConfig.stats.yearsExperience} años de experiencia especializado en realismo, black & grey y fine line en ${siteConfig.location.country}.`,
+  title: `Sobre ${siteConfig.artistName} | +${siteConfig.stats.yearsExperience} Anos de Arte Corporal`,
+  description: `Conoce la historia de ${siteConfig.artistName}, tatuador profesional con mas de ${siteConfig.stats.yearsExperience} anos transformando ideas en arte corporal. Especialista en realismo, black & grey y fine line en ${siteConfig.location.city}, Costa Rica. Descubre su trayectoria y filosofia artistica.`,
+  keywords: [
+    "Rene Ruiz tatuador",
+    "historia Tata-u",
+    "artista tatuador Costa Rica",
+    "biografia tatuador profesional",
+    "experiencia tatuador San Jose",
+    "trayectoria artista corporal",
+    "filosofia tatuaje Costa Rica",
+    "estudio tatuajes profesional",
+  ],
   openGraph: {
-    title: `Sobre Mí | ${siteConfig.name}`,
-    description: `Conoce a ${siteConfig.artistName}, tatuador profesional con más de ${siteConfig.stats.yearsExperience} años de experiencia.`,
+    title: `Sobre ${siteConfig.artistName} | +${siteConfig.stats.yearsExperience} Anos de Arte Corporal | ${siteConfig.name}`,
+    description: `Descubre la historia detras de ${siteConfig.name}. ${siteConfig.artistName} ha dedicado +${siteConfig.stats.yearsExperience} anos al arte del tatuaje, creando piezas unicas para +${siteConfig.stats.happyClients} clientes satisfechos.`,
+    url: `${siteConfig.url}/about`,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.artistName} - Tatuador Profesional de ${siteConfig.name}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Sobre ${siteConfig.artistName} | ${siteConfig.name}`,
+    description: `+${siteConfig.stats.yearsExperience} anos de experiencia en arte corporal. Conoce al artista detras de Tata-u.`,
+    images: [siteConfig.ogImage],
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/about`,
   },
 };
 

@@ -4,6 +4,7 @@ import { Toaster } from "sonner";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { WhatsAppFloat } from "@/components/shared/whatsapp-float";
+import { CombinedSchemas } from "@/components/seo/json-ld";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -71,13 +72,30 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteConfig.url,
+    languages: {
+      "es-CR": siteConfig.url,
+      es: siteConfig.url,
+    },
   },
+  manifest: "/manifest.json",
   category: "Tattoo Artist",
+  classification: "Arte y Entretenimiento > Tatuajes > Tatuador Profesional",
+  verification: {
+    google: "google-site-verification-code",
+    yandex: "yandex-verification-code",
+    other: {
+      "msvalidate.01": "bing-verification-code",
+    },
+  },
   other: {
-    "geo.region": "CR-G",
+    "geo.region": "CR-SJ",
     "geo.placename": siteConfig.location.city,
     "geo.position": `${siteConfig.location.coordinates.lat};${siteConfig.location.coordinates.lng}`,
     ICBM: `${siteConfig.location.coordinates.lat}, ${siteConfig.location.coordinates.lng}`,
+    "format-detection": "telephone=no",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "apple-mobile-web-app-title": siteConfig.name,
   },
 };
 
@@ -94,6 +112,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <CombinedSchemas />
       </head>
       <body className="bg-background text-foreground flex min-h-full flex-col">
         {children}
