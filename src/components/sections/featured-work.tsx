@@ -52,7 +52,7 @@ export function FeaturedWork() {
               {/* Image */}
               <Image
                 src={work.image}
-                alt={work.title}
+                alt={work.category}
                 fill
                 sizes={
                   work.size === "large"
@@ -83,19 +83,16 @@ export function FeaturedWork() {
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6">
                 <div className="translate-y-2 transform transition-transform duration-500 group-hover:translate-y-0">
-                  <span className="text-olive mb-1 block text-xs tracking-wider uppercase">
-                    {work.category}
-                  </span>
-                  <h3
+                  <span
                     className={cn(
-                      "font-heading text-foreground font-semibold",
+                      "text-olive font-heading block font-semibold tracking-wider uppercase",
                       work.size === "large"
                         ? "text-xl sm:text-2xl"
                         : "text-sm sm:text-base"
                     )}
                   >
-                    {work.title}
-                  </h3>
+                    {work.category}
+                  </span>
                 </div>
 
                 {/* Hover Icon */}

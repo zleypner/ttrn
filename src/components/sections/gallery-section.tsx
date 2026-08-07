@@ -189,10 +189,9 @@ export function GallerySection() {
                   <div className="bg-olive/20 mb-3 rounded-full p-3 backdrop-blur-sm">
                     <ZoomIn size={24} className="text-olive" />
                   </div>
-                  <p className="text-foreground px-4 text-center text-sm font-medium">
-                    {item.title}
+                  <p className="text-olive text-sm font-medium">
+                    {item.category}
                   </p>
-                  <p className="text-olive text-xs">{item.category}</p>
                 </div>
 
                 {/* Border */}
@@ -311,10 +310,7 @@ export function GallerySection() {
                   transition={{ delay: 0.3 }}
                   className="from-background/80 absolute right-0 bottom-0 left-0 bg-gradient-to-t to-transparent p-6"
                 >
-                  <h3 className="font-heading text-foreground mb-1 text-xl">
-                    {filteredItems[lightboxIndex].title}
-                  </h3>
-                  <p className="text-olive text-sm">
+                  <p className="text-olive font-heading text-xl">
                     {filteredItems[lightboxIndex].category}
                   </p>
                 </motion.div>

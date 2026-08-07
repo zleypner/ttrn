@@ -58,12 +58,6 @@ export const galleryImages = [
     image: "/images/realismo/leon-brazo.webp",
   },
   {
-    id: "realismo-6",
-    title: "Águila en Brazo",
-    category: "Realismo",
-    image: "/images/realismo/aguila-brazo.webp",
-  },
-  {
     id: "realismo-7",
     title: "Flores en Antebrazo",
     category: "Realismo",
@@ -173,42 +167,36 @@ export const galleryImages = [
 export const featuredWorkImages = [
   {
     id: "f1",
-    title: "Blackwork Mano con Ojo",
     category: "Tribal",
     image: "/images/tribal/blackwork-mano-ojo-1.webp",
     size: "large" as const,
   },
   {
     id: "f2",
-    title: "Medusa Realista",
     category: "Realismo",
     image: "/images/realismo/medusa-antebrazo-1.webp",
     size: "large" as const,
   },
   {
     id: "f3",
-    title: "Retrato Familiar",
     category: "Retratos",
     image: "/images/retratos/retrato-familiar-1.webp",
     size: "medium" as const,
   },
   {
     id: "f4",
-    title: "Dragón Japonés",
     category: "Japonés",
     image: "/images/japones/dragon-japones-espalda.webp",
     size: "medium" as const,
   },
   {
     id: "f5",
-    title: "Blackwork Hombro",
     category: "Tribal",
     image: "/images/tribal/blackwork-hombro-organico-1.webp",
     size: "small" as const,
   },
   {
     id: "f6",
-    title: "Tigre Realista",
     category: "Realismo",
     image: "/images/realismo/tigre-brazo-1.webp",
     size: "small" as const,
