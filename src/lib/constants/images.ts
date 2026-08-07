@@ -9,12 +9,6 @@ export const galleryImages = [
     image: "/images/tribal/blackwork-antebrazo-llamas.webp",
   },
   {
-    id: "tribal-3",
-    title: "Blackwork Antebrazo Fluido",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-antebrazo-fluido.webp",
-  },
-  {
     id: "tribal-4",
     title: "Blackwork Mano con Ojo",
     category: "Tribal",
@@ -74,12 +68,6 @@ export const galleryImages = [
     title: "Medusa en Antebrazo",
     category: "Realismo",
     image: "/images/realismo/medusa-antebrazo-1.webp",
-  },
-  {
-    id: "realismo-10",
-    title: "Tigre en Brazo",
-    category: "Realismo",
-    image: "/images/realismo/tigre-brazo-1.webp",
   },
   {
     id: "realismo-11",
@@ -198,7 +186,7 @@ export const featuredWorkImages = [
   {
     id: "f6",
     category: "Realismo",
-    image: "/images/realismo/tigre-brazo-1.webp",
+    image: "/images/realismo/leon-realista.webp",
     size: "small" as const,
   },
 ] as const;
@@ -213,7 +201,7 @@ export const styleImages = {
 export const aboutImages = {
   artist: "/images/realismo/medusa-antebrazo-1.webp",
   studio1: "/images/tribal/blackwork-mano-ojo-1.webp",
-  studio2: "/images/realismo/tigre-brazo-1.webp",
+  studio2: "/images/realismo/leon-realista.webp",
   studio3: "/images/retratos/retrato-mascota.webp",
   artistWorking: "/images/realismo/retrato-hombre-pecho-1.webp",
 } as const;
