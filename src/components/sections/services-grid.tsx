@@ -24,8 +24,8 @@ export function ServicesGrid() {
     <section className="section-padding">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Estilos de Tatuaje"
-          subtitle="Dominamos diversas técnicas para crear la pieza perfecta para ti."
+          title="Tattoo Styles"
+          subtitle="We master various techniques to create the perfect piece for you."
         />
 
         <motion.div
@@ -97,7 +97,7 @@ export function ServicesGrid() {
                     "transition-all duration-300"
                   )}
                 >
-                  <span>Consultar</span>
+                  <span>Inquire</span>
                   <ArrowRight
                     size={16}
                     className="transition-transform group-hover:translate-x-1"

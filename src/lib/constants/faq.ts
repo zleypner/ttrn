@@ -5,43 +5,43 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   {
-    question: "¿Cómo agendo una cita?",
+    question: "How do I book an appointment?",
     answer:
-      "Puedes agendar tu cita contactándome directamente por WhatsApp o a través del formulario de contacto en esta página. Te responderé en menos de 24 horas para discutir tu idea y encontrar la mejor fecha disponible.",
+      "You can book your appointment by contacting me directly via WhatsApp or through the contact form on this page. I'll respond within 24 hours to discuss your idea and find the best available date.",
   },
   {
-    question: "¿Cuánto cuesta un tatuaje?",
+    question: "How much does a tattoo cost?",
     answer:
-      "El precio varía según el tamaño, complejidad, ubicación en el cuerpo y estilo del tatuaje. Después de nuestra consulta inicial donde discutimos tu idea, te proporcionaré un presupuesto detallado y personalizado.",
+      "The price varies depending on the size, complexity, body location, and style of the tattoo. After our initial consultation where we discuss your idea, I'll provide a detailed and personalized quote.",
   },
   {
-    question: "¿Necesito dejar un depósito?",
+    question: "Do I need to pay a deposit?",
     answer:
-      "Sí, se requiere un depósito para reservar tu cita. Este depósito se descuenta del precio final del tatuaje y garantiza tu espacio en mi agenda. El monto específico te lo indicaré durante la consulta.",
+      "Yes, a deposit is required to book your appointment. This deposit is deducted from the final tattoo price and guarantees your spot in my schedule. The specific amount will be communicated during the consultation.",
   },
   {
-    question: "¿Cuánto tiempo dura una sesión?",
+    question: "How long does a session last?",
     answer:
-      "Depende del proyecto. Las piezas pequeñas pueden completarse en 1-2 horas, mientras que trabajos más grandes pueden requerir múltiples sesiones de 4-6 horas cada una. Siempre priorizamos tu comodidad.",
+      "It depends on the project. Small pieces can be completed in 1-2 hours, while larger work may require multiple sessions of 4-6 hours each. We always prioritize your comfort.",
   },
   {
-    question: "¿Cómo debo prepararme para mi cita?",
+    question: "How should I prepare for my appointment?",
     answer:
-      "Descansa bien la noche anterior, come una comida completa antes de llegar, mantente hidratado y evita el alcohol por al menos 24 horas. Viste ropa cómoda que permita acceso fácil al área del tatuaje.",
+      "Get a good night's sleep the night before, eat a full meal before arriving, stay hydrated, and avoid alcohol for at least 24 hours. Wear comfortable clothing that allows easy access to the tattoo area.",
   },
   {
-    question: "¿Qué cuidados necesita mi tatuaje?",
+    question: "What aftercare does my tattoo need?",
     answer:
-      "Te proporcionaré instrucciones detalladas de cuidado posterior. En general: mantenerlo limpio, aplicar crema hidratante recomendada, evitar el sol directo y no sumergirlo en agua por 2-3 semanas.",
+      "I'll provide detailed aftercare instructions. In general: keep it clean, apply recommended moisturizer, avoid direct sunlight, and don't submerge it in water for 2-3 weeks.",
   },
   {
-    question: "¿Ofrecen retoques gratuitos?",
+    question: "Do you offer free touch-ups?",
     answer:
-      "Sí, ofrezco un retoque gratuito dentro de los primeros 3 meses después de completar el tatuaje, siempre que se hayan seguido correctamente las instrucciones de cuidado.",
+      "Yes, I offer a free touch-up within the first 3 months after completing the tattoo, as long as the aftercare instructions have been followed correctly.",
   },
   {
-    question: "¿Trabajan con diseños personalizados?",
+    question: "Do you work with custom designs?",
     answer:
-      "Absolutamente. Cada tatuaje que hago es único y diseñado específicamente para ti. Trabajamos juntos para crear una pieza que refleje tu visión personal y se adapte perfectamente a tu cuerpo.",
+      "Absolutely. Every tattoo I create is unique and designed specifically for you. We work together to create a piece that reflects your personal vision and fits perfectly on your body.",
   },
 ];

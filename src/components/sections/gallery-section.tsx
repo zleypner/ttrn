@@ -21,21 +21,21 @@ import {
 } from "@/lib/animations/variants";
 
 const categories = [
-  "Todos",
+  "All",
   "Tribal",
-  "Realismo",
-  "Retratos",
-  "Japonés",
-  "Otros",
+  "Realism",
+  "Portraits",
+  "Japanese",
+  "Other",
 ];
 
 export function GallerySection() {
-  const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
   const filteredItems =
-    selectedCategory === "Todos"
+    selectedCategory === "All"
       ? galleryImages
       : galleryImages.filter((item) => item.category === selectedCategory);
 
@@ -100,11 +100,11 @@ export function GallerySection() {
   };
 
   return (
-    <section id="galeria" className="section-padding">
+    <section id="gallery" className="section-padding">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Galería"
-          subtitle="Explora mi colección completa de trabajos. Cada pieza cuenta una historia única."
+          title="Gallery"
+          subtitle="Explore my complete collection of work. Each piece tells a unique story."
         />
 
         {/* Category Filters */}
@@ -215,16 +215,16 @@ export function GallerySection() {
           className="mt-12 text-center"
         >
           <p className="text-muted-foreground mb-4">
-            ¿Te gustó algún diseño? Agenda tu cita ahora
+            Like a design? Book your appointment now
           </p>
           <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Vi tu galería y me interesa agendar una cita para un tatuaje.")}`}
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi! I saw your gallery and I'm interested in booking an appointment for a tattoo.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
           >
             <MessageCircle size={18} />
-            Agendar Cita por WhatsApp
+            Book Appointment via WhatsApp
           </a>
         </motion.div>
 
@@ -246,7 +246,7 @@ export function GallerySection() {
                 transition={{ delay: 0.2 }}
                 onClick={closeLightbox}
                 className="bg-card/80 hover:bg-secondary absolute top-4 right-4 z-10 rounded-full border border-white/10 p-3 transition-colors"
-                aria-label="Cerrar"
+                aria-label="Close"
               >
                 <X size={24} className="text-foreground" />
               </motion.button>
@@ -261,7 +261,7 @@ export function GallerySection() {
                   goToPrevious();
                 }}
                 className="bg-card/80 hover:bg-secondary absolute left-4 z-10 rounded-full border border-white/10 p-3 transition-colors"
-                aria-label="Anterior"
+                aria-label="Previous"
               >
                 <ChevronLeft size={24} className="text-foreground" />
               </motion.button>
@@ -276,7 +276,7 @@ export function GallerySection() {
                   goToNext();
                 }}
                 className="bg-card/80 hover:bg-secondary absolute right-4 z-10 rounded-full border border-white/10 p-3 transition-colors"
-                aria-label="Siguiente"
+                aria-label="Next"
               >
                 <ChevronRight size={24} className="text-foreground" />
               </motion.button>

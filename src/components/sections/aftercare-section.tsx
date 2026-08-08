@@ -29,48 +29,48 @@ interface CareStep {
 const careSteps: CareStep[] = [
   {
     icon: Shield,
-    title: "Primeras Horas",
+    title: "First Hours",
     description:
-      "Mantén el vendaje protector durante 2-4 horas. Tu artista te indicará el tiempo exacto según el tatuaje.",
-    timeframe: "0-4 horas",
+      "Keep the protective bandage on for 2-4 hours. Your artist will indicate the exact time based on the tattoo.",
+    timeframe: "0-4 hours",
   },
   {
     icon: Droplets,
-    title: "Limpieza Inicial",
+    title: "Initial Cleaning",
     description:
-      "Lava suavemente con agua tibia y jabón antibacterial neutro. Seca con palmaditas usando una toalla limpia.",
-    timeframe: "Día 1-3",
+      "Gently wash with lukewarm water and neutral antibacterial soap. Pat dry with a clean towel.",
+    timeframe: "Day 1-3",
   },
   {
     icon: Heart,
-    title: "Hidratación",
+    title: "Moisturizing",
     description:
-      "Aplica una capa fina de crema hidratante especializada 2-3 veces al día. Evita productos con fragancia.",
-    timeframe: "Día 1-14",
+      "Apply a thin layer of specialized moisturizing cream 2-3 times daily. Avoid products with fragrance.",
+    timeframe: "Day 1-14",
   },
   {
     icon: Sun,
-    title: "Protección Solar",
+    title: "Sun Protection",
     description:
-      "Evita la exposición directa al sol. Después de sanar, usa siempre protector solar SPF 50+ sobre el tatuaje.",
-    timeframe: "Permanente",
+      "Avoid direct sun exposure. After healing, always use SPF 50+ sunscreen on the tattoo.",
+    timeframe: "Permanent",
   },
 ];
 
 const dosList = [
-  "Lava tus manos antes de tocar el tatuaje",
-  "Mantén el área limpia y seca",
-  "Usa ropa suelta y cómoda",
-  "Bebe mucha agua para hidratar desde dentro",
-  "Sigue las instrucciones de tu artista",
+  "Wash your hands before touching the tattoo",
+  "Keep the area clean and dry",
+  "Wear loose, comfortable clothing",
+  "Drink plenty of water to hydrate from within",
+  "Follow your artist's instructions",
 ];
 
 const dontsList = [
-  "No rasques ni arranques las costras",
-  "Evita piscinas, jacuzzis y mar por 2 semanas",
-  "No uses alcohol o productos agresivos",
-  "No expongas al sol directo sin protección",
-  "No hagas ejercicio intenso los primeros días",
+  "Don't scratch or pick at scabs",
+  "Avoid pools, hot tubs, and the ocean for 2 weeks",
+  "Don't use alcohol or harsh products",
+  "Don't expose to direct sunlight without protection",
+  "Don't do intense exercise for the first few days",
 ];
 
 export function AftercareSection() {
@@ -78,8 +78,8 @@ export function AftercareSection() {
     <section className="section-padding">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Cuidados Post-Tatuaje"
-          subtitle="Tu nuevo tatuaje es una inversión. Sigue estos pasos para asegurar una sanación perfecta."
+          title="Tattoo Aftercare"
+          subtitle="Your new tattoo is an investment. Follow these steps to ensure perfect healing."
         />
 
         {/* Timeline Steps */}
@@ -147,7 +147,7 @@ export function AftercareSection() {
                 <Heart className="h-5 w-5 text-emerald-500" />
               </div>
               <h3 className="font-heading text-foreground text-xl font-semibold">
-                Recomendado
+                Recommended
               </h3>
             </div>
             <ul className="space-y-3">
@@ -182,7 +182,7 @@ export function AftercareSection() {
                 <Ban className="h-5 w-5 text-red-500" />
               </div>
               <h3 className="font-heading text-foreground text-xl font-semibold">
-                Evitar
+                Avoid
               </h3>
             </div>
             <ul className="space-y-3">
@@ -217,11 +217,9 @@ export function AftercareSection() {
           )}
         >
           <p className="text-muted-foreground">
-            ¿Tienes dudas sobre el cuidado de tu tatuaje?{" "}
-            <span className="text-olive font-medium">
-              Contáctanos en cualquier momento
-            </span>
-            . Estamos aquí para asegurar que tu tatuaje sane perfectamente.
+            Have questions about caring for your tattoo?{" "}
+            <span className="text-olive font-medium">Contact us anytime</span>.
+            We&apos;re here to ensure your tattoo heals perfectly.
           </p>
         </motion.div>
       </div>

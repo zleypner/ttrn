@@ -1,34 +1,34 @@
 // Main navigation links for homepage sections
 export const navigationLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#estilos", label: "Estilos" },
-  { href: "#galeria", label: "Galería" },
-  { href: "#proceso", label: "Proceso" },
-  { href: "#testimonios", label: "Testimonios" },
+  { href: "#home", label: "Home" },
+  { href: "#styles", label: "Styles" },
+  { href: "#gallery", label: "Gallery" },
+  { href: "#process", label: "Process" },
+  { href: "#testimonials", label: "Testimonials" },
   { href: "#faq", label: "FAQ" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "#contact", label: "Contact" },
 ] as const;
 
 // Page links for main site navigation
 export const pageLinks = [
-  { href: "/", label: "Inicio" },
-  { href: "/about", label: "Sobre Mí" },
-  { href: "/services", label: "Servicios" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
   { href: "/#faq", label: "FAQ" },
 ] as const;
 
 // Combined links for footer
 export const footerLinks = {
   pages: [
-    { href: "/", label: "Inicio" },
-    { href: "/about", label: "Sobre Mí" },
-    { href: "/services", label: "Servicios" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
   ],
   sections: [
-    { href: "/#galeria", label: "Galería" },
-    { href: "/#proceso", label: "Proceso" },
-    { href: "/#testimonios", label: "Testimonios" },
-    { href: "/#contacto", label: "Contacto" },
+    { href: "/#gallery", label: "Gallery" },
+    { href: "/#process", label: "Process" },
+    { href: "/#testimonials", label: "Testimonials" },
+    { href: "/#contact", label: "Contact" },
   ],
 } as const;
 

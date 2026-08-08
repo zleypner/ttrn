@@ -23,49 +23,49 @@ interface PricingTier {
 
 const pricingTiers: PricingTier[] = [
   {
-    name: "Pequeño",
-    description: "Diseños de hasta 5cm",
+    name: "Small",
+    description: "Designs up to 5cm",
     priceRange: "$100 - $200",
     features: [
-      "Diseño personalizado",
-      "Una sesión de 1-2 horas",
-      "Retoque incluido",
-      "Kit de cuidado básico",
+      "Custom design",
+      "One 1-2 hour session",
+      "Touch-up included",
+      "Basic care kit",
     ],
   },
   {
-    name: "Mediano",
-    description: "Diseños de 5-15cm",
+    name: "Medium",
+    description: "Designs 5-15cm",
     priceRange: "$200 - $500",
     features: [
-      "Diseño personalizado",
-      "1-2 sesiones de 2-4 horas",
-      "Retoques incluidos",
-      "Kit de cuidado premium",
-      "Seguimiento personalizado",
+      "Custom design",
+      "1-2 sessions of 2-4 hours",
+      "Touch-ups included",
+      "Premium care kit",
+      "Personalized follow-up",
     ],
     popular: true,
   },
   {
-    name: "Grande",
-    description: "Diseños de 15cm+",
+    name: "Large",
+    description: "Designs 15cm+",
     priceRange: "$500+",
     features: [
-      "Diseño exclusivo",
-      "Múltiples sesiones",
-      "Retoques de por vida",
-      "Kit de cuidado completo",
-      "Prioridad en citas",
-      "Fotografía profesional",
+      "Exclusive design",
+      "Multiple sessions",
+      "Lifetime touch-ups",
+      "Complete care kit",
+      "Priority booking",
+      "Professional photography",
     ],
   },
 ];
 
 const pricingNotes = [
-  "Los precios son estimados y varían según complejidad y ubicación",
-  "La consulta inicial es completamente gratuita",
-  "Se requiere un depósito del 50% para reservar tu cita",
-  "Aceptamos pagos en efectivo, tarjeta y transferencia",
+  "Prices are estimates and vary based on complexity and placement",
+  "Initial consultation is completely free",
+  "A 50% deposit is required to book your appointment",
+  "We accept cash, card, and bank transfer payments",
 ];
 
 export function PricingSection() {
@@ -73,8 +73,8 @@ export function PricingSection() {
     <section className="section-padding bg-card/30">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Precios"
-          subtitle="Inversión transparente para tu arte corporal permanente."
+          title="Pricing"
+          subtitle="Transparent investment for your permanent body art."
         />
 
         <motion.div
@@ -109,7 +109,7 @@ export function PricingSection() {
                       "text-background text-xs font-medium"
                     )}
                   >
-                    Más Popular
+                    Most Popular
                   </span>
                 </div>
               )}
@@ -147,7 +147,7 @@ export function PricingSection() {
 
               {/* CTA */}
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hola, me interesa un tatuaje ${tier.name.toLowerCase()}.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello, I'm interested in a ${tier.name.toLowerCase()} tattoo.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
@@ -157,7 +157,7 @@ export function PricingSection() {
                 )}
               >
                 <WhatsAppIcon size={16} />
-                Consultar
+                Inquire
               </a>
             </motion.div>
           ))}
@@ -174,7 +174,7 @@ export function PricingSection() {
           <div className="mb-4 flex items-start gap-3">
             <Info className="text-olive mt-0.5 h-5 w-5 flex-shrink-0" />
             <h4 className="font-heading text-foreground text-lg font-semibold">
-              Información Importante
+              Important Information
             </h4>
           </div>
           <ul className="grid gap-3 sm:grid-cols-2">

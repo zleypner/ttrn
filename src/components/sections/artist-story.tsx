@@ -21,57 +21,57 @@ interface TimelineItem {
 const timeline: TimelineItem[] = [
   {
     year: "2009",
-    title: "Inicio del Viaje",
+    title: "Beginning of the Journey",
     description:
-      "Comencé mi carrera como aprendiz en un reconocido estudio de tatuajes, donde descubrí mi pasión por el arte corporal permanente.",
+      "I began my career as an apprentice at a renowned tattoo studio, where I discovered my passion for permanent body art.",
   },
   {
     year: "2012",
-    title: "Especialización en Realismo",
+    title: "Specialization in Realism",
     description:
-      "Viajé a Europa para perfeccionar mi técnica en realismo y black & grey con maestros del arte del tatuaje.",
+      "I traveled to Europe to perfect my technique in realism and black & grey with masters of tattoo art.",
   },
   {
     year: "2015",
-    title: "Apertura del Estudio",
+    title: "Studio Opening",
     description:
-      "Abrí mi propio estudio en Costa Rica, creando un espacio dedicado al arte del tatuaje de alta calidad.",
+      "I opened my own studio in Costa Rica, creating a space dedicated to high-quality tattoo art.",
   },
   {
     year: "2018",
-    title: "Reconocimiento Internacional",
+    title: "International Recognition",
     description:
-      "Participé en convenciones internacionales, ganando premios por trabajos de realismo y retratos.",
+      "I participated in international conventions, winning awards for realism and portrait work.",
   },
   {
     year: "2022",
-    title: "Expansión Artística",
+    title: "Artistic Expansion",
     description:
-      "Incorporé nuevas técnicas como fine line y geométrico, ampliando mi repertorio artístico.",
+      "I incorporated new techniques such as fine line and geometric, expanding my artistic repertoire.",
   },
   {
-    year: "Presente",
-    title: "Continuando el Legado",
+    year: "Present",
+    title: "Continuing the Legacy",
     description:
-      "Sigo dedicado a crear obras de arte únicas para clientes de todo el mundo, manteniendo los más altos estándares de calidad.",
+      "I continue to dedicate myself to creating unique works of art for clients from around the world, maintaining the highest quality standards.",
   },
 ];
 
 const philosophy = [
   {
-    title: "Arte con Propósito",
+    title: "Art with Purpose",
     description:
-      "Cada tatuaje debe tener un significado profundo para quien lo lleva. Mi trabajo es ayudarte a expresar tu historia de manera visual.",
+      "Every tattoo should have a deep meaning for the wearer. My job is to help you express your story visually.",
   },
   {
-    title: "Excelencia Técnica",
+    title: "Technical Excellence",
     description:
-      "La perfección está en los detalles. Cada línea, cada sombra, cada textura es trabajada con precisión milimétrica.",
+      "Perfection is in the details. Every line, every shadow, every texture is worked with millimetric precision.",
   },
   {
-    title: "Experiencia Premium",
+    title: "Premium Experience",
     description:
-      "Desde la consulta inicial hasta el cuidado posterior, cada paso del proceso está diseñado para tu comodidad y satisfacción.",
+      "From the initial consultation to aftercare, every step of the process is designed for your comfort and satisfaction.",
   },
 ];
 
@@ -82,8 +82,8 @@ export function ArtistStory() {
         {/* Philosophy Section */}
         <div className="mb-24">
           <SectionHeading
-            title="Mi Filosofía"
-            subtitle="Los principios que guían cada pieza que creo."
+            title="My Philosophy"
+            subtitle="The principles that guide every piece I create."
           />
 
           <motion.div
@@ -121,8 +121,8 @@ export function ArtistStory() {
         {/* Timeline Section */}
         <div className="mb-24">
           <SectionHeading
-            title="Mi Historia"
-            subtitle="El camino que me ha llevado a donde estoy hoy."
+            title="My Story"
+            subtitle="The path that has led me to where I am today."
           />
 
           <div className="relative">
@@ -189,16 +189,16 @@ export function ArtistStory() {
           className="text-center"
         >
           <p className="text-muted-foreground mb-4">
-            ¿Quieres conocer más sobre mi trabajo?
+            Want to learn more about my work?
           </p>
           <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría conocerte y hablar sobre un tatuaje.")}`}
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hello! I'd like to get to know you and talk about a tattoo.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
           >
             <MessageCircle size={18} />
-            Contáctame Directamente
+            Contact Me Directly
           </a>
         </motion.div>
       </div>

@@ -9,11 +9,11 @@ import { fadeInUp, scrollViewport } from "@/lib/animations/variants";
 
 export function ContactSection() {
   return (
-    <section id="contacto" className="section-padding">
+    <section id="contact" className="section-padding">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Contáctame"
-          subtitle="¿Listo para tu próximo tatuaje? Escríbeme y empecemos a crear algo extraordinario."
+          title="Contact Me"
+          subtitle="Ready for your next tattoo? Write to me and let's start creating something extraordinary."
         />
 
         <motion.div
@@ -27,7 +27,7 @@ export function ContactSection() {
             {/* Contact Info */}
             <div className="glass-card p-6 sm:p-8">
               <h3 className="font-heading text-foreground mb-6 text-xl font-semibold">
-                Contacto Directo
+                Direct Contact
               </h3>
 
               <div className="space-y-5">
@@ -74,7 +74,7 @@ export function ContactSection() {
                     <Phone className="text-accent-red h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-muted-foreground text-sm">Teléfono</p>
+                    <p className="text-muted-foreground text-sm">Phone</p>
                     <p className="text-foreground group-hover:text-olive font-medium transition-colors">
                       {siteConfig.contact.phone}
                     </p>
@@ -86,7 +86,7 @@ export function ContactSection() {
             {/* Location */}
             <div className="glass-card p-6 sm:p-8">
               <h3 className="font-heading text-foreground mb-6 text-xl font-semibold">
-                Ubicación
+                Location
               </h3>
 
               <div className="space-y-5">
@@ -95,7 +95,7 @@ export function ContactSection() {
                     <MapPin className="text-olive h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-muted-foreground text-sm">Dirección</p>
+                    <p className="text-muted-foreground text-sm">Address</p>
                     <p className="text-foreground font-medium">
                       {siteConfig.location.address}
                     </p>
@@ -107,15 +107,15 @@ export function ContactSection() {
                     <Clock className="text-olive h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-muted-foreground text-sm">Horario</p>
+                    <p className="text-muted-foreground text-sm">Hours</p>
                     <p className="text-foreground font-medium">
-                      Lun - Vie: {siteConfig.hours.weekdays}
+                      Mon - Fri: {siteConfig.hours.weekdays}
                     </p>
                     <p className="text-foreground font-medium">
-                      Sábado: {siteConfig.hours.saturday}
+                      Saturday: {siteConfig.hours.saturday}
                     </p>
                     <p className="text-muted-foreground text-sm">
-                      Domingo: {siteConfig.hours.sunday}
+                      Sunday: {siteConfig.hours.sunday}
                     </p>
                   </div>
                 </div>

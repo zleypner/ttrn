@@ -17,10 +17,10 @@ import {
 } from "@/lib/animations/variants";
 
 const studioImages = [
-  { id: 1, src: aboutImages.studio1, alt: "Área de trabajo" },
-  { id: 2, src: aboutImages.studio2, alt: "Sala de espera" },
-  { id: 3, src: aboutImages.studio3, alt: "Estación de tatuaje" },
-  { id: 4, src: aboutImages.artistWorking, alt: "Artista trabajando" },
+  { id: 1, src: aboutImages.studio1, alt: "Work Area" },
+  { id: 2, src: aboutImages.studio2, alt: "Waiting Room" },
+  { id: 3, src: aboutImages.studio3, alt: "Tattoo Station" },
+  { id: 4, src: aboutImages.artistWorking, alt: "Artist Working" },
 ];
 
 export function StudioGallery() {
@@ -34,8 +34,8 @@ export function StudioGallery() {
     <section className="section-padding bg-card/30">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="El Estudio"
-          subtitle="Un espacio diseñado para la creatividad y tu comodidad."
+          title="The Studio"
+          subtitle="A space designed for creativity and your comfort."
         />
 
         {/* Studio Gallery Grid */}
@@ -128,7 +128,7 @@ export function StudioGallery() {
               <div className="bg-olive/10 rounded-full p-3">
                 <MapPin className="text-olive h-5 w-5" />
               </div>
-              <h3 className="font-heading text-lg font-semibold">Ubicación</h3>
+              <h3 className="font-heading text-lg font-semibold">Location</h3>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {siteConfig.location.address}
@@ -149,19 +149,19 @@ export function StudioGallery() {
               <div className="bg-olive/10 rounded-full p-3">
                 <Clock className="text-olive h-5 w-5" />
               </div>
-              <h3 className="font-heading text-lg font-semibold">Horarios</h3>
+              <h3 className="font-heading text-lg font-semibold">Hours</h3>
             </div>
             <div className="text-muted-foreground space-y-1 text-sm">
               <p>
-                <span className="text-foreground">Lun - Vie:</span>{" "}
+                <span className="text-foreground">Mon - Fri:</span>{" "}
                 {siteConfig.hours.weekdays}
               </p>
               <p>
-                <span className="text-foreground">Sábado:</span>{" "}
+                <span className="text-foreground">Saturday:</span>{" "}
                 {siteConfig.hours.saturday}
               </p>
               <p>
-                <span className="text-foreground">Domingo:</span>{" "}
+                <span className="text-foreground">Sunday:</span>{" "}
                 {siteConfig.hours.sunday}
               </p>
             </div>
@@ -178,7 +178,7 @@ export function StudioGallery() {
               <div className="bg-olive/10 rounded-full p-3">
                 <Phone className="text-olive h-5 w-5" />
               </div>
-              <h3 className="font-heading text-lg font-semibold">Contacto</h3>
+              <h3 className="font-heading text-lg font-semibold">Contact</h3>
             </div>
             <div className="text-muted-foreground space-y-2 text-sm">
               <p>
@@ -210,7 +210,7 @@ export function StudioGallery() {
           className="mt-12 text-center"
         >
           <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hola, me gustaría visitar el estudio.`}
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello, I'd like to visit the studio.`}
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
@@ -220,7 +220,7 @@ export function StudioGallery() {
             )}
           >
             <WhatsAppIcon size={20} />
-            Agenda una Visita
+            Schedule a Visit
           </a>
         </motion.div>
       </div>

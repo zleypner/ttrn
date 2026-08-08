@@ -24,8 +24,8 @@ export function FeaturedWork() {
     <section className="section-padding bg-card/50">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Trabajos Destacados"
-          subtitle="Una selección de mis piezas más recientes y representativas."
+          title="Featured Work"
+          subtitle="A selection of my most recent and representative pieces."
         />
 
         <motion.div
@@ -131,7 +131,7 @@ export function FeaturedWork() {
         >
           <button
             onClick={() => {
-              const element = document.querySelector("#galeria");
+              const element = document.querySelector("#gallery");
               if (element) element.scrollIntoView({ behavior: "smooth" });
             }}
             className={cn(
@@ -140,7 +140,7 @@ export function FeaturedWork() {
               "transition-all duration-300"
             )}
           >
-            Ver Galería Completa
+            View Full Gallery
             <ArrowUpRight size={18} />
           </button>
         </motion.div>

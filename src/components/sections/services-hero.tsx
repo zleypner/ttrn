@@ -104,7 +104,7 @@ export function ServicesHero() {
             />
             <Sparkles className="text-olive h-5 w-5" />
             <span className="text-olive text-sm font-medium tracking-[0.3em] uppercase">
-              Servicios Premium
+              Premium Services
             </span>
             <Sparkles className="text-olive h-5 w-5" />
             <motion.span
@@ -123,7 +123,7 @@ export function ServicesHero() {
             className="font-heading mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl"
           >
             <span className="text-shadow-gold">
-              <AnimatedTitle text="Nuestros Servicios" />
+              <AnimatedTitle text="Our Services" />
             </span>
           </motion.h1>
 
@@ -134,9 +134,8 @@ export function ServicesHero() {
             variants={fadeInUp}
             className="text-muted-foreground mx-auto mb-8 max-w-2xl text-lg sm:text-xl"
           >
-            Desde el diseño personalizado hasta el cuidado posterior, ofrecemos
-            una experiencia completa de tatuaje de lujo adaptada a tu visión
-            única.
+            From custom design to aftercare, we offer a complete luxury tattoo
+            experience tailored to your unique vision.
           </motion.p>
 
           {/* Quick stats */}
@@ -147,9 +146,9 @@ export function ServicesHero() {
             className="flex flex-wrap justify-center gap-8 sm:gap-12"
           >
             {[
-              { label: "Estilos", value: "6+" },
-              { label: "Consulta", value: "Gratis" },
-              { label: "Garantía", value: "100%" },
+              { label: "Styles", value: "6+" },
+              { label: "Consultation", value: "Free" },
+              { label: "Guarantee", value: "100%" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="font-heading text-accent-red text-2xl font-bold">

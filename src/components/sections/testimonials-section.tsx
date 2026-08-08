@@ -122,11 +122,11 @@ export function TestimonialsSection() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="testimonios" className="section-padding">
+    <section id="testimonials" className="section-padding">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Lo Que Dicen Mis Clientes"
-          subtitle="Testimonios reales de personas que confiaron en mi trabajo."
+          title="What My Clients Say"
+          subtitle="Real testimonials from people who trusted my work."
         />
 
         <motion.div
@@ -158,7 +158,7 @@ export function TestimonialsSection() {
                 "border-olive/30 rounded-full border p-3 transition-all duration-300",
                 "hover:bg-olive/10 hover:border-olive"
               )}
-              aria-label="Anterior"
+              aria-label="Previous"
             >
               <ChevronLeft size={24} className="text-olive" />
             </button>
@@ -175,7 +175,7 @@ export function TestimonialsSection() {
                       ? "bg-olive w-8"
                       : "bg-olive/30 hover:bg-olive/50"
                   )}
-                  aria-label={`Ir a testimonio ${index + 1}`}
+                  aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
             </div>
@@ -186,7 +186,7 @@ export function TestimonialsSection() {
                 "border-olive/30 rounded-full border p-3 transition-all duration-300",
                 "hover:bg-olive/10 hover:border-olive"
               )}
-              aria-label="Siguiente"
+              aria-label="Next"
             >
               <ChevronRight size={24} className="text-olive" />
             </button>
@@ -195,16 +195,16 @@ export function TestimonialsSection() {
           {/* CTA */}
           <div className="mt-10 text-center">
             <p className="text-muted-foreground mb-4">
-              Únete a cientos de clientes satisfechos
+              Join hundreds of satisfied clients
             </p>
             <a
-              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría agendar una consulta para un tatuaje.")}`}
+              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi! I would like to schedule a consultation for a tattoo.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
             >
               <MessageCircle size={18} />
-              Agenda Tu Consulta Gratis
+              Schedule Your Free Consultation
             </a>
           </div>
         </motion.div>

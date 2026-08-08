@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "Tata-u",
+  name: "Costa Rica Tattoos",
   artistName: "René Ruíz",
   description:
-    "Tatuador profesional en Costa Rica especializado en realismo, black and grey, fine line y retratos. Arte corporal de lujo con más de 15 años de experiencia.",
-  url: "https://reneruiztattoo.com",
-  ogImage: "https://reneruiztattoo.com/og.jpg",
+    "Professional tattoo artist in Costa Rica specializing in realism, black and grey, fine line, and portraits. Luxury body art with over 15 years of experience.",
+  url: "https://www.costaricatattoos.com",
+  ogImage: "https://www.costaricatattoos.com/og.jpg",
   location: {
     city: "San José",
     region: "San José",
@@ -25,7 +25,7 @@ export const siteConfig = {
   hours: {
     weekdays: "10:00 AM - 7:00 PM",
     saturday: "10:00 AM - 5:00 PM",
-    sunday: "Cerrado",
+    sunday: "Closed",
   },
   stats: {
     yearsExperience: 15,
@@ -40,11 +40,11 @@ export const siteConfig = {
     "Realism Tattoo Costa Rica",
     "Fine Line Tattoo Costa Rica",
     "Portrait Tattoo Costa Rica",
-    "Tattoo Guanacaste",
-    "Tattoo Playa del Coco",
+    "Tattoo San Jose Costa Rica",
+    "Custom Tattoo Costa Rica",
     "Luxury Tattoo Costa Rica",
-    "Tatuador Costa Rica",
-    "Tatuajes Realistas Costa Rica",
+    "Professional Tattoo Artist",
+    "Tattoo Shop Costa Rica",
   ],
 } as const;
 

@@ -7,35 +7,35 @@ import { StudioGallery } from "@/components/sections/studio-gallery";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: `Sobre ${siteConfig.artistName} | +${siteConfig.stats.yearsExperience} Anos de Arte Corporal`,
-  description: `Conoce la historia de ${siteConfig.artistName}, tatuador profesional con mas de ${siteConfig.stats.yearsExperience} anos transformando ideas en arte corporal. Especialista en realismo, black & grey y fine line en ${siteConfig.location.city}, Costa Rica. Descubre su trayectoria y filosofia artistica.`,
+  title: `About ${siteConfig.artistName} | +${siteConfig.stats.yearsExperience} Years of Body Art`,
+  description: `Learn about ${siteConfig.artistName}, professional tattoo artist with over ${siteConfig.stats.yearsExperience} years transforming ideas into body art. Specialist in realism, black & grey, and fine line in ${siteConfig.location.city}, Costa Rica. Discover his journey and artistic philosophy.`,
   keywords: [
-    "Rene Ruiz tatuador",
-    "historia Tata-u",
-    "artista tatuador Costa Rica",
-    "biografia tatuador profesional",
-    "experiencia tatuador San Jose",
-    "trayectoria artista corporal",
-    "filosofia tatuaje Costa Rica",
-    "estudio tatuajes profesional",
+    "Rene Ruiz tattoo artist",
+    "Costa Rica Tattoos story",
+    "tattoo artist Costa Rica",
+    "professional tattoo artist bio",
+    "tattoo artist San Jose",
+    "body art journey",
+    "tattoo philosophy Costa Rica",
+    "professional tattoo studio",
   ],
   openGraph: {
-    title: `Sobre ${siteConfig.artistName} | +${siteConfig.stats.yearsExperience} Anos de Arte Corporal | ${siteConfig.name}`,
-    description: `Descubre la historia detras de ${siteConfig.name}. ${siteConfig.artistName} ha dedicado +${siteConfig.stats.yearsExperience} anos al arte del tatuaje, creando piezas unicas para +${siteConfig.stats.happyClients} clientes satisfechos.`,
+    title: `About ${siteConfig.artistName} | +${siteConfig.stats.yearsExperience} Years of Body Art | ${siteConfig.name}`,
+    description: `Discover the story behind ${siteConfig.name}. ${siteConfig.artistName} has dedicated +${siteConfig.stats.yearsExperience} years to the art of tattooing, creating unique pieces for +${siteConfig.stats.happyClients} satisfied clients.`,
     url: `${siteConfig.url}/about`,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.artistName} - Tatuador Profesional de ${siteConfig.name}`,
+        alt: `${siteConfig.artistName} - Professional Tattoo Artist at ${siteConfig.name}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `Sobre ${siteConfig.artistName} | ${siteConfig.name}`,
-    description: `+${siteConfig.stats.yearsExperience} anos de experiencia en arte corporal. Conoce al artista detras de Tata-u.`,
+    title: `About ${siteConfig.artistName} | ${siteConfig.name}`,
+    description: `+${siteConfig.stats.yearsExperience} years of body art experience. Meet the artist behind Costa Rica Tattoos.`,
     images: [siteConfig.ogImage],
   },
   alternates: {

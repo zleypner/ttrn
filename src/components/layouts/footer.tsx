@@ -31,8 +31,8 @@ export function Footer() {
                 <Logo className="mb-6" />
               </Link>
               <p className="text-muted-foreground mb-6 max-w-xs text-sm leading-relaxed">
-                Arte corporal de lujo en Costa Rica. Cada tatuaje es una obra
-                única, diseñada exclusivamente para ti.
+                Luxury body art in Costa Rica. Every tattoo is a unique work of
+                art, designed exclusively for you.
               </p>
               <SocialLinks variant="footer" />
             </div>
@@ -40,7 +40,7 @@ export function Footer() {
             {/* Pages Column */}
             <div>
               <h3 className="font-heading text-olive mb-6 text-sm font-semibold tracking-wider uppercase">
-                Páginas
+                Pages
               </h3>
               <ul className="space-y-3">
                 {footerLinks.pages.map((link) => (
@@ -60,7 +60,7 @@ export function Footer() {
               </ul>
 
               <h3 className="font-heading text-olive mt-8 mb-6 text-sm font-semibold tracking-wider uppercase">
-                Secciones
+                Sections
               </h3>
               <ul className="space-y-3">
                 {footerLinks.sections.map((link) => (
@@ -79,7 +79,7 @@ export function Footer() {
             {/* Contact Info */}
             <div>
               <h3 className="font-heading text-olive mb-6 text-sm font-semibold tracking-wider uppercase">
-                Contacto
+                Contact
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -106,9 +106,9 @@ export function Footer() {
                     className="text-olive mt-0.5 flex-shrink-0"
                   />
                   <div className="text-muted-foreground text-sm">
-                    <p>Lun - Vie: {siteConfig.hours.weekdays}</p>
-                    <p>Sábado: {siteConfig.hours.saturday}</p>
-                    <p>Domingo: {siteConfig.hours.sunday}</p>
+                    <p>Mon - Fri: {siteConfig.hours.weekdays}</p>
+                    <p>Saturday: {siteConfig.hours.saturday}</p>
+                    <p>Sunday: {siteConfig.hours.sunday}</p>
                   </div>
                 </li>
               </ul>
@@ -117,14 +117,14 @@ export function Footer() {
             {/* CTA Column */}
             <div>
               <h3 className="font-heading text-olive mb-6 text-sm font-semibold tracking-wider uppercase">
-                ¿Listo para tu tatuaje?
+                Ready for your tattoo?
               </h3>
               <p className="text-muted-foreground mb-6 text-sm">
-                Agenda una consulta gratuita y comencemos a crear tu pieza
-                única.
+                Schedule a free consultation and let&apos;s start creating your
+                unique piece.
               </p>
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hola, me gustaría agendar una cita para un tatuaje.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi, I'd like to schedule an appointment for a tattoo.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cta inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm"
@@ -136,20 +136,20 @@ export function Footer() {
               {/* Quick Links */}
               <div className="mt-8 border-t border-white/5 pt-6">
                 <h4 className="text-muted-foreground mb-4 text-xs tracking-wider uppercase">
-                  Enlaces Rápidos
+                  Quick Links
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   <Link
-                    href="/#galeria"
+                    href="/#gallery"
                     className="bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80 rounded-full px-3 py-1.5 text-xs transition-colors"
                   >
-                    Galería
+                    Gallery
                   </Link>
                   <Link
                     href="/about"
                     className="bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80 rounded-full px-3 py-1.5 text-xs transition-colors"
                   >
-                    Historia
+                    Story
                   </Link>
                 </div>
               </div>
@@ -161,10 +161,10 @@ export function Footer() {
         <div className="border-t border-white/5 py-6">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-muted-foreground text-center text-xs sm:text-left">
-              © {currentYear} {siteConfig.name}. Todos los derechos reservados.
+              © {currentYear} {siteConfig.name}. All rights reserved.
             </p>
             <p className="text-muted-foreground text-xs">
-              Diseñado con excelencia en Costa Rica
+              Designed with excellence in Costa Rica
             </p>
           </div>
         </div>

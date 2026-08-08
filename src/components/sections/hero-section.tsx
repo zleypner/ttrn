@@ -152,7 +152,7 @@ export function HeroSection() {
 
   return (
     <section
-      id="inicio"
+      id="home"
       className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20 md:pt-0"
     >
       {/* Background with Parallax */}
@@ -249,7 +249,7 @@ export function HeroSection() {
               transition={{ delay: 0.5, duration: 0.8 }}
             />
             <span className="text-olive text-sm font-medium tracking-[0.3em] uppercase">
-              Tatuador Profesional
+              Professional Tattoo Artist
             </span>
             <motion.span
               className="to-olive/50 h-px w-12 bg-gradient-to-l from-transparent"
@@ -274,7 +274,7 @@ export function HeroSection() {
             variants={heroSubtitle}
             className="text-muted-foreground mb-4 text-xl font-light tracking-wide sm:text-2xl md:text-3xl"
           >
-            El Arte de lo Permanente
+            The Art of Permanence
           </motion.p>
 
           {/* Description */}
@@ -282,8 +282,8 @@ export function HeroSection() {
             variants={heroSubtitle}
             className="text-muted-foreground mx-auto mb-10 max-w-2xl text-base sm:text-lg"
           >
-            Especializado en realismo, black &amp; grey y fine line.
-            Transformando tu visión en arte corporal de lujo en{" "}
+            Specializing in realism, black &amp; grey, and fine line.
+            Transforming your vision into luxury body art in{" "}
             <span className="text-olive">{siteConfig.location.country}</span>.
           </motion.p>
 
@@ -293,7 +293,7 @@ export function HeroSection() {
             className="flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <motion.a
-              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hola, me gustaría agendar una consulta para un tatuaje.`}
+              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi, I'd like to schedule a consultation for a tattoo.`}
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
@@ -310,10 +310,10 @@ export function HeroSection() {
                 size={20}
                 className="transition-transform group-hover:scale-110"
               />
-              Consulta Gratis
+              Free Consultation
             </motion.a>
             <motion.button
-              onClick={() => handleScroll("#galeria")}
+              onClick={() => handleScroll("#gallery")}
               className={cn(
                 "group relative inline-flex items-center gap-2 rounded-full px-8 py-4",
                 "btn-outline-gold overflow-hidden",
@@ -324,7 +324,7 @@ export function HeroSection() {
             >
               <span className="via-olive/10 absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               <Calendar size={20} />
-              Ver Portfolio
+              View Portfolio
             </motion.button>
           </motion.div>
 
@@ -334,11 +334,11 @@ export function HeroSection() {
             className="mt-16 flex items-center justify-center gap-8 sm:gap-12 md:gap-16"
           >
             {[
-              { value: `${siteConfig.stats.yearsExperience}+`, label: "Años" },
-              { value: `${siteConfig.stats.happyClients}+`, label: "Clientes" },
+              { value: `${siteConfig.stats.yearsExperience}+`, label: "Years" },
+              { value: `${siteConfig.stats.happyClients}+`, label: "Clients" },
               {
                 value: `${siteConfig.stats.countriesServed}+`,
-                label: "Países",
+                label: "Countries",
               },
             ].map((stat, index) => (
               <motion.div
@@ -369,11 +369,11 @@ export function HeroSection() {
         style={{ opacity }}
       >
         <button
-          onClick={() => handleScroll("#estilos")}
+          onClick={() => handleScroll("#styles")}
           className="text-muted-foreground hover:text-olive group flex flex-col items-center gap-2 transition-colors"
-          aria-label="Scroll hacia abajo"
+          aria-label="Scroll down"
         >
-          <span className="text-xs tracking-widest uppercase">Explorar</span>
+          <span className="text-xs tracking-widest uppercase">Explore</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

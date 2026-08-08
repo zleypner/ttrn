@@ -91,8 +91,8 @@ export function FAQSection() {
         </div>
 
         <SectionHeading
-          title="Preguntas Frecuentes"
-          subtitle="Respuestas a las dudas más comunes sobre el proceso de tatuaje."
+          title="Frequently Asked Questions"
+          subtitle="Answers to the most common questions about the tattoo process."
         />
 
         <motion.div
@@ -120,15 +120,15 @@ export function FAQSection() {
           variants={staggerChild}
           className="mt-12 text-center"
         >
-          <p className="text-muted-foreground mb-4">¿Tienes otra pregunta?</p>
+          <p className="text-muted-foreground mb-4">Have another question?</p>
           <button
             onClick={() => {
-              const element = document.querySelector("#contacto");
+              const element = document.querySelector("#contact");
               if (element) element.scrollIntoView({ behavior: "smooth" });
             }}
             className="btn-outline-gold rounded-full px-6 py-2.5 text-sm"
           >
-            Contáctame
+            Contact Me
           </button>
         </motion.div>
       </div>

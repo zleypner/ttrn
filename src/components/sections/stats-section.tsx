@@ -24,19 +24,19 @@ const stats: StatItem[] = [
     icon: Award,
     value: siteConfig.stats.yearsExperience,
     suffix: "+",
-    label: "Años de Experiencia",
+    label: "Years of Experience",
   },
   {
     icon: Users,
     value: siteConfig.stats.happyClients,
     suffix: "+",
-    label: "Clientes Satisfechos",
+    label: "Happy Clients",
   },
   {
     icon: Palette,
     value: siteConfig.stats.tattoosCompleted,
     suffix: "+",
-    label: "Tatuajes Completados",
+    label: "Tattoos Completed",
   },
 ];
 
@@ -205,13 +205,13 @@ export function StatsSection() {
           className="mt-12 text-center"
         >
           <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Quisiera ser parte de tus clientes satisfechos. ¿Podemos conversar?")}`}
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi! I would like to become one of your satisfied clients. Can we chat?")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
           >
             <MessageCircle size={18} />
-            Sé el Próximo Cliente Satisfecho
+            Be the Next Satisfied Client
           </a>
         </motion.div>
       </div>

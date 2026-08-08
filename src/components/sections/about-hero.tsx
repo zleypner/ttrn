@@ -75,7 +75,7 @@ export function AboutHero() {
                 {siteConfig.stats.yearsExperience}+
               </p>
               <p className="text-muted-foreground text-sm">
-                Años de Experiencia
+                Years of Experience
               </p>
             </motion.div>
           </motion.div>
@@ -94,7 +94,7 @@ export function AboutHero() {
             >
               <span className="from-olive h-px w-12 bg-gradient-to-r to-transparent" />
               <span className="text-olive text-sm font-medium tracking-[0.3em] uppercase">
-                Sobre el Artista
+                About the Artist
               </span>
             </motion.div>
 
@@ -109,19 +109,19 @@ export function AboutHero() {
             {/* Description */}
             <motion.div variants={fadeInUp} className="mb-8 space-y-4">
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Con más de 15 años de experiencia en el arte del tatuaje, me he
-                dedicado a transformar las visiones de mis clientes en obras de
-                arte permanentes que cuentan historias únicas.
+                With over 15 years of experience in the art of tattooing, I have
+                dedicated myself to transforming my clients&apos; visions into
+                permanent works of art that tell unique stories.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Mi especialidad reside en el realismo, black & grey y fine line,
-                técnicas que me permiten crear piezas con un nivel de detalle
-                excepcional y una estética atemporal.
+                My specialty lies in realism, black & grey, and fine line,
+                techniques that allow me to create pieces with exceptional
+                detail and timeless aesthetics.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Cada tatuaje es una colaboración íntima entre artista y cliente,
-                donde la precisión técnica se combina con la expresión artística
-                para crear algo verdaderamente único.
+                Each tattoo is an intimate collaboration between artist and
+                client, where technical precision combines with artistic
+                expression to create something truly unique.
               </p>
             </motion.div>
 
@@ -135,7 +135,7 @@ export function AboutHero() {
                   {siteConfig.stats.happyClients.toLocaleString()}+
                 </p>
                 <p className="text-muted-foreground text-xs tracking-wider uppercase">
-                  Clientes
+                  Clients
                 </p>
               </div>
               <div className="border-x border-white/10 text-center">
@@ -143,7 +143,7 @@ export function AboutHero() {
                   {siteConfig.stats.tattoosCompleted.toLocaleString()}+
                 </p>
                 <p className="text-muted-foreground text-xs tracking-wider uppercase">
-                  Tatuajes
+                  Tattoos
                 </p>
               </div>
               <div className="text-center">
@@ -151,7 +151,7 @@ export function AboutHero() {
                   {siteConfig.stats.countriesServed}+
                 </p>
                 <p className="text-muted-foreground text-xs tracking-wider uppercase">
-                  Países
+                  Countries
                 </p>
               </div>
             </motion.div>

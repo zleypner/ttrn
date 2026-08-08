@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Tatuador Profesional en Costa Rica`,
+    default: `${siteConfig.name} | Professional Tattoo Artist in Costa Rica`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -48,24 +48,23 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "es_CR",
-    alternateLocale: "en_US",
+    locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Tatuador Profesional en Costa Rica`,
+    title: `${siteConfig.name} | Professional Tattoo Artist in Costa Rica`,
     description: siteConfig.description,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - Arte Corporal de Lujo`,
+        alt: `${siteConfig.name} - Luxury Body Art`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Tatuador Profesional en Costa Rica`,
+    title: `${siteConfig.name} | Professional Tattoo Artist in Costa Rica`,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
     creator: `@${siteConfig.contact.instagram}`,
@@ -73,13 +72,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.url,
     languages: {
-      "es-CR": siteConfig.url,
-      es: siteConfig.url,
+      "en-US": siteConfig.url,
+      en: siteConfig.url,
     },
   },
   manifest: "/manifest.json",
   category: "Tattoo Artist",
-  classification: "Arte y Entretenimiento > Tatuajes > Tatuador Profesional",
+  classification: "Arts & Entertainment > Tattoos > Professional Tattoo Artist",
   verification: {
     google: "google-site-verification-code",
     yandex: "yandex-verification-code",
@@ -106,7 +105,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="es"
+      lang="en"
       className={`${cinzel.variable} ${inter.variable} h-full antialiased`}
     >
       <head>

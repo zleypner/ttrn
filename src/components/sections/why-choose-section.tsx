@@ -28,39 +28,39 @@ interface Benefit {
 const benefits: Benefit[] = [
   {
     icon: Award,
-    title: "15+ Años de Experiencia",
+    title: "15+ Years of Experience",
     description:
-      "Décadas perfeccionando mi arte, garantizando resultados excepcionales en cada pieza.",
+      "Decades perfecting my art, guaranteeing exceptional results in every piece.",
   },
   {
     icon: Sparkles,
-    title: "Diseños 100% Personalizados",
+    title: "100% Custom Designs",
     description:
-      "Cada tatuaje es único, creado exclusivamente para ti y tu visión personal.",
+      "Each tattoo is unique, created exclusively for you and your personal vision.",
   },
   {
     icon: Shield,
-    title: "Estándares de Higiene Premium",
+    title: "Premium Hygiene Standards",
     description:
-      "Protocolos estrictos de esterilización y materiales de la más alta calidad.",
+      "Strict sterilization protocols and the highest quality materials.",
   },
   {
     icon: Heart,
-    title: "Atención Personalizada",
+    title: "Personalized Attention",
     description:
-      "Te acompaño en todo el proceso, desde la idea inicial hasta el cuidado posterior.",
+      "I accompany you throughout the entire process, from the initial idea to aftercare.",
   },
   {
     icon: Clock,
-    title: "Tiempo y Dedicación",
+    title: "Time and Dedication",
     description:
-      "Sin prisas. Cada sesión se planifica para lograr la perfección en cada detalle.",
+      "No rush. Each session is planned to achieve perfection in every detail.",
   },
   {
     icon: MessageSquare,
-    title: "Comunicación Constante",
+    title: "Constant Communication",
     description:
-      "Mantengo comunicación abierta para asegurar que tu visión se materialice perfectamente.",
+      "I maintain open communication to ensure your vision materializes perfectly.",
   },
 ];
 
@@ -69,8 +69,8 @@ export function WhyChooseSection() {
     <section className="section-padding bg-card/30">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="¿Por Qué Elegirme?"
-          subtitle="Compromiso con la excelencia en cada aspecto de mi trabajo."
+          title="Why Choose Me?"
+          subtitle="Commitment to excellence in every aspect of my work."
           variant="premium"
         />
 
@@ -134,13 +134,13 @@ export function WhyChooseSection() {
           className="mt-12 text-center"
         >
           <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola! Me gustaría conocer más sobre tus servicios de tatuaje.")}`}
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi! I would like to know more about your tattoo services.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
           >
             <MessageCircle size={18} />
-            Conversemos Sobre Tu Idea
+            Let&apos;s Talk About Your Idea
           </a>
         </motion.div>
       </div>
