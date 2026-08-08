@@ -40,7 +40,7 @@ const styles = [
 
 const reasons = [
   "15+ years of professional tattoo experience",
-  "International clients from 25+ countries",
+  "7,000+ satisfied clients worldwide",
   "Strict hygiene and sterilization protocols",
   "Premium inks and equipment",
   "Comfortable, private studio environment",
@@ -129,12 +129,12 @@ export function BestTattooShopContent() {
                   label: "Years Experience",
                 },
                 {
-                  value: `${siteConfig.stats.happyClients}+`,
+                  value: `${siteConfig.stats.happyClients.toLocaleString()}+`,
                   label: "Happy Clients",
                 },
                 {
-                  value: `${siteConfig.stats.countriesServed}+`,
-                  label: "Countries Served",
+                  value: "Custom",
+                  label: "Designs",
                 },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">

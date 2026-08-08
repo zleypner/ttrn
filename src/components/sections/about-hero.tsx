@@ -148,10 +148,10 @@ export function AboutHero() {
               </div>
               <div className="text-center">
                 <p className="font-heading text-accent-red text-2xl font-bold">
-                  {siteConfig.stats.countriesServed}+
+                  Custom
                 </p>
                 <p className="text-muted-foreground text-xs tracking-wider uppercase">
-                  Countries
+                  Designs
                 </p>
               </div>
             </motion.div>

@@ -335,11 +335,11 @@ export function HeroSection() {
           >
             {[
               { value: `${siteConfig.stats.yearsExperience}+`, label: "Years" },
-              { value: `${siteConfig.stats.happyClients}+`, label: "Clients" },
               {
-                value: `${siteConfig.stats.countriesServed}+`,
-                label: "Countries",
+                value: `${siteConfig.stats.happyClients.toLocaleString()}+`,
+                label: "Clients",
               },
+              { value: "Custom", label: "Designs" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
