@@ -40,12 +40,6 @@ export const galleryImages = [
     image: "/images/realismo/reloj-rosa-brazo.webp",
   },
   {
-    id: "realismo-3",
-    title: "Retrato Hombre Pecho",
-    category: "Realismo",
-    image: "/images/realismo/retrato-hombre-pecho-1.webp",
-  },
-  {
     id: "realismo-5",
     title: "León en Brazo",
     category: "Realismo",
@@ -203,7 +197,7 @@ export const aboutImages = {
   studio1: "/images/tribal/blackwork-mano-ojo-1.webp",
   studio2: "/images/realismo/leon-realista.webp",
   studio3: "/images/retratos/retrato-mascota.webp",
-  artistWorking: "/images/realismo/retrato-hombre-pecho-1.webp",
+  artistWorking: "/images/realismo/lobo-antebrazo.webp",
 } as const;
 
 export const heroBackground = "/images/realismo/lobo-antebrazo.webp";

@@ -19,6 +19,7 @@ interface SectionHeadingProps {
   subtitleClassName?: string;
   showLine?: boolean;
   as?: "h1" | "h2" | "h3";
+  variant?: "default" | "premium";
 }
 
 export function SectionHeading({
@@ -30,6 +31,7 @@ export function SectionHeading({
   subtitleClassName,
   showLine = true,
   as: Tag = "h2",
+  variant = "default",
 }: SectionHeadingProps) {
   const alignmentClasses = {
     left: "text-left items-start",
@@ -57,22 +59,34 @@ export function SectionHeading({
           )}
         />
       )}
-      <motion.div variants={fadeInUp}>
+      <motion.div
+        variants={fadeInUp}
+        className={variant === "premium" ? "relative" : undefined}
+      >
+        {variant === "premium" && (
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-[#F3EDE2] via-[#C9A45C] to-[#7A1E2C] opacity-20 blur-2xl"
+            aria-hidden="true"
+          />
+        )}
         <Tag
           className={cn(
             "font-heading text-3xl font-semibold tracking-wide md:text-4xl lg:text-5xl",
             "text-shadow-gold",
+            variant === "premium" &&
+              "relative bg-gradient-to-r from-[#F3EDE2] via-[#C9A45C] to-[#7A1E2C] bg-clip-text text-transparent",
             titleClassName
           )}
         >
-          <ColorText text={title} />
+          {variant === "premium" ? title : <ColorText text={title} />}
         </Tag>
       </motion.div>
       {subtitle && (
         <motion.p
           variants={fadeInUp}
           className={cn(
-            "text-muted-foreground max-w-2xl text-base md:text-lg",
+            "max-w-2xl text-base md:text-lg",
+            variant === "premium" ? "text-[#A8A29A]" : "text-muted-foreground",
             align === "center" && "mx-auto",
             subtitleClassName
           )}

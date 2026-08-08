@@ -71,6 +71,7 @@ export function WhyChooseSection() {
         <SectionHeading
           title="¿Por Qué Elegirme?"
           subtitle="Compromiso con la excelencia en cada aspecto de mi trabajo."
+          variant="premium"
         />
 
         <motion.div
