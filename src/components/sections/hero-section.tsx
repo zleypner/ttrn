@@ -153,7 +153,7 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden pt-20 md:pt-0"
     >
       {/* Background with Parallax */}
       <motion.div

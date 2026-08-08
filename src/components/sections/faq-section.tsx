@@ -84,7 +84,7 @@ export function FAQSection() {
   };
 
   return (
-    <section className="section-padding bg-card/30">
+    <section id="faq" className="section-padding bg-card/30">
       <div className="container-narrow px-4 sm:px-6 lg:px-8">
         <div className="mb-4 flex items-center justify-center gap-3">
           <HelpCircle className="text-olive h-6 w-6" />

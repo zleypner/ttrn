@@ -5,6 +5,7 @@ export const navigationLinks = [
   { href: "#galeria", label: "Galería" },
   { href: "#proceso", label: "Proceso" },
   { href: "#testimonios", label: "Testimonios" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contacto", label: "Contacto" },
 ] as const;
 
