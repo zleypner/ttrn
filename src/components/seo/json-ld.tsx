@@ -130,11 +130,11 @@ export function LocalBusinessSchema() {
  */
 export function PersonSchema() {
   const specialties = [
-    "Realismo",
+    "Realism",
     "Black & Grey",
     "Fine Line",
-    "Retratos",
-    "Geometrico",
+    "Portraits",
+    "Geometric",
     "Ornamental",
   ];
 
@@ -143,8 +143,8 @@ export function PersonSchema() {
     "@type": "Person",
     "@id": `${siteConfig.url}/#person`,
     name: siteConfig.artistName,
-    jobTitle: "Tatuador Profesional",
-    description: `Tatuador profesional con mas de ${siteConfig.stats.yearsExperience} anos de experiencia especializado en ${specialties.join(", ")}.`,
+    jobTitle: "Professional Tattoo Artist",
+    description: `Professional tattoo artist with over ${siteConfig.stats.yearsExperience} years of experience specializing in ${specialties.join(", ")}.`,
     url: siteConfig.url,
     image: `${siteConfig.url}/images/artist.jpg`,
     sameAs: [
@@ -161,18 +161,18 @@ export function PersonSchema() {
       {
         "@type": "EducationalOccupationalCredential",
         credentialCategory: "Professional Experience",
-        description: `${siteConfig.stats.yearsExperience}+ anos de experiencia profesional`,
+        description: `${siteConfig.stats.yearsExperience}+ years of professional experience`,
       },
       {
         "@type": "EducationalOccupationalCredential",
         credentialCategory: "Portfolio",
-        description: `${siteConfig.stats.tattoosCompleted}+ tatuajes completados`,
+        description: `${siteConfig.stats.tattoosCompleted}+ tattoos completed`,
       },
     ],
     award: [
-      `Mas de ${siteConfig.stats.yearsExperience} anos de experiencia`,
-      `${siteConfig.stats.tattoosCompleted}+ tatuajes completados`,
-      `Clientes de ${siteConfig.stats.countriesServed}+ paises`,
+      `Over ${siteConfig.stats.yearsExperience} years of experience`,
+      `${siteConfig.stats.tattoosCompleted}+ tattoos completed`,
+      `${siteConfig.stats.happyClients}+ satisfied clients`,
     ],
     address: {
       "@type": "PostalAddress",
@@ -217,8 +217,8 @@ export function ServiceSchema({ service }: { service: ServiceType }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `${siteConfig.url}/servicios/${service.id}`,
-    name: `Tatuaje ${service.name}`,
+    "@id": `${siteConfig.url}/services/${service.id}`,
+    name: `${service.name} Tattoo`,
     description: service.description,
     provider: {
       "@type": "TattooParlor",
@@ -262,17 +262,16 @@ export function AllServicesSchema({
   const schema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Estilos de Tatuaje",
-    description:
-      "Servicios de tatuaje profesional disponibles en " + siteConfig.name,
+    name: "Tattoo Styles",
+    description: "Professional tattoo services available at " + siteConfig.name,
     numberOfItems: services.length,
     itemListElement: services.map((service, index) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {
         "@type": "Service",
-        "@id": `${siteConfig.url}/servicios/${service.id}`,
-        name: `Tatuaje ${service.name}`,
+        "@id": `${siteConfig.url}/services/${service.id}`,
+        name: `${service.name} Tattoo`,
         description: service.description,
         provider: {
           "@type": "TattooParlor",
@@ -317,9 +316,9 @@ export function ImageGallerySchema({
   const schema = {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
-    name: `${siteConfig.name} - Galeria de Tatuajes`,
-    description: `Galeria de trabajos de tatuaje realizados por ${siteConfig.artistName}`,
-    url: `${siteConfig.url}/#galeria`,
+    name: `${siteConfig.name} - Tattoo Gallery`,
+    description: `Gallery of tattoo work by ${siteConfig.artistName}`,
+    url: `${siteConfig.url}/#gallery`,
     creator: {
       "@type": "Person",
       "@id": `${siteConfig.url}/#person`,
@@ -328,7 +327,7 @@ export function ImageGallerySchema({
     image: images.map((img) => ({
       "@type": "ImageObject",
       name: img.title,
-      description: `${img.title} - Estilo ${img.category}`,
+      description: `${img.title} - ${img.category} Style`,
       contentUrl: img.image.startsWith("http")
         ? img.image
         : `${siteConfig.url}${img.image}`,
@@ -361,7 +360,7 @@ export function WebSiteSchema() {
       "@type": "TattooParlor",
       "@id": `${siteConfig.url}/#organization`,
     },
-    inLanguage: "es-CR",
+    inLanguage: "en-US",
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -404,7 +403,7 @@ export function WebPageSchema({
       "@type": "TattooParlor",
       "@id": `${siteConfig.url}/#organization`,
     },
-    inLanguage: "es-CR",
+    inLanguage: "en-US",
     ...(breadcrumbs && {
       breadcrumb: {
         "@type": "BreadcrumbList",
