@@ -29,9 +29,9 @@ export const siteConfig = {
   },
   stats: {
     yearsExperience: 15,
-    happyClients: 2500,
+    happyClients: 7000,
     countriesServed: 25,
-    tattoosCompleted: 5000,
+    tattoosCompleted: 7000,
   },
   keywords: [
     "Tattoo Artist Costa Rica",
