@@ -72,13 +72,13 @@ export function BestTattooShopContent() {
                   </Link>
                 </li>
                 <li>/</li>
-                <li className="text-foreground">Best Tattoo Shop Costa Rica</li>
+                <li className="text-foreground">Best Tattoo Shop San José</li>
               </ol>
             </motion.nav>
 
             <SectionHeading
-              title="Best Tattoo Shop in Costa Rica"
-              subtitle="Premium custom tattoos for tourists and locals. Award-winning artists specializing in fine line, realism, and black & grey work."
+              title="Best Tattoo Shop in San José"
+              subtitle="Premium custom tattoos in Costa Rica's capital. Award-winning artists specializing in fine line, realism, and black & grey work."
               as="h1"
               variant="premium"
               showLine={true}
@@ -89,7 +89,7 @@ export function BestTattooShopContent() {
               className="text-muted-foreground mx-auto mb-8 max-w-2xl text-base sm:text-lg"
             >
               Looking for a professional{" "}
-              <strong>tattoo artist in Costa Rica</strong>? Our studio in{" "}
+              <strong>tattoo artist in San José</strong>? Our studio in{" "}
               {siteConfig.location.city} has been creating exceptional body art
               for over {siteConfig.stats.yearsExperience} years, serving
               international visitors and local clients with world-class custom
@@ -101,7 +101,7 @@ export function BestTattooShopContent() {
               className="flex flex-col items-center justify-center gap-4 sm:flex-row"
             >
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi, I'm visiting Costa Rica and interested in getting a tattoo.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi, I'm looking for a tattoo shop in San José and interested in getting a tattoo.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cta btn-cta-glow inline-flex items-center gap-2 rounded-full px-8 py-4"
@@ -155,7 +155,7 @@ export function BestTattooShopContent() {
       <section className="section-padding bg-card/30">
         <div className="container-narrow px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Looking for a Tattoo Artist in Costa Rica?"
+            title="Looking for a Tattoo Artist in San José?"
             subtitle="Whether you're a tourist on vacation or a local looking for exceptional body art, you've found the right place."
           />
 
@@ -170,9 +170,8 @@ export function BestTattooShopContent() {
               variants={staggerChild}
               className="text-muted-foreground text-lg leading-relaxed"
             >
-              Costa Rica is known for its beautiful beaches, lush rainforests,
-              and vibrant culture. But did you know it&apos;s also home to some
-              of the best tattoo artists in Central America? At our studio in{" "}
+              San José, the vibrant capital of Costa Rica, is home to some of
+              the best tattoo artists in Central America. At our studio in{" "}
               {siteConfig.location.city}, we combine artistic excellence with
               world-class hygiene standards to create tattoos that you&apos;ll
               cherish forever.
@@ -226,7 +225,7 @@ export function BestTattooShopContent() {
               exploring reference images, considering placement on your body,
               and refining the design until it&apos;s exactly what you envision.
               This attention to detail is what sets us apart as one of the{" "}
-              <strong>best tattoo shops in Costa Rica</strong>.
+              <strong>best tattoo shops in San José</strong>.
             </motion.p>
           </motion.div>
         </div>
@@ -281,11 +280,11 @@ export function BestTattooShopContent() {
         </div>
       </section>
 
-      {/* Visiting Costa Rica Section */}
+      {/* Visiting San José Section */}
       <section className="section-padding">
         <div className="container-narrow px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Getting a Tattoo While Visiting Costa Rica"
+            title="Getting a Tattoo While Visiting San José"
             subtitle="Planning to get inked during your vacation? Here's what you need to know."
           />
 
@@ -326,7 +325,7 @@ export function BestTattooShopContent() {
                   <MapPin size={20} className="text-olive mt-1 flex-shrink-0" />
                   <span>
                     Conveniently located in {siteConfig.location.city}, easy to
-                    access from major hotels
+                    access from major hotels and the airport
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -352,8 +351,8 @@ export function BestTattooShopContent() {
       <section className="section-padding bg-card/30">
         <div className="container-wide px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Why Choose Costa Rica Tattoos"
-            subtitle="What makes our studio one of the top tattoo destinations in Central America."
+            title="Why Choose Our San José Studio"
+            subtitle="What makes our studio one of the top tattoo destinations in Costa Rica."
           />
 
           <motion.div
@@ -463,7 +462,7 @@ export function BestTattooShopContent() {
       <section className="section-padding">
         <div className="container-narrow px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Book Your Tattoo in Costa Rica"
+            title="Book Your Tattoo in San José"
             subtitle="Ready to get started? Booking your appointment is easy."
           />
 
@@ -481,7 +480,7 @@ export function BestTattooShopContent() {
               Contact us via WhatsApp to start planning your custom tattoo. We
               offer free consultations to discuss your ideas, provide quotes,
               and answer any questions. Whether you&apos;re local or visiting
-              Costa Rica, we&apos;re here to make your tattoo experience
+              San José, we&apos;re here to make your tattoo experience
               exceptional.
             </motion.p>
 
@@ -490,7 +489,7 @@ export function BestTattooShopContent() {
               className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
             >
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi! I found your website and I'm interested in booking a tattoo consultation.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi! I found your website and I'm interested in booking a tattoo consultation in San José.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
@@ -518,7 +517,7 @@ export function BestTattooShopContent() {
         <div className="container-narrow px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Frequently Asked Questions"
-            subtitle="Common questions from tourists and visitors about getting a tattoo in Costa Rica."
+            subtitle="Common questions about getting a tattoo in San José, Costa Rica."
           />
 
           <motion.div

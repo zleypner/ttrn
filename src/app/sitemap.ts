@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/best-tattoo-shop-costa-rica`,
+      url: `${baseUrl}/best-tattoo-shop-in-san-jose`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,

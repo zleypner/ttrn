@@ -5,36 +5,36 @@ import { siteConfig } from "@/config/site";
 import { BestTattooShopContent } from "./content";
 
 export const metadata: Metadata = {
-  title: "Best Tattoo Shop in Costa Rica | Custom Tattoo Artists",
+  title: "Best Tattoo Shop in San José | Custom Tattoo Artists Costa Rica",
   description:
-    "Looking for the best tattoo shop in Costa Rica? Our professional artists specialize in fine line, realism, and black & grey tattoos. Book your custom tattoo today!",
+    "Looking for the best tattoo shop in San José, Costa Rica? Our professional artists specialize in fine line, realism, and black & grey tattoos. Book your custom tattoo today!",
   keywords: [
-    "best tattoo shop Costa Rica",
-    "tattoo artist Costa Rica",
+    "best tattoo shop San Jose",
+    "tattoo artist San Jose Costa Rica",
+    "San Jose tattoo",
+    "tattoo San Jose",
+    "custom tattoo San Jose",
+    "fine line tattoo San Jose",
+    "realism tattoo San Jose",
+    "black and grey tattoo San Jose",
+    "tattoo shop San Jose Costa Rica",
+    "professional tattoo artist San Jose",
+    "tattoo studio San Jose",
+    "best tattoo artist San Jose",
+    "portrait tattoo San Jose",
+    "minimalist tattoo San Jose",
+    "luxury tattoo San Jose Costa Rica",
+    "tatuajes San Jose",
+    "tatuador San Jose",
     "Costa Rica tattoo",
-    "tattoo San Jose Costa Rica",
+    "tattoo near me San Jose",
     "custom tattoo Costa Rica",
-    "fine line tattoo Costa Rica",
-    "realism tattoo Costa Rica",
-    "black and grey tattoo Costa Rica",
-    "tattoo while traveling Costa Rica",
-    "tourist tattoo Costa Rica",
-    "professional tattoo artist",
-    "tattoo vacation Costa Rica",
-    "Costa Rica ink",
-    "Central America tattoo",
-    "tattoo shop near me Costa Rica",
-    "best tattoo artist Central America",
-    "portrait tattoo Costa Rica",
-    "minimalist tattoo Costa Rica",
-    "tattoo studio Costa Rica",
-    "luxury tattoo Costa Rica",
   ],
   openGraph: {
-    title: "Best Tattoo Shop in Costa Rica | Custom Tattoo Artists",
+    title: "Best Tattoo Shop in San José | Custom Tattoo Artists Costa Rica",
     description:
-      "Professional custom tattoos for tourists and locals. Award-winning artists specializing in fine line, realism, and black & grey work in Costa Rica.",
-    url: `${siteConfig.url}/best-tattoo-shop-costa-rica`,
+      "Professional custom tattoos in San José, Costa Rica. Award-winning artists specializing in fine line, realism, and black & grey work.",
+    url: `${siteConfig.url}/best-tattoo-shop-in-san-jose`,
     siteName: siteConfig.name,
     locale: "en_US",
     type: "website",
@@ -43,21 +43,21 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "Best Tattoo Shop in Costa Rica - Custom Tattoo Artists",
+        alt: "Best Tattoo Shop in San José - Custom Tattoo Artists",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Tattoo Shop in Costa Rica | Custom Tattoo Artists",
+    title: "Best Tattoo Shop in San José | Custom Tattoo Artists Costa Rica",
     description:
-      "Professional custom tattoos for tourists and locals. Award-winning artists specializing in fine line, realism, and black & grey.",
+      "Professional custom tattoos in San José, Costa Rica. Award-winning artists specializing in fine line, realism, and black & grey.",
     images: [siteConfig.ogImage],
   },
   alternates: {
-    canonical: `${siteConfig.url}/best-tattoo-shop-costa-rica`,
+    canonical: `${siteConfig.url}/best-tattoo-shop-in-san-jose`,
     languages: {
-      "en-US": `${siteConfig.url}/best-tattoo-shop-costa-rica`,
+      "en-US": `${siteConfig.url}/best-tattoo-shop-in-san-jose`,
     },
   },
   other: {
@@ -65,14 +65,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BestTattooShopCostaRicaPage() {
+export default function BestTattooShopSanJosePage() {
   const jsonLdFAQ = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       {
         "@type": "Question",
-        name: "How do I book a tattoo appointment in Costa Rica?",
+        name: "How do I book a tattoo appointment in San José?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Booking is easy! Contact us directly via WhatsApp or through our contact form. We'll respond within 24 hours to discuss your tattoo idea, schedule a consultation, and find the best available date for your session.",
@@ -80,7 +80,7 @@ export default function BestTattooShopCostaRicaPage() {
       },
       {
         "@type": "Question",
-        name: "How much does a tattoo cost in Costa Rica?",
+        name: "How much does a tattoo cost in San José, Costa Rica?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Tattoo pricing depends on size, complexity, body placement, and style. After our initial consultation where we discuss your design, we'll provide a detailed, personalized quote. We offer competitive rates with luxury-quality results.",
@@ -96,7 +96,7 @@ export default function BestTattooShopCostaRicaPage() {
       },
       {
         "@type": "Question",
-        name: "Can I get a tattoo while on vacation in Costa Rica?",
+        name: "Can I get a tattoo while visiting San José?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Absolutely! We specialize in working with tourists and international visitors. We recommend reaching out before your trip so we can schedule your session. Same-day consultations are sometimes available for walk-ins.",
@@ -150,8 +150,8 @@ export default function BestTattooShopCostaRicaPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Best Tattoo Shop Costa Rica",
-        item: `${siteConfig.url}/best-tattoo-shop-costa-rica`,
+        name: "Best Tattoo Shop in San José",
+        item: `${siteConfig.url}/best-tattoo-shop-in-san-jose`,
       },
     ],
   };
@@ -159,10 +159,10 @@ export default function BestTattooShopCostaRicaPage() {
   const jsonLdWebPage = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Best Tattoo Shop in Costa Rica",
+    name: "Best Tattoo Shop in San José",
     description:
-      "Looking for the best tattoo shop in Costa Rica? Our professional artists specialize in fine line, realism, and black & grey tattoos.",
-    url: `${siteConfig.url}/best-tattoo-shop-costa-rica`,
+      "Looking for the best tattoo shop in San José, Costa Rica? Our professional artists specialize in fine line, realism, and black & grey tattoos.",
+    url: `${siteConfig.url}/best-tattoo-shop-in-san-jose`,
     inLanguage: "en-US",
     isPartOf: {
       "@type": "WebSite",
@@ -175,6 +175,7 @@ export default function BestTattooShopCostaRicaPage() {
       address: {
         "@type": "PostalAddress",
         addressLocality: siteConfig.location.city,
+        addressRegion: siteConfig.location.region,
         addressCountry: "CR",
       },
     },
