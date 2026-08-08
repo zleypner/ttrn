@@ -14,6 +14,7 @@ export const pageLinks = [
   { href: "/", label: "Inicio" },
   { href: "/about", label: "Sobre Mí" },
   { href: "/services", label: "Servicios" },
+  { href: "/#faq", label: "FAQ" },
 ] as const;
 
 // Combined links for footer
