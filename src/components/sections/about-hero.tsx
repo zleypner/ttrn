@@ -104,25 +104,6 @@ export function AboutHero() {
                 <div className="border-olive/20 pointer-events-none absolute inset-2 rounded-lg border" />
               </div>
             </div>
-
-            {/* Floating badge */}
-            <motion.div
-              className={cn(
-                "absolute -right-4 bottom-20 md:-right-6",
-                "bg-card/90 rounded-2xl p-5 backdrop-blur-lg",
-                "border-olive/20 border shadow-2xl"
-              )}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5 }}
-            >
-              <p className="font-heading text-accent-red text-3xl font-bold">
-                {siteConfig.stats.yearsExperience}+
-              </p>
-              <p className="text-muted-foreground text-sm">
-                Years of Experience
-              </p>
-            </motion.div>
           </motion.div>
 
           {/* Content Column */}
