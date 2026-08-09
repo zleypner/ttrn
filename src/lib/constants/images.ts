@@ -156,7 +156,7 @@ export const featuredWorkImages = [
   {
     id: "f2",
     category: "Realismo",
-    image: "/images/realismo/medusa-antebrazo-1.webp",
+    image: "/images/realismo/reloj-rosa-brazo.webp",
     size: "large" as const,
   },
   {
@@ -193,7 +193,7 @@ export const styleImages = {
 } as const;
 
 export const aboutImages = {
-  artist: "/images/realismo/medusa-antebrazo-1.webp",
+  artist: "/images/realismo/rostro-mujer.webp",
   studio1: "/images/tribal/blackwork-mano-ojo-1.webp",
   studio2: "/images/realismo/leon-realista.webp",
   studio3: "/images/retratos/retrato-mascota.webp",
