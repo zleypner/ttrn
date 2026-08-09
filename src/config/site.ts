@@ -19,7 +19,7 @@ export const siteConfig = {
     phone: "+506 7111 1499",
     whatsapp: "50671111499",
     email: "info@reneruiztattoo.com",
-    instagram: "reneruiztattoo",
+    instagram: "reneruiz_tattoo",
     facebook: "reneruiztattoo",
   },
   hours: {
