@@ -17,7 +17,6 @@ const artistPhotos = [
 
 export function AboutHero() {
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
-  const [activeImage, setActiveImage] = useState(0);
 
   const handleImageLoad = (index: number) => {
     setLoadedImages((prev) => new Set(prev).add(index));
@@ -40,74 +39,84 @@ export function AboutHero() {
 
       <div className="container-wide relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Image Column */}
+          {/* Image Column - Grid of 3 photos */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeInLeft}
             className="relative"
           >
-            {/* Main Image */}
-            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
-              <Image
-                src={artistPhotos[activeImage]}
-                alt={siteConfig.artistName}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className={cn(
-                  "object-cover transition-all duration-500",
-                  loadedImages.has(activeImage) ? "opacity-100" : "opacity-0"
-                )}
-                onLoad={() => handleImageLoad(activeImage)}
-              />
-              {!loadedImages.has(activeImage) && (
-                <div className="from-secondary via-card to-secondary absolute inset-0 animate-pulse bg-gradient-to-br" />
-              )}
-
-              {/* Overlay gradient */}
-              <div className="from-background/60 absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
-
-              {/* Decorative frame */}
-              <div className="border-olive/20 pointer-events-none absolute inset-4 rounded-xl border" />
-            </div>
-
-            {/* Thumbnail Gallery */}
-            <div className="mt-4 flex gap-3">
-              {artistPhotos.map((photo, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveImage(index)}
+            <div className="grid grid-cols-2 gap-4">
+              {/* Large main image */}
+              <div className="relative col-span-2 aspect-[4/3] overflow-hidden rounded-2xl">
+                <Image
+                  src={artistPhotos[0]}
+                  alt={siteConfig.artistName}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className={cn(
-                    "relative h-20 w-20 overflow-hidden rounded-lg transition-all duration-300",
-                    activeImage === index
-                      ? "ring-olive ring-offset-background ring-2 ring-offset-2"
-                      : "opacity-60 hover:opacity-100"
+                    "object-cover transition-all duration-500",
+                    loadedImages.has(0) ? "opacity-100" : "opacity-0"
                   )}
-                >
-                  <Image
-                    src={photo}
-                    alt={`${siteConfig.artistName} ${index + 1}`}
-                    fill
-                    sizes="80px"
-                    className="object-cover"
-                  />
-                </button>
-              ))}
+                  onLoad={() => handleImageLoad(0)}
+                />
+                {!loadedImages.has(0) && (
+                  <div className="from-secondary via-card to-secondary absolute inset-0 animate-pulse bg-gradient-to-br" />
+                )}
+                <div className="border-olive/20 pointer-events-none absolute inset-3 rounded-xl border" />
+              </div>
+
+              {/* Two smaller images side by side */}
+              <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                <Image
+                  src={artistPhotos[1]}
+                  alt={`${siteConfig.artistName} 2`}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className={cn(
+                    "object-cover transition-all duration-500",
+                    loadedImages.has(1) ? "opacity-100" : "opacity-0"
+                  )}
+                  onLoad={() => handleImageLoad(1)}
+                />
+                {!loadedImages.has(1) && (
+                  <div className="from-secondary via-card to-secondary absolute inset-0 animate-pulse bg-gradient-to-br" />
+                )}
+                <div className="border-olive/20 pointer-events-none absolute inset-2 rounded-lg border" />
+              </div>
+
+              <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
+                <Image
+                  src={artistPhotos[2]}
+                  alt={`${siteConfig.artistName} 3`}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className={cn(
+                    "object-cover transition-all duration-500",
+                    loadedImages.has(2) ? "opacity-100" : "opacity-0"
+                  )}
+                  onLoad={() => handleImageLoad(2)}
+                />
+                {!loadedImages.has(2) && (
+                  <div className="from-secondary via-card to-secondary absolute inset-0 animate-pulse bg-gradient-to-br" />
+                )}
+                <div className="border-olive/20 pointer-events-none absolute inset-2 rounded-lg border" />
+              </div>
             </div>
 
             {/* Floating badge */}
             <motion.div
               className={cn(
-                "absolute -right-6 -bottom-6 md:-right-8 md:bottom-8",
-                "bg-card/90 rounded-2xl p-6 backdrop-blur-lg",
+                "absolute -right-4 bottom-20 md:-right-6",
+                "bg-card/90 rounded-2xl p-5 backdrop-blur-lg",
                 "border-olive/20 border shadow-2xl"
               )}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <p className="font-heading text-accent-red text-4xl font-bold">
+              <p className="font-heading text-accent-red text-3xl font-bold">
                 {siteConfig.stats.yearsExperience}+
               </p>
               <p className="text-muted-foreground text-sm">
