@@ -193,7 +193,7 @@ export const styleImages = {
 } as const;
 
 export const aboutImages = {
-  artist: "/images/perfil/rene11.png",
+  artist: "/images/perfil/rene111.png",
   artist2: "/images/perfil/rene2.png",
   artist3: "/images/perfil/rene3.png",
   studio1: "/images/tribal/blackwork-mano-ojo-1.webp",
