@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
 import { AboutHero } from "@/components/sections/about-hero";
-import { ArtistStory } from "@/components/sections/artist-story";
 import { StudioGallery } from "@/components/sections/studio-gallery";
 import { siteConfig } from "@/config/site";
 
@@ -49,7 +48,6 @@ export default function AboutPage() {
       <Header />
       <main>
         <AboutHero />
-        <ArtistStory />
         <StudioGallery />
       </main>
       <Footer />
