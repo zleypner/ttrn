@@ -18,34 +18,25 @@ export function Logo({ className, variant = "default" }: LogoProps) {
     >
       {variant === "default" ? (
         <div className="flex flex-col items-start">
-          {/* Main Name - Increased size, better kerning */}
+          {/* Main Name */}
           <span
             className={cn(
-              "font-heading text-2xl font-semibold tracking-[0.25em] sm:text-[1.75rem]",
+              "font-heading text-xl font-semibold tracking-[0.15em] sm:text-2xl",
               "transition-all duration-300"
             )}
           >
-            <span className="text-foreground">TATA</span>
-            <span className="text-accent-red">-U</span>
-          </span>
-          {/* Subtitle - More spacing from name */}
-          <span
-            className={cn(
-              "mt-1 text-[10px] font-medium tracking-[0.35em] uppercase sm:text-[11px]",
-              "text-neutral-500"
-            )}
-          >
-            Tattoo Artist
+            <span className="text-foreground">COSTA RICA</span>
+            <span className="text-accent-red"> TATTOO</span>
           </span>
         </div>
       ) : (
         <motion.span
-          className={cn("font-heading text-xl font-semibold tracking-[0.2em]")}
+          className={cn("font-heading text-lg font-semibold tracking-[0.1em]")}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
         >
-          <span className="text-foreground">TATA</span>
-          <span className="text-accent-red">-U</span>
+          <span className="text-foreground">CR</span>
+          <span className="text-accent-red"> TATTOO</span>
         </motion.span>
       )}
     </motion.div>

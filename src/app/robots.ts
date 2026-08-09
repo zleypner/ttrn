@@ -2,12 +2,12 @@ import type { MetadataRoute } from "next";
 
 /**
  * Generates a robots.txt file optimized for SEO
- * for the Tata-u Tattoo Studio website.
+ * for the Costa Rica Tattoos website.
  *
  * @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots
  */
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://reneruiztattoo.com";
+  const baseUrl = "https://www.costaricatattoos.com";
 
   return {
     rules: [
