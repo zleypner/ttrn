@@ -9,8 +9,19 @@ import { aboutImages } from "@/lib/constants/images";
 import { fadeInUp, fadeInLeft, fadeInRight } from "@/lib/animations/variants";
 import { ColorText } from "../shared/color-text";
 
+const artistPhotos = [
+  aboutImages.artist,
+  aboutImages.artist2,
+  aboutImages.artist3,
+];
+
 export function AboutHero() {
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
+  const [activeImage, setActiveImage] = useState(0);
+
+  const handleImageLoad = (index: number) => {
+    setLoadedImages((prev) => new Set(prev).add(index));
+  };
 
   return (
     <section className="relative flex min-h-[80vh] items-center overflow-hidden pt-20">
@@ -36,20 +47,21 @@ export function AboutHero() {
             variants={fadeInLeft}
             className="relative"
           >
+            {/* Main Image */}
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
               <Image
-                src={aboutImages.artist}
+                src={artistPhotos[activeImage]}
                 alt={siteConfig.artistName}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className={cn(
-                  "object-cover transition-opacity duration-500",
-                  imageLoaded ? "opacity-100" : "opacity-0"
+                  "object-cover transition-all duration-500",
+                  loadedImages.has(activeImage) ? "opacity-100" : "opacity-0"
                 )}
-                onLoad={() => setImageLoaded(true)}
+                onLoad={() => handleImageLoad(activeImage)}
               />
-              {!imageLoaded && (
+              {!loadedImages.has(activeImage) && (
                 <div className="from-secondary via-card to-secondary absolute inset-0 animate-pulse bg-gradient-to-br" />
               )}
 
@@ -58,6 +70,30 @@ export function AboutHero() {
 
               {/* Decorative frame */}
               <div className="border-olive/20 pointer-events-none absolute inset-4 rounded-xl border" />
+            </div>
+
+            {/* Thumbnail Gallery */}
+            <div className="mt-4 flex gap-3">
+              {artistPhotos.map((photo, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveImage(index)}
+                  className={cn(
+                    "relative h-20 w-20 overflow-hidden rounded-lg transition-all duration-300",
+                    activeImage === index
+                      ? "ring-olive ring-offset-background ring-2 ring-offset-2"
+                      : "opacity-60 hover:opacity-100"
+                  )}
+                >
+                  <Image
+                    src={photo}
+                    alt={`${siteConfig.artistName} ${index + 1}`}
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                  />
+                </button>
+              ))}
             </div>
 
             {/* Floating badge */}

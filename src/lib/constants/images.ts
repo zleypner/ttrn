@@ -193,7 +193,9 @@ export const styleImages = {
 } as const;
 
 export const aboutImages = {
-  artist: "/images/realismo/rostro-mujer.webp",
+  artist: "/images/perfil/rene11.png",
+  artist2: "/images/perfil/rene2.png",
+  artist3: "/images/perfil/rene3.png",
   studio1: "/images/tribal/blackwork-mano-ojo-1.webp",
   studio2: "/images/realismo/leon-realista.webp",
   studio3: "/images/retratos/retrato-mascota.webp",
