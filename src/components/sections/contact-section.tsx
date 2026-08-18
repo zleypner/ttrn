@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone } from "lucide-react";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { siteConfig } from "@/config/site";
 import { WhatsAppIcon } from "@/components/shared";
@@ -47,21 +47,6 @@ export function ContactSection() {
                     <p className="text-muted-foreground text-sm">WhatsApp</p>
                     <p className="text-foreground group-hover:text-olive font-medium transition-colors">
                       {siteConfig.contact.phone}
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="group flex items-center gap-4"
-                >
-                  <div className="bg-olive/10 group-hover:bg-olive/20 rounded-xl p-3 transition-colors">
-                    <Mail className="text-olive h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="text-muted-foreground text-sm">Email</p>
-                    <p className="text-foreground group-hover:text-olive font-medium transition-colors">
-                      {siteConfig.contact.email}
                     </p>
                   </div>
                 </a>

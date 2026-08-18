@@ -7,6 +7,7 @@ export const navigationLinks = [
   { href: "#testimonials", label: "Testimonials" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
+  { href: "#location", label: "Location" },
 ] as const;
 
 // Page links for main site navigation

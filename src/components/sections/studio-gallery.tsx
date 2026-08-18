@@ -189,14 +189,6 @@ export function StudioGallery() {
                   {siteConfig.contact.phone}
                 </a>
               </p>
-              <p>
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="hover:text-olive transition-colors"
-                >
-                  {siteConfig.contact.email}
-                </a>
-              </p>
             </div>
           </div>
         </motion.div>

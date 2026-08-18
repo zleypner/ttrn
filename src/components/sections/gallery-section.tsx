@@ -23,10 +23,12 @@ import {
 const categories = [
   "All",
   "Tribal",
-  "Realism",
-  "Portraits",
-  "Japanese",
-  "Other",
+  "Realismo",
+  "Retratos",
+  "Japonés",
+  "Gray and Black",
+  "Full Color",
+  "Otros",
 ];
 
 export function GallerySection() {

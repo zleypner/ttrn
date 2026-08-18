@@ -11,6 +11,7 @@ import { WhyChooseSection } from "@/components/sections/why-choose-section";
 import { ProcessSection } from "@/components/sections/process-section";
 import { FAQSection } from "@/components/sections/faq-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { LocationSection } from "@/components/sections/location-section";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -69,6 +70,7 @@ export default function Home() {
         <TestimonialsSection />
         <FAQSection />
         <ContactSection />
+        <LocationSection />
       </main>
       <Footer />
     </>
