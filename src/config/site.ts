@@ -20,7 +20,7 @@ export const siteConfig = {
     whatsapp: "50671111499",
     email: "info@reneruiztattoo.com",
     instagram: "reneruiz_tattoo",
-    facebook: "reneruiztattoo",
+    facebook: "rene.ruiz.714338",
   },
   hours: {
     weekdays: "10:00 AM - 7:00 PM",
