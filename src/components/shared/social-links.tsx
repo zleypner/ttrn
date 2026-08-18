@@ -1,6 +1,4 @@
 "use client";
-
-import { Mail } from "lucide-react";
 import { WhatsAppIcon } from "./whatsapp-icon";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
@@ -67,12 +65,6 @@ const socialLinks = [
     href: `https://wa.me/${siteConfig.contact.whatsapp}`,
     icon: WhatsAppIcon,
     label: siteConfig.contact.phone,
-  },
-  {
-    name: "Email",
-    href: `mailto:${siteConfig.contact.email}`,
-    icon: Mail,
-    label: siteConfig.contact.email,
   },
 ];
 
