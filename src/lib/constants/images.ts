@@ -87,6 +87,42 @@ export const galleryImages = [
     category: "Realismo",
     image: "/images/realismo/angel-espalda.webp",
   },
+  {
+    id: "realismo-15",
+    title: "Realismo Detalle",
+    category: "Realismo",
+    image: "/images/realismo/realismo-tattoo-15.webp",
+  },
+  {
+    id: "realismo-16",
+    title: "Realismo Artístico",
+    category: "Realismo",
+    image: "/images/realismo/realismo-tattoo-16.webp",
+  },
+  {
+    id: "realismo-17",
+    title: "Realismo Sombreado",
+    category: "Realismo",
+    image: "/images/realismo/realismo-tattoo-17.webp",
+  },
+  {
+    id: "realismo-18",
+    title: "Realismo Fino",
+    category: "Realismo",
+    image: "/images/realismo/realismo-tattoo-18.webp",
+  },
+  {
+    id: "realismo-19",
+    title: "Realismo Completo",
+    category: "Realismo",
+    image: "/images/realismo/realismo-tattoo-19.webp",
+  },
+  {
+    id: "realismo-20",
+    title: "Perro Realista",
+    category: "Realismo",
+    image: "/images/realismo/perro-realista.webp",
+  },
   // Retratos - 4 images (removed duplicates)
   {
     id: "retrato-1",
@@ -112,12 +148,30 @@ export const galleryImages = [
     category: "Retratos",
     image: "/images/retratos/retrato-mascota.webp",
   },
-  // Japonés - 1 image
+  // Japonés - 4 images
   {
     id: "japones-1",
     title: "Dragón Japonés Espalda",
     category: "Japonés",
     image: "/images/japones/dragon-japones-espalda.webp",
+  },
+  {
+    id: "japones-2",
+    title: "Tatuaje Japonés",
+    category: "Japonés",
+    image: "/images/japones/japones-tattoo-1.webp",
+  },
+  {
+    id: "japones-3",
+    title: "Tatuaje Japonés Detalle",
+    category: "Japonés",
+    image: "/images/japones/japones-tattoo-2.webp",
+  },
+  {
+    id: "japones-4",
+    title: "Arte Japonés",
+    category: "Japonés",
+    image: "/images/japones/japones-tattoo-3.webp",
   },
   // Otros - 4 images
   {
@@ -143,6 +197,74 @@ export const galleryImages = [
     title: "Tatuaje Pierna",
     category: "Otros",
     image: "/images/otros/tatuaje-pierna.webp",
+  },
+  // Gray and Black - 4 images
+  {
+    id: "grayblack-1",
+    title: "Gray and Black Arte",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-1.webp",
+  },
+  {
+    id: "grayblack-2",
+    title: "Gray and Black Detalle",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-2.webp",
+  },
+  {
+    id: "grayblack-3",
+    title: "Gray and Black Sombreado",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-3.webp",
+  },
+  {
+    id: "grayblack-4",
+    title: "Gray and Black Fino",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-4.webp",
+  },
+  // Full Color - 7 images
+  {
+    id: "fullcolor-1",
+    title: "Full Color Vibrante",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-1.webp",
+  },
+  {
+    id: "fullcolor-2",
+    title: "Full Color Detalle",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-2.webp",
+  },
+  {
+    id: "fullcolor-3",
+    title: "Full Color Artístico",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-3.webp",
+  },
+  {
+    id: "fullcolor-4",
+    title: "Full Color Intenso",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-4.webp",
+  },
+  {
+    id: "fullcolor-5",
+    title: "Full Color Expresivo",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-5.webp",
+  },
+  {
+    id: "fullcolor-6",
+    title: "Full Color Dinámico",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-6.webp",
+  },
+  {
+    id: "fullcolor-7",
+    title: "Full Color Completo",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-7.webp",
   },
 ] as const;
 
