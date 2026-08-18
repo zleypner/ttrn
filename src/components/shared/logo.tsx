@@ -25,8 +25,9 @@ export function Logo({ className, variant = "default" }: LogoProps) {
               "transition-all duration-300"
             )}
           >
-            <span className="text-foreground">COSTA RICA</span>
-            <span className="text-accent-red"> TATTOO</span>
+            <span className="text-foreground">TaTa</span>
+            <span className="text-olive">-</span>
+            <span className="text-accent-red">U</span>
           </span>
         </div>
       ) : (
@@ -35,8 +36,9 @@ export function Logo({ className, variant = "default" }: LogoProps) {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.2 }}
         >
-          <span className="text-foreground">CR</span>
-          <span className="text-accent-red"> TATTOO</span>
+          <span className="text-foreground">TaTa</span>
+          <span className="text-olive">-</span>
+          <span className="text-accent-red">U</span>
         </motion.span>
       )}
     </motion.div>
