@@ -231,12 +231,6 @@ export const galleryImages = [
     image: "/images/fullcolor/fullcolor-1.webp",
   },
   {
-    id: "fullcolor-2",
-    title: "Full Color Detalle",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-2.webp",
-  },
-  {
     id: "fullcolor-3",
     title: "Full Color Artístico",
     category: "Full Color",
