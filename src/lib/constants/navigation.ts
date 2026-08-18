@@ -14,8 +14,9 @@ export const navigationLinks = [
 export const pageLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/#gallery", label: "Gallery" },
   { href: "/services", label: "Services" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 // Combined links for footer
