@@ -25,13 +25,15 @@ export function StyleCard({ style, isActive = false }: StyleCardProps) {
 
   const handleClick = () => {
     const category = styleToCategory[style.id] || style.name;
-    const gallerySection = document.querySelector("#galeria");
+    const gallerySection = document.querySelector("#gallery");
     if (gallerySection) {
       gallerySection.scrollIntoView({ behavior: "smooth" });
-      // Dispatch custom event to set category
-      window.dispatchEvent(
-        new CustomEvent("setGalleryCategory", { detail: category })
-      );
+      // Dispatch custom event to set category after scroll
+      setTimeout(() => {
+        window.dispatchEvent(
+          new CustomEvent("setGalleryCategory", { detail: category })
+        );
+      }, 100);
     }
   };
 
