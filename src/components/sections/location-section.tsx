@@ -9,7 +9,7 @@ import { fadeInUp, scrollViewport } from "@/lib/animations/variants";
 import { cn } from "@/lib/utils";
 
 export function LocationSection() {
-  const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8!2d${siteConfig.location.coordinates.lng}!3d${siteConfig.location.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwNTUnNDEuMiJOIDg0wrAwNScyNi41Ilc!5e0!3m2!1sen!2scr!4v1234567890`;
+  const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.7!2d-84.0809002!3d9.9332754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e37e135438c9%3A0x1e3b5a3b8da73966!2sArmageddon%20Tattoo%20%26%20Piercing%20Studio!5e0!3m2!1sen!2scr!4v1692300000000!5m2!1sen!2scr`;
 
   return (
     <section id="location" className="section-padding bg-card/30">

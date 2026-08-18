@@ -11,8 +11,8 @@ export const siteConfig = {
     country: "Costa Rica",
     address: "50 norte de Banco Popular, frente a Office Depot",
     coordinates: {
-      lat: 9.9281,
-      lng: -84.0907,
+      lat: 9.9332754,
+      lng: -84.0783253,
     },
   },
   contact: {
