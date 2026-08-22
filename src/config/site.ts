@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "TaTa-U",
-  artistName: "René Ruíz",
+  artistName: "Rene Ruiz",
   description:
     "Professional tattoo artist in Costa Rica specializing in realism, black and grey, fine line, and portraits. Luxury body art with over 15 years of experience.",
   url: "https://www.costaricatattoos.com",
