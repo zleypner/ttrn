@@ -1,16 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Award, Users, Palette, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIntersection } from "@/hooks/use-intersection";
 import { useCounter } from "@/hooks/use-counter";
 import { siteConfig } from "@/config/site";
-import {
-  staggerContainer,
-  staggerChild,
-  scrollViewport,
-} from "@/lib/animations/variants";
 
 interface StatItem {
   icon: typeof Award;
@@ -43,11 +37,9 @@ const stats: StatItem[] = [
 function StatCounter({
   stat,
   isVisible,
-  index,
 }: {
   stat: StatItem;
   isVisible: boolean;
-  index: number;
 }) {
   const count = useCounter({
     end: stat.value,
@@ -55,15 +47,8 @@ function StatCounter({
     enabled: isVisible,
   });
 
-  const isAnimating = isVisible && count < stat.value;
-
   return (
-    <motion.div
-      variants={staggerChild}
-      className="group relative p-6 text-center sm:p-8"
-      whileHover={{ y: -5 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div className="group relative p-6 text-center sm:p-8">
       {/* Background */}
       <div
         className={cn(
@@ -73,77 +58,31 @@ function StatCounter({
         )}
       />
 
-      {/* Glow effect on background */}
-      <motion.div
-        className={cn(
-          "absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100",
-          "from-olive/5 to-copper/5 bg-gradient-to-br via-transparent",
-          "transition-opacity duration-500"
-        )}
-      />
-
       {/* Content */}
       <div className="relative z-10">
-        {/* Icon with pulse glow */}
-        <motion.div
+        {/* Icon */}
+        <div
           className={cn(
             "mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full",
             "from-olive/20 to-olive/5 bg-gradient-to-br",
             "border-olive/20 border"
           )}
-          animate={
-            isVisible
-              ? {
-                  boxShadow: [
-                    "0 0 0 rgba(194, 154, 88, 0)",
-                    "0 0 20px rgba(194, 154, 88, 0.3)",
-                    "0 0 0 rgba(194, 154, 88, 0)",
-                  ],
-                }
-              : {}
-          }
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            delay: index * 0.3,
-            ease: "easeInOut",
-          }}
         >
           <stat.icon className="text-olive h-6 w-6" />
-        </motion.div>
+        </div>
 
-        {/* Value with blur effect during counting */}
-        <motion.p
-          className="font-heading text-accent-red mb-2 text-4xl font-bold sm:text-5xl md:text-6xl"
-          animate={{
-            filter: isAnimating ? "blur(2px)" : "blur(0px)",
-          }}
-          transition={{ duration: 0.2 }}
-        >
+        {/* Value */}
+        <p className="font-heading text-accent-red mb-2 text-4xl font-bold sm:text-5xl md:text-6xl">
           {count.toLocaleString()}
           <span>{stat.suffix}</span>
-        </motion.p>
+        </p>
 
         {/* Label */}
         <p className="text-muted-foreground text-sm tracking-wide sm:text-base">
           {stat.label}
         </p>
       </div>
-
-      {/* Decorative corners */}
-      <div
-        className={cn(
-          "border-olive/0 absolute -right-1 -bottom-1 h-8 w-8 border-r border-b",
-          "group-hover:border-olive/30 transition-all duration-500"
-        )}
-      />
-      <div
-        className={cn(
-          "border-olive/0 absolute -top-1 -left-1 h-8 w-8 border-t border-l",
-          "group-hover:border-olive/30 transition-all duration-500"
-        )}
-      />
-    </motion.div>
+    </div>
   );
 }
 
@@ -158,52 +97,19 @@ export function StatsSection() {
       ref={ref}
       className="section-padding bg-card/30 relative overflow-hidden"
     >
-      {/* Background decoration */}
-      <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute top-0 left-1/4 h-96 w-96 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, oklch(0.72 0.12 85 / 3%) 0%, transparent 70%)",
-            filter: "blur(60px)",
-          }}
-        />
-        <div
-          className="absolute right-1/4 bottom-0 h-80 w-80 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, oklch(0.65 0.15 55 / 3%) 0%, transparent 70%)",
-            filter: "blur(60px)",
-          }}
-        />
-      </div>
-
       <div className="container-wide relative z-10 px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={scrollViewport}
-          variants={staggerContainer}
-          className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6"
-        >
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
+          {stats.map((stat) => (
             <StatCounter
               key={stat.label}
               stat={stat}
               isVisible={isIntersecting}
-              index={index}
             />
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={scrollViewport}
-          variants={staggerChild}
-          className="mt-12 text-center"
-        >
+        <div className="mt-12 text-center">
           <a
             href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi! I would like to become one of your satisfied clients. Can we chat?")}`}
             target="_blank"
@@ -213,7 +119,7 @@ export function StatsSection() {
             <MessageCircle size={18} />
             Be the Next Satisfied Client
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
