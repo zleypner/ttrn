@@ -4,6 +4,8 @@ import { ChevronDown, Calendar } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { WhatsAppIcon } from "@/components/shared";
+import { useCounter } from "@/hooks/use-counter";
+import { useIntersection } from "@/hooks/use-intersection";
 
 const handleScroll = (href: string) => {
   const element = document.querySelector(href);
@@ -12,7 +14,38 @@ const handleScroll = (href: string) => {
   }
 };
 
+function AnimatedStat({
+  value,
+  label,
+  isVisible,
+}: {
+  value: number;
+  label: string;
+  isVisible: boolean;
+}) {
+  const count = useCounter({
+    end: value,
+    duration: 2000,
+    enabled: isVisible,
+  });
+
+  return (
+    <div className="text-center">
+      <p className="text-olive text-2xl font-bold sm:text-3xl md:text-4xl">
+        {count.toLocaleString()}+
+      </p>
+      <p className="text-muted-foreground text-xs tracking-wider uppercase sm:text-sm">
+        {label}
+      </p>
+    </div>
+  );
+}
+
 export function HeroSection() {
+  const { ref, isIntersecting } = useIntersection<HTMLDivElement>({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
   return (
     <section
       id="home"
@@ -91,24 +124,28 @@ export function HeroSection() {
           </div>
 
           {/* Stats Preview */}
-          <div className="mt-16 flex items-center justify-center gap-8 sm:gap-12 md:gap-16">
-            {[
-              { value: `${siteConfig.stats.yearsExperience}+`, label: "Years" },
-              {
-                value: `${siteConfig.stats.happyClients.toLocaleString()}+`,
-                label: "Clients",
-              },
-              { value: "Custom", label: "Designs" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="font-heading text-accent-red text-2xl font-bold sm:text-3xl md:text-4xl">
-                  {stat.value}
-                </p>
-                <p className="text-muted-foreground text-xs tracking-wider uppercase sm:text-sm">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
+          <div
+            ref={ref}
+            className="mt-16 flex items-center justify-center gap-8 sm:gap-12 md:gap-16"
+          >
+            <AnimatedStat
+              value={siteConfig.stats.yearsExperience}
+              label="Years"
+              isVisible={isIntersecting}
+            />
+            <AnimatedStat
+              value={siteConfig.stats.happyClients}
+              label="Clients"
+              isVisible={isIntersecting}
+            />
+            <div className="text-center">
+              <p className="text-olive text-2xl font-bold sm:text-3xl md:text-4xl">
+                Custom
+              </p>
+              <p className="text-muted-foreground text-xs tracking-wider uppercase sm:text-sm">
+                Designs
+              </p>
+            </div>
           </div>
         </div>
       </div>
