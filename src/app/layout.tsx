@@ -7,7 +7,7 @@ import { WhatsAppFloat } from "@/components/shared/whatsapp-float";
 import { CombinedSchemas } from "@/components/seo/json-ld";
 
 const cinzel = Cinzel({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-cinzel",
   display: "swap",
 });
