@@ -12,6 +12,8 @@
 
 html {
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -219,9 +221,12 @@ canvas {
     @apply font-heading tracking-wide;
   }
 
-  /* Fix Cinzel font ligature issues on Android */
+  /* Fix Cinzel font rendering issues on Android */
   .font-heading {
     font-variant-ligatures: none;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-feature-settings:
       "liga" 0,
       "clig" 0,

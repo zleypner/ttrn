@@ -8,6 +8,7 @@ import { CombinedSchemas } from "@/components/seo/json-ld";
 
 const cinzel = Cinzel({
   subsets: ["latin", "latin-ext"],
+  weight: ["400", "600", "700"],
   variable: "--font-cinzel",
   display: "swap",
 });
