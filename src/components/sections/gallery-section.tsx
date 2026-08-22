@@ -290,7 +290,7 @@ export function GallerySection() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: -20 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="relative h-[80vh] w-[90vw] max-w-4xl"
+                className="relative h-[80vh] w-full max-w-4xl px-4"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Image
@@ -300,7 +300,7 @@ export function GallerySection() {
                   )}
                   alt={filteredItems[lightboxIndex].title}
                   fill
-                  sizes="90vw"
+                  sizes="(max-width: 896px) 100vw, 896px"
                   className="object-contain"
                   priority
                 />
