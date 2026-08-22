@@ -45,15 +45,9 @@ export function HeroSection() {
           </div>
 
           {/* Main Title */}
-          <h1 className="font-heading mb-6 w-full max-w-full text-4xl leading-tight font-bold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-            <span className="text-shadow-gold">
-              <span className="text-foreground">
-                {siteConfig.artistName.split(" ")[0].toUpperCase()}
-              </span>{" "}
-              <span className="text-olive">
-                {siteConfig.artistName.split(" ")[1]?.toUpperCase()}
-              </span>
-            </span>
+          <h1 className="mb-6 text-4xl leading-tight font-bold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <span className="text-foreground">RENE</span>{" "}
+            <span className="text-olive">RUIZ</span>
           </h1>
 
           {/* Tagline */}
