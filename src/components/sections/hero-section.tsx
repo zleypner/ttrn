@@ -11,8 +11,6 @@ import {
   heroSubtitle,
   heroCta,
   fadeIn,
-  letterRevealContainer,
-  letterReveal,
 } from "@/lib/animations/variants";
 
 // Pre-generated particle data (deterministic)
@@ -71,50 +69,29 @@ function FloatingParticles() {
   );
 }
 
-// Animated letter component
+// Simplified title component for better Android compatibility
 function AnimatedTitle({ text }: { text: string }) {
   const words = text.split(" ");
 
   return (
     <motion.span
-      variants={letterRevealContainer}
-      initial="hidden"
-      animate="visible"
-      className="inline-flex flex-wrap justify-center gap-x-[0.25em]"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="block"
     >
       {words.map((word, wordIdx) => {
-        let colorClass = "text-foreground"; // 60%
+        let colorClass = "text-foreground";
         if (words.length === 1) {
           colorClass = "text-olive";
-        } else if (words.length === 2) {
-          if (wordIdx === 1) colorClass = "text-olive";
-        } else if (words.length === 3) {
-          if (wordIdx === 1) colorClass = "text-olive";
-          if (wordIdx === 2) colorClass = "text-accent-red";
-        } else {
-          const percent = wordIdx / words.length;
-          if (percent >= 0.9) {
-            colorClass = "text-accent-red";
-          } else if (percent >= 0.6) {
-            colorClass = "text-olive";
-          } else {
-            colorClass = "text-foreground";
-          }
+        } else if (words.length >= 2 && wordIdx === 1) {
+          colorClass = "text-olive";
         }
 
-        const letters = word.split("");
-
         return (
-          <span key={wordIdx} className={cn(colorClass, "inline-flex")}>
-            {letters.map((letter, letterIdx) => (
-              <motion.span
-                key={letterIdx}
-                variants={letterReveal}
-                className="inline-block"
-              >
-                {letter}
-              </motion.span>
-            ))}
+          <span key={wordIdx}>
+            <span className={colorClass}>{word}</span>
+            {wordIdx < words.length - 1 && " "}
           </span>
         );
       })}
@@ -259,10 +236,10 @@ export function HeroSection() {
             />
           </motion.div>
 
-          {/* Main Title with Letter Animation */}
+          {/* Main Title */}
           <motion.h1
             variants={heroTitle}
-            className="font-heading mb-6 text-5xl font-bold tracking-wide sm:text-6xl md:text-7xl lg:text-8xl"
+            className="font-heading mb-6 w-full max-w-full text-4xl leading-tight font-bold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
           >
             <span className="text-shadow-gold">
               <AnimatedTitle text={siteConfig.artistName.toUpperCase()} />
