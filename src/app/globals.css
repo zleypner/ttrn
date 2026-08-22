@@ -192,6 +192,26 @@
   h6 {
     @apply font-heading tracking-wide;
   }
+
+  /* Fix Cinzel font ligature issues on Android */
+  .font-heading {
+    font-variant-ligatures: none;
+    font-feature-settings:
+      "liga" 0,
+      "clig" 0,
+      "dlig" 0,
+      "hlig" 0;
+    -webkit-font-feature-settings:
+      "liga" 0,
+      "clig" 0,
+      "dlig" 0,
+      "hlig" 0;
+    -moz-font-feature-settings:
+      "liga" 0,
+      "clig" 0,
+      "dlig" 0,
+      "hlig" 0;
+  }
 }
 
 @layer utilities {
