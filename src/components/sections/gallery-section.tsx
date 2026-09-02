@@ -22,6 +22,7 @@ import {
 
 const categories = [
   "All",
+  "Line",
   "Tribal",
   "Realismo",
   "Retratos",
@@ -39,13 +40,19 @@ export function GallerySection() {
   const filteredItems =
     selectedCategory === "All"
       ? galleryImages
-      : galleryImages.filter((item) => item.category === selectedCategory);
+      : galleryImages.filter(
+          (item) =>
+            item.category.toLowerCase() === selectedCategory.toLowerCase()
+        );
 
   // Listen for category change events from style cards
   useEffect(() => {
     const handleSetCategory = (event: CustomEvent<string>) => {
-      if (categories.includes(event.detail)) {
-        setSelectedCategory(event.detail);
+      const match = categories.find(
+        (cat) => cat.toLowerCase() === event.detail.toLowerCase()
+      );
+      if (match) {
+        setSelectedCategory(match);
       }
     };
 

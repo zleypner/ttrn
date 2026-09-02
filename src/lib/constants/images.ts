@@ -266,6 +266,109 @@ export const galleryImages = [
     category: "Full Color",
     image: "/images/fullcolor/fullcolor-7.webp",
   },
+  // Line - 17 images
+  {
+    id: "line-1",
+    title: "Tatuaje de Línea Fina 1",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
+  },
+  {
+    id: "line-2",
+    title: "Tatuaje de Línea Fina 2",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.02.jpeg",
+  },
+  {
+    id: "line-3",
+    title: "Tatuaje de Línea Fina 3",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.05.jpeg",
+  },
+  {
+    id: "line-4",
+    title: "Tatuaje de Línea Fina 4",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.06.jpeg",
+  },
+  {
+    id: "line-5",
+    title: "Tatuaje de Línea Fina 5",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.09.jpeg",
+  },
+  {
+    id: "line-6",
+    title: "Tatuaje de Línea Fina 6",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.11.jpeg",
+  },
+  {
+    id: "line-7",
+    title: "Tatuaje de Línea Fina 7",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.12.jpeg",
+  },
+  {
+    id: "line-8",
+    title: "Tatuaje de Línea Fina 8",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.13.jpeg",
+  },
+  {
+    id: "line-9",
+    title: "Tatuaje de Línea Fina 9",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.14.jpeg",
+  },
+  {
+    id: "line-10",
+    title: "Tatuaje de Línea Fina 10",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.16.jpeg",
+  },
+  {
+    id: "line-11",
+    title: "Tatuaje de Línea Fina 11",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.17.jpeg",
+  },
+  {
+    id: "line-12",
+    title: "Tatuaje de Línea Fina 12",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.18.jpeg",
+  },
+  {
+    id: "line-13",
+    title: "Tatuaje de Línea Fina 13",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.19.jpeg",
+  },
+  {
+    id: "line-14",
+    title: "Tatuaje de Línea Fina 14",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.20.jpeg",
+  },
+  {
+    id: "line-15",
+    title: "Tatuaje de Línea Fina 15",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.21.jpeg",
+  },
+  {
+    id: "line-16",
+    title: "Tatuaje de Línea Fina 16",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.23.jpeg",
+  },
+  {
+    id: "line-17",
+    title: "Tatuaje de Línea Fina 17",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.24.jpeg",
+  },
 ] as const;
 
 export const featuredWorkImages = [
@@ -305,6 +408,12 @@ export const featuredWorkImages = [
     image: "/images/realismo/leon-realista.webp",
     size: "small" as const,
   },
+  {
+    id: "f7",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
+    size: "small" as const,
+  },
 ] as const;
 
 export const styleImages = {
@@ -312,6 +421,7 @@ export const styleImages = {
   realism: "/images/realismo/medusa-antebrazo-1.webp",
   portrait: "/images/retratos/gato.webp",
   japanese: "/images/japones/dragon-japones-espalda.webp",
+  line: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
 } as const;
 
 export const aboutImages = {

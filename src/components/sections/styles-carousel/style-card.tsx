@@ -13,6 +13,7 @@ const styleToCategory: Record<string, string> = {
   realism: "Realismo",
   portrait: "Retratos",
   japanese: "Japonés",
+  line: "Line",
 };
 
 interface StyleCardProps {

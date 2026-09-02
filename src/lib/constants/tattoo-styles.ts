@@ -45,4 +45,12 @@ export const tattooStyles: TattooStyle[] = [
       "Composiciones fluidas",
     ],
   },
+  {
+    id: "line",
+    name: "Line",
+    description:
+      "Tatuajes de línea fina y trazos precisos con diseños delicados y minimalistas.",
+    image: styleImages.line,
+    features: ["Líneas finas", "Trazos precisos", "Alta precisión"],
+  },
 ];
