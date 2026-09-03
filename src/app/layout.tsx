@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cinzel, Inter } from "next/font/google";
+import Script from "next/script";
 import { Toaster } from "sonner";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
@@ -113,6 +114,19 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <CombinedSchemas />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-QYH40HNWE8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-QYH40HNWE8');
+          `}
+        </Script>
       </head>
       <body className="bg-background text-foreground flex min-h-full flex-col">
         {children}
