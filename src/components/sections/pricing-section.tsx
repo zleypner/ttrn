@@ -147,7 +147,7 @@ export function PricingSection() {
 
               {/* CTA */}
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello, I'm interested in a ${tier.name.toLowerCase()} tattoo.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(

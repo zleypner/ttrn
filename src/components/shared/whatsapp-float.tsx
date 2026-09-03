@@ -4,7 +4,7 @@ import { WhatsAppIcon } from "./whatsapp-icon";
 import { siteConfig } from "@/config/site";
 
 export function WhatsAppFloat() {
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola, me gustaría agendar una cita para un tatuaje.")}`;
+  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`;
 
   return (
     <a

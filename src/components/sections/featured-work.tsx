@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { siteConfig } from "@/config/site";
+import { WhatsAppIcon } from "@/components/shared";
 import { featuredWorkImages } from "@/lib/constants/images";
 import {
   staggerContainer,
@@ -121,14 +123,23 @@ export function FeaturedWork() {
           ))}
         </motion.div>
 
-        {/* View All Button */}
+        {/* View All & WhatsApp CTA Buttons */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={scrollViewport}
           variants={staggerChild}
-          className="mt-12 text-center"
+          className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
+          <a
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
+          >
+            <WhatsAppIcon size={18} />
+            Inquire About These Designs
+          </a>
           <button
             onClick={() => {
               const element = document.querySelector("#gallery");

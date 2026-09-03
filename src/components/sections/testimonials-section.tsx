@@ -4,15 +4,10 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Star,
-  Quote,
-  MessageCircle,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { WhatsAppIcon } from "@/components/shared";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { testimonials, type Testimonial } from "@/lib/constants/testimonials";
 import { fadeInUp, scrollViewport } from "@/lib/animations/variants";
@@ -198,12 +193,12 @@ export function TestimonialsSection() {
               Join hundreds of satisfied clients
             </p>
             <a
-              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi! I would like to schedule a consultation for a tattoo.")}`}
+              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
             >
-              <MessageCircle size={18} />
+              <WhatsAppIcon size={18} />
               Schedule Your Free Consultation
             </a>
           </div>

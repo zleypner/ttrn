@@ -202,7 +202,7 @@ export function StudioGallery() {
           className="mt-12 text-center"
         >
           <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hello, I'd like to visit the studio.`}
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
             target="_blank"
             rel="noopener noreferrer"
             className={cn(

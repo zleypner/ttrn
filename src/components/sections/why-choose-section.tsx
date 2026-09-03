@@ -8,10 +8,10 @@ import {
   Heart,
   Clock,
   MessageSquare,
-  MessageCircle,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { WhatsAppIcon } from "@/components/shared";
 import { SectionHeading } from "@/components/shared/section-heading";
 import {
   staggerContainer,
@@ -134,12 +134,12 @@ export function WhyChooseSection() {
           className="mt-12 text-center"
         >
           <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi! I would like to know more about your tattoo services.")}`}
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
           >
-            <MessageCircle size={18} />
+            <WhatsAppIcon size={18} />
             Let&apos;s Talk About Your Idea
           </a>
         </motion.div>

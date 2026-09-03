@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { siteConfig } from "@/config/site";
+import { WhatsAppIcon } from "@/components/shared";
 import { faqItems, type FAQItem } from "@/lib/constants/faq";
 import {
   staggerContainer,
@@ -121,15 +123,26 @@ export function FAQSection() {
           className="mt-12 text-center"
         >
           <p className="text-muted-foreground mb-4">Have another question?</p>
-          <button
-            onClick={() => {
-              const element = document.querySelector("#contact");
-              if (element) element.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="btn-outline-gold rounded-full px-6 py-2.5 text-sm"
-          >
-            Contact Me
-          </button>
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
+            >
+              <WhatsAppIcon size={18} />
+              Chat Directly on WhatsApp
+            </a>
+            <button
+              onClick={() => {
+                const element = document.querySelector("#contact");
+                if (element) element.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="btn-outline-gold rounded-full px-6 py-2.5 text-sm"
+            >
+              Fill Contact Form
+            </button>
+          </div>
         </motion.div>
       </div>
     </section>

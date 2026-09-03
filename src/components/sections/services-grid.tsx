@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { siteConfig } from "@/config/site";
+import { WhatsAppIcon } from "@/components/shared";
 import { tattooStyles } from "@/lib/constants/tattoo-styles";
 import {
   staggerContainer,
@@ -90,19 +92,22 @@ export function ServicesGrid() {
                 </div>
 
                 {/* CTA */}
-                <div
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={cn(
-                    "text-olive flex items-center gap-2 text-sm font-medium",
-                    "translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100",
-                    "transition-all duration-300"
+                    "text-olive hover:text-foreground inline-flex items-center gap-2 text-sm font-medium",
+                    "transition-colors duration-300"
                   )}
                 >
-                  <span>Inquire</span>
+                  <WhatsAppIcon size={16} />
+                  <span>Inquire via WhatsApp</span>
                   <ArrowRight
                     size={16}
                     className="transition-transform group-hover:translate-x-1"
                   />
-                </div>
+                </a>
               </div>
 
               {/* Corner accent */}
@@ -111,6 +116,28 @@ export function ServicesGrid() {
               </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Bottom WhatsApp CTA */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={scrollViewport}
+          variants={staggerChild}
+          className="mt-12 text-center"
+        >
+          <p className="text-muted-foreground mb-4">
+            Have a custom style or idea in mind?
+          </p>
+          <a
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
+          >
+            <WhatsAppIcon size={18} />
+            Ask About Custom Tattoos on WhatsApp
+          </a>
         </motion.div>
       </div>
     </section>

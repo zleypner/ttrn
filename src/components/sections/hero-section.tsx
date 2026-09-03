@@ -98,7 +98,7 @@ export function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi, I'd like to schedule a consultation for a tattoo.`}
+              href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
               target="_blank"
               rel="noopener noreferrer"
               className={cn(

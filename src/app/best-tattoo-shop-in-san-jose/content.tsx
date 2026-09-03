@@ -101,7 +101,7 @@ export function BestTattooShopContent() {
               className="flex flex-col items-center justify-center gap-4 sm:flex-row"
             >
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi, I'm looking for a tattoo shop in San José and interested in getting a tattoo.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cta btn-cta-glow inline-flex items-center gap-2 rounded-full px-8 py-4"
@@ -489,7 +489,7 @@ export function BestTattooShopContent() {
               className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
             >
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi! I found your website and I'm interested in booking a tattoo consultation in San José.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(

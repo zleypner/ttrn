@@ -196,7 +196,7 @@ export function Header() {
     };
   }, [isMobileMenuOpen]);
 
-  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hola, me gustaría reservar una cita.")}`;
+  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`;
 
   return (
     <>

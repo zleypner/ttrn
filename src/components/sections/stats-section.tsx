@@ -1,10 +1,11 @@
 "use client";
 
-import { Award, Users, Palette, MessageCircle } from "lucide-react";
+import { Award, Users, Palette } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useIntersection } from "@/hooks/use-intersection";
 import { useCounter } from "@/hooks/use-counter";
 import { siteConfig } from "@/config/site";
+import { WhatsAppIcon } from "@/components/shared";
 
 interface StatItem {
   icon: typeof Award;
@@ -111,12 +112,12 @@ export function StatsSection() {
         {/* CTA */}
         <div className="mt-12 text-center">
           <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hi! I would like to become one of your satisfied clients. Can we chat?")}`}
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
           >
-            <MessageCircle size={18} />
+            <WhatsAppIcon size={18} />
             Be the Next Satisfied Client
           </a>
         </div>

@@ -124,7 +124,7 @@ export function Footer() {
                 unique piece.
               </p>
               <a
-                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=Hi, I'd like to schedule an appointment for a tattoo.`}
+                href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cta inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm"

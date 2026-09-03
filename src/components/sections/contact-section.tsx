@@ -32,7 +32,7 @@ export function ContactSection() {
 
               <div className="space-y-5">
                 <a
-                  href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a tattoo")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4"
