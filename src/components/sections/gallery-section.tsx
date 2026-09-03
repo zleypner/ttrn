@@ -22,10 +22,10 @@ import {
 
 const categories = [
   "All",
-  "Line",
-  "Tribal",
   "Realismo",
   "Retratos",
+  "Line",
+  "Tribal",
   "Japonés",
   "Gray and Black",
   "Full Color",

@@ -10,14 +10,6 @@ export interface TattooStyle {
 
 export const tattooStyles: TattooStyle[] = [
   {
-    id: "tribal",
-    name: "Tribal",
-    description:
-      "Diseños tribales con líneas audaces y patrones tradicionales que representan fuerza y conexión cultural.",
-    image: styleImages.tribal,
-    features: ["Líneas audaces", "Patrones tradicionales", "Alta durabilidad"],
-  },
-  {
     id: "realism",
     name: "Realismo",
     description:
@@ -34,6 +26,22 @@ export const tattooStyles: TattooStyle[] = [
     features: ["Expresiones vivas", "Semejanza exacta", "Emotividad"],
   },
   {
+    id: "line",
+    name: "Line",
+    description:
+      "Tatuajes de línea fina y trazos precisos con diseños delicados y minimalistas.",
+    image: styleImages.line,
+    features: ["Líneas finas", "Trazos precisos", "Alta precisión"],
+  },
+  {
+    id: "tribal",
+    name: "Tribal",
+    description:
+      "Diseños tribales con líneas audaces y patrones tradicionales que representan fuerza y conexión cultural.",
+    image: styleImages.tribal,
+    features: ["Líneas audaces", "Patrones tradicionales", "Alta durabilidad"],
+  },
+  {
     id: "japanese",
     name: "Japonés",
     description:
@@ -44,13 +52,5 @@ export const tattooStyles: TattooStyle[] = [
       "Simbolismo profundo",
       "Composiciones fluidas",
     ],
-  },
-  {
-    id: "line",
-    name: "Line",
-    description:
-      "Tatuajes de línea fina y trazos precisos con diseños delicados y minimalistas.",
-    image: styleImages.line,
-    features: ["Líneas finas", "Trazos precisos", "Alta precisión"],
   },
 ];

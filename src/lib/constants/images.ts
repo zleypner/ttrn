@@ -1,32 +1,7 @@
-// Local gallery images organized by category
+// Local gallery images organized by category (Realismo and Retratos prioritized first)
 
 export const galleryImages = [
-  // Tribal - 4 images
-  {
-    id: "tribal-1",
-    title: "Blackwork Antebrazo Llamas",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-antebrazo-llamas.webp",
-  },
-  {
-    id: "tribal-2",
-    title: "Blackwork Mano con Ojo",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-mano-ojo-1.webp",
-  },
-  {
-    id: "tribal-3",
-    title: "Blackwork Hombro Orgánico",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-hombro-organico-1.webp",
-  },
-  {
-    id: "tribal-4",
-    title: "Blackwork Mano Detalle",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-mano-ojo-3.webp",
-  },
-  // Realismo - 18 images
+  // Realismo - 17 images
   {
     id: "realismo-1",
     title: "Caballo Realista",
@@ -50,12 +25,6 @@ export const galleryImages = [
     title: "Fénix",
     category: "Realismo",
     image: "/images/realismo/fenix.webp",
-  },
-  {
-    id: "realismo-5",
-    title: "Jesús",
-    category: "Realismo",
-    image: "/images/realismo/jesus.webp",
   },
   {
     id: "realismo-6",
@@ -135,6 +104,7 @@ export const galleryImages = [
     category: "Realismo",
     image: "/images/realismo/realismo-tattoo-19.webp",
   },
+
   // Retratos - 4 images
   {
     id: "retrato-1",
@@ -160,113 +130,8 @@ export const galleryImages = [
     category: "Retratos",
     image: "/images/retratos/retrato-mascota.webp",
   },
-  // Japonés - 4 images
-  {
-    id: "japones-1",
-    title: "Dragón Japonés Espalda",
-    category: "Japonés",
-    image: "/images/japones/dragon-japones-espalda.webp",
-  },
-  {
-    id: "japones-2",
-    title: "Tatuaje Japonés",
-    category: "Japonés",
-    image: "/images/japones/japones-tattoo-1.webp",
-  },
-  {
-    id: "japones-3",
-    title: "Tatuaje Japonés Detalle",
-    category: "Japonés",
-    image: "/images/japones/japones-tattoo-2.webp",
-  },
-  {
-    id: "japones-4",
-    title: "Arte Japonés",
-    category: "Japonés",
-    image: "/images/japones/japones-tattoo-3.webp",
-  },
-  // Otros - 4 images
-  {
-    id: "otros-1",
-    title: "Tatuaje Brazo",
-    category: "Otros",
-    image: "/images/otros/tatuaje-brazo-1.webp",
-  },
-  {
-    id: "otros-2",
-    title: "Tatuaje Espalda",
-    category: "Otros",
-    image: "/images/otros/tatuaje-espalda.webp",
-  },
-  {
-    id: "otros-3",
-    title: "Tatuaje Costado",
-    category: "Otros",
-    image: "/images/otros/tatuaje-costado.webp",
-  },
-  {
-    id: "otros-4",
-    title: "Tatuaje Pierna",
-    category: "Otros",
-    image: "/images/otros/tatuaje-pierna.webp",
-  },
-  // Gray and Black - 4 images
-  {
-    id: "grayblack-1",
-    title: "Gray and Black Arte",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-1.webp",
-  },
-  {
-    id: "grayblack-2",
-    title: "Gray and Black Detalle",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-2.webp",
-  },
-  {
-    id: "grayblack-3",
-    title: "Gray and Black Sombreado",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-3.webp",
-  },
-  {
-    id: "grayblack-4",
-    title: "Gray and Black Fino",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-4.webp",
-  },
-  // Full Color - 5 images
-  {
-    id: "fullcolor-1",
-    title: "Full Color Vibrante",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-1.webp",
-  },
-  {
-    id: "fullcolor-4",
-    title: "Full Color Intenso",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-4.webp",
-  },
-  {
-    id: "fullcolor-5",
-    title: "Full Color Expresivo",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-5.webp",
-  },
-  {
-    id: "fullcolor-6",
-    title: "Full Color Dinámico",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-6.webp",
-  },
-  {
-    id: "fullcolor-7",
-    title: "Full Color Completo",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-7.webp",
-  },
-  // Line - 17 images
+
+  // Line - 13 images
   {
     id: "line-1",
     title: "Tatuaje de Línea Fina 1",
@@ -290,30 +155,6 @@ export const galleryImages = [
     title: "Tatuaje de Línea Fina 4",
     category: "Line",
     image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.06.jpeg",
-  },
-  {
-    id: "line-5",
-    title: "Tatuaje de Línea Fina 5",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.09.jpeg",
-  },
-  {
-    id: "line-6",
-    title: "Tatuaje de Línea Fina 6",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.11.jpeg",
-  },
-  {
-    id: "line-7",
-    title: "Tatuaje de Línea Fina 7",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.12.jpeg",
-  },
-  {
-    id: "line-8",
-    title: "Tatuaje de Línea Fina 8",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.13.jpeg",
   },
   {
     id: "line-9",
@@ -369,66 +210,196 @@ export const galleryImages = [
     category: "Line",
     image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.24.jpeg",
   },
+
+  // Tribal - 4 images
+  {
+    id: "tribal-1",
+    title: "Blackwork Antebrazo Llamas",
+    category: "Tribal",
+    image: "/images/tribal/blackwork-antebrazo-llamas.webp",
+  },
+  {
+    id: "tribal-2",
+    title: "Blackwork Mano con Ojo",
+    category: "Tribal",
+    image: "/images/tribal/blackwork-mano-ojo-1.webp",
+  },
+  {
+    id: "tribal-3",
+    title: "Blackwork Hombro Orgánico",
+    category: "Tribal",
+    image: "/images/tribal/blackwork-hombro-organico-1.webp",
+  },
+  {
+    id: "tribal-4",
+    title: "Blackwork Mano Detalle",
+    category: "Tribal",
+    image: "/images/tribal/blackwork-mano-ojo-3.webp",
+  },
+
+  // Japonés - 4 images
+  {
+    id: "japones-1",
+    title: "Dragón Japonés Espalda",
+    category: "Japonés",
+    image: "/images/japones/dragon-japones-espalda.webp",
+  },
+  {
+    id: "japones-2",
+    title: "Tatuaje Japonés",
+    category: "Japonés",
+    image: "/images/japones/japones-tattoo-1.webp",
+  },
+  {
+    id: "japones-3",
+    title: "Tatuaje Japonés Detalle",
+    category: "Japonés",
+    image: "/images/japones/japones-tattoo-2.webp",
+  },
+  {
+    id: "japones-4",
+    title: "Arte Japonés",
+    category: "Japonés",
+    image: "/images/japones/japones-tattoo-3.webp",
+  },
+
+  // Gray and Black - 4 images
+  {
+    id: "grayblack-1",
+    title: "Gray and Black Arte",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-1.webp",
+  },
+  {
+    id: "grayblack-2",
+    title: "Gray and Black Detalle",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-2.webp",
+  },
+  {
+    id: "grayblack-3",
+    title: "Gray and Black Sombreado",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-3.webp",
+  },
+  {
+    id: "grayblack-4",
+    title: "Gray and Black Fino",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-4.webp",
+  },
+
+  // Full Color - 5 images
+  {
+    id: "fullcolor-1",
+    title: "Full Color Vibrante",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-1.webp",
+  },
+  {
+    id: "fullcolor-4",
+    title: "Full Color Intenso",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-4.webp",
+  },
+  {
+    id: "fullcolor-5",
+    title: "Full Color Expresivo",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-5.webp",
+  },
+  {
+    id: "fullcolor-6",
+    title: "Full Color Dinámico",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-6.webp",
+  },
+  {
+    id: "fullcolor-7",
+    title: "Full Color Completo",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-7.webp",
+  },
+
+  // Otros - 4 images
+  {
+    id: "otros-1",
+    title: "Tatuaje Brazo",
+    category: "Otros",
+    image: "/images/otros/tatuaje-brazo-1.webp",
+  },
+  {
+    id: "otros-2",
+    title: "Tatuaje Espalda",
+    category: "Otros",
+    image: "/images/otros/tatuaje-espalda.webp",
+  },
+  {
+    id: "otros-3",
+    title: "Tatuaje Costado",
+    category: "Otros",
+    image: "/images/otros/tatuaje-costado.webp",
+  },
+  {
+    id: "otros-4",
+    title: "Tatuaje Pierna",
+    category: "Otros",
+    image: "/images/otros/tatuaje-pierna.webp",
+  },
 ] as const;
 
 export const featuredWorkImages = [
   {
     id: "f1",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-mano-ojo-1.webp",
-    size: "large" as const,
-  },
-  {
-    id: "f2",
     category: "Realismo",
     image: "/images/realismo/tigre.webp",
     size: "large" as const,
   },
   {
-    id: "f3",
+    id: "f2",
     category: "Retratos",
     image: "/images/retratos/gato.webp",
+    size: "large" as const,
+  },
+  {
+    id: "f3",
+    category: "Realismo",
+    image: "/images/realismo/leon-realista.webp",
     size: "medium" as const,
   },
   {
     id: "f4",
-    category: "Japonés",
-    image: "/images/japones/dragon-japones-espalda.webp",
+    category: "Retratos",
+    image: "/images/retratos/retrato-mascota.webp",
     size: "medium" as const,
   },
   {
     id: "f5",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-hombro-organico-1.webp",
+    category: "Line",
+    image: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
     size: "small" as const,
   },
   {
     id: "f6",
-    category: "Realismo",
-    image: "/images/realismo/leon-realista.webp",
-    size: "small" as const,
-  },
-  {
-    id: "f7",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
+    category: "Tribal",
+    image: "/images/tribal/blackwork-mano-ojo-1.webp",
     size: "small" as const,
   },
 ] as const;
 
 export const styleImages = {
-  tribal: "/images/tribal/blackwork-mano-ojo-1.webp",
   realism: "/images/realismo/medusa-antebrazo-1.webp",
   portrait: "/images/retratos/gato.webp",
-  japanese: "/images/japones/dragon-japones-espalda.webp",
   line: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
+  tribal: "/images/tribal/blackwork-mano-ojo-1.webp",
+  japanese: "/images/japones/dragon-japones-espalda.webp",
 } as const;
 
 export const aboutImages = {
   artist: "/images/perfil/rene111.png",
   artist2: "/images/perfil/rene2.png",
   artist3: "/images/perfil/rene3.png",
-  studio1: "/images/tribal/blackwork-mano-ojo-1.webp",
+  studio1: "/images/realismo/medusa-antebrazo-1.webp",
   studio2: "/images/realismo/leon-realista.webp",
   studio3: "/images/retratos/retrato-mascota.webp",
   artistWorking: "/images/realismo/fenix.webp",
