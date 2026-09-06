@@ -68,17 +68,18 @@ export function HeroSection() {
       {/* Content */}
       <div className="container-wide relative z-10 px-4 text-center sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          {/* Pre-title */}
+          {/* Pre-title with SEO keyword */}
           <div className="mb-6 flex items-center justify-center gap-4">
             <span className="to-olive/50 h-px w-12 bg-gradient-to-r from-transparent" />
             <span className="text-olive text-sm font-medium tracking-[0.3em] uppercase">
-              Professional Tattoo Artist
+              Realism Tattoo Artist in Costa Rica
             </span>
             <span className="to-olive/50 h-px w-12 bg-gradient-to-l from-transparent" />
           </div>
 
-          {/* Main Title */}
+          {/* Main Title - H1 includes both keyword phrase and artist name for SEO */}
           <h1 className="mb-6 text-4xl leading-tight font-bold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <span className="sr-only">Realism Tattoo Artist Costa Rica - </span>
             <span className="text-foreground">RENE</span>{" "}
             <span className="text-olive">RUIZ</span>
           </h1>

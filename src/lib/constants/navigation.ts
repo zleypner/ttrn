@@ -25,6 +25,8 @@ export const footerLinks = {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
+    { href: "/realism-tattoo-costa-rica", label: "Realism Tattoos" },
+    { href: "/rene-ruiz", label: "Meet the Artist" },
   ],
   sections: [
     { href: "/#gallery", label: "Gallery" },
