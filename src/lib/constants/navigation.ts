@@ -16,6 +16,7 @@ export const pageLinks = [
   { href: "/about", label: "About" },
   { href: "/#gallery", label: "Gallery" },
   { href: "/services", label: "Services" },
+  { href: "/blog", label: "Blog" },
   { href: "/#contact", label: "Contact" },
 ] as const;
 
@@ -25,8 +26,12 @@ export const footerLinks = {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
+    { href: "/blog", label: "Blog" },
+  ],
+  blog: [
     { href: "/realism-tattoo-costa-rica", label: "Realism Tattoos" },
     { href: "/rene-ruiz", label: "Meet the Artist" },
+    { href: "/best-tattoo-shop-in-san-jose", label: "San José Guide" },
   ],
   sections: [
     { href: "/#gallery", label: "Gallery" },

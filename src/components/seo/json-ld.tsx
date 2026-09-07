@@ -96,10 +96,19 @@ export function LocalBusinessSchema() {
       "@type": "Person",
       name: siteConfig.artistName,
     },
-    areaServed: {
-      "@type": "Country",
-      name: "Costa Rica",
-    },
+    areaServed: [
+      {
+        "@type": "Country",
+        name: "Costa Rica",
+      },
+      {
+        "@type": "Country",
+        name: "United States",
+        description: "Serving American tourists visiting Costa Rica",
+      },
+    ],
+    knowsLanguage: ["en", "es"],
+    slogan: "Costa Rica's Premier Realism Tattoo Artist for American Travelers",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Tattoo Services",

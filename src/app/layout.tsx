@@ -29,10 +29,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Professional Tattoo Artist in Costa Rica`,
+    default: `Realism Tattoo Artist Costa Rica | ${siteConfig.artistName} | English Speaking`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: `${siteConfig.artistName} - Costa Rica's premier realism tattoo artist for American travelers. English-speaking, USD accepted. Specializing in photorealistic portraits, black & grey, fine line. Near San José airport. ${siteConfig.stats.yearsExperience}+ years experience.`,
   keywords: [...siteConfig.keywords],
   authors: [{ name: siteConfig.artistName }],
   creator: siteConfig.artistName,
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Professional Tattoo Artist in Costa Rica`,
-    description: siteConfig.description,
+    title: `Realism Tattoo Artist Costa Rica | ${siteConfig.artistName}`,
+    description: `Costa Rica's #1 tattoo artist for American travelers. English-speaking, USD accepted. Photorealistic portraits, black & grey, fine line. Book your tattoo vacation today.`,
     images: [
       {
         url: siteConfig.ogImage,
@@ -66,8 +66,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Professional Tattoo Artist in Costa Rica`,
-    description: siteConfig.description,
+    title: `Realism Tattoo Artist Costa Rica | ${siteConfig.artistName}`,
+    description: `Costa Rica's #1 tattoo artist for American travelers. English-speaking, USD accepted. Book your tattoo vacation today.`,
     images: [siteConfig.ogImage],
     creator: `@${siteConfig.contact.instagram}`,
   },

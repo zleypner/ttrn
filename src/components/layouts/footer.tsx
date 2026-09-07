@@ -60,10 +60,10 @@ export function Footer() {
               </ul>
 
               <h3 className="font-heading text-olive mt-8 mb-6 text-sm font-semibold tracking-wider uppercase">
-                Sections
+                Blog & Guides
               </h3>
               <ul className="space-y-3">
-                {footerLinks.sections.map((link) => (
+                {footerLinks.blog.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}

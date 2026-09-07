@@ -5,23 +5,24 @@ import { siteConfig } from "@/config/site";
 import { RealismContent } from "./content";
 
 export const metadata: Metadata = {
-  title:
-    "Realism Tattoo Artist Costa Rica | Photorealistic Tattoos by Rene Ruiz",
+  title: "Realism Tattoo Artist Costa Rica | #1 Choice for American Travelers",
   description:
-    "Expert realism tattoo artist in Costa Rica. Rene Ruiz specializes in photorealistic portraits, black & grey realism, and lifelike animal tattoos. 15+ years experience creating stunning realistic tattoos in San José.",
+    "Top realism tattoo artist in Costa Rica for US tourists. Rene Ruiz specializes in photorealistic portraits, black & grey realism, and lifelike tattoos. English-speaking, USD accepted. 15+ years experience near San José airport.",
   keywords: [
     "realism tattoo costa rica",
     "realistic tattoo artist costa rica",
+    "american tattoo artist costa rica",
+    "us tourist tattoo costa rica",
+    "english speaking tattoo artist costa rica",
     "photorealistic tattoo costa rica",
     "portrait tattoo costa rica",
     "black and grey realism costa rica",
-    "realistic portrait tattoo",
-    "animal realism tattoo",
-    "hyperrealistic tattoo costa rica",
-    "rene ruiz realism tattoo",
+    "tattoo vacation costa rica",
     "best realism tattoo artist costa rica",
-    "lifelike tattoo costa rica",
-    "realistic pet portrait tattoo",
+    "tattoo near san jose airport",
+    "costa rica tattoo prices usd",
+    "rene ruiz realism tattoo",
+    "hyperrealistic tattoo costa rica",
   ],
   openGraph: {
     title: "Realism Tattoo Artist Costa Rica | Photorealistic Tattoos",

@@ -370,8 +370,77 @@ export function ReneRuizContent() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Related Articles Section */}
       <section className="section-padding">
+        <div className="container-wide px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="Related Articles"
+            subtitle="Continue exploring our guides for American travelers."
+          />
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={scrollViewport}
+            variants={staggerContainer}
+            className="grid gap-6 md:grid-cols-2"
+          >
+            <motion.div variants={staggerChild}>
+              <Link
+                href="/realism-tattoo-costa-rica"
+                className="group bg-card/50 hover:border-olive/30 block rounded-xl border border-white/5 p-6 transition-all"
+              >
+                <span className="text-olive text-xs font-medium tracking-wider uppercase">
+                  Realism Guide
+                </span>
+                <h3 className="text-foreground group-hover:text-olive mt-2 text-lg font-semibold transition-colors">
+                  Realism Tattoo Costa Rica
+                </h3>
+                <p className="text-muted-foreground mt-2 text-sm">
+                  Everything you need to know about photorealistic tattoos and
+                  why Costa Rica is a top destination.
+                </p>
+              </Link>
+            </motion.div>
+            <motion.div variants={staggerChild}>
+              <Link
+                href="/best-tattoo-shop-in-san-jose"
+                className="group bg-card/50 hover:border-olive/30 block rounded-xl border border-white/5 p-6 transition-all"
+              >
+                <span className="text-olive text-xs font-medium tracking-wider uppercase">
+                  Travel Guide
+                </span>
+                <h3 className="text-foreground group-hover:text-olive mt-2 text-lg font-semibold transition-colors">
+                  Best Tattoo Shop in San José
+                </h3>
+                <p className="text-muted-foreground mt-2 text-sm">
+                  Planning a trip? Everything you need to know about getting
+                  tattooed in Costa Rica&apos;s capital.
+                </p>
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={scrollViewport}
+            variants={fadeInUp}
+            className="mt-8 text-center"
+          >
+            <Link
+              href="/blog"
+              className="text-olive inline-flex items-center gap-2 text-sm font-medium hover:underline"
+            >
+              View All Articles
+              <ArrowRight size={16} />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-card/30">
         <div className="container-narrow px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"

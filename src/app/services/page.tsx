@@ -6,41 +6,44 @@ import { ServicesGrid } from "@/components/sections/services-grid";
 import { AftercareSection } from "@/components/sections/aftercare-section";
 import { FAQSection } from "@/components/sections/faq-section";
 import { siteConfig } from "@/config/site";
+import { AllServicesSchema } from "@/components/seo/json-ld";
 
 export const metadata: Metadata = {
-  title: "Tattoo Styles | Realism, Fine Line, Portraits",
-  description: `Discover all tattoo styles we offer: Realism, Black & Grey, Fine Line, Portraits, Micro Realism and more. Custom tattoos in ${siteConfig.location.city}, Costa Rica. Free consultation available.`,
+  title:
+    "Tattoo Services Costa Rica | Realism, Portraits, Fine Line | USD Accepted",
+  description: `Premium tattoo services for American travelers in Costa Rica. Realism, Black & Grey, Fine Line, Portraits. English-speaking artist, USD accepted. Free consultation near San José airport.`,
   keywords: [
-    "tattoo styles Costa Rica",
-    "realism tattoos San Jose",
-    "black and grey tattoo Costa Rica",
-    "fine line tattoo Costa Rica",
-    "portrait tattoos Costa Rica",
+    "tattoo services costa rica",
+    "realism tattoo costa rica",
+    "portrait tattoo costa rica",
+    "black and grey tattoo costa rica",
+    "fine line tattoo costa rica",
+    "tattoo prices costa rica usd",
+    "english speaking tattoo costa rica",
+    "american tourist tattoo costa rica",
     "micro realism tattoo",
-    "geometric tattoos Costa Rica",
-    "minimalist tattoos San Jose",
-    "cover up tattoos Costa Rica",
-    "professional tattoo services",
-    "tattoo prices Costa Rica",
-    "free tattoo consultation",
+    "geometric tattoos costa rica",
+    "cover up tattoos costa rica",
+    "free tattoo consultation costa rica",
+    "tattoo near san jose airport",
   ],
   openGraph: {
-    title: `Tattoo Styles | Realism, Fine Line, Portraits | ${siteConfig.name}`,
-    description: `Explore our variety of styles: Realism, Black & Grey, Fine Line, Portraits and more. Each tattoo is a personalized work of art. Schedule your free consultation.`,
+    title: `Tattoo Services Costa Rica | Realism, Portraits, Fine Line`,
+    description: `Premium tattoo services for American travelers. Realism, Black & Grey, Fine Line, Portraits. English-speaking, USD accepted.`,
     url: `${siteConfig.url}/services`,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `Tattoo Styles - ${siteConfig.name}`,
+        alt: `Tattoo Services Costa Rica - ${siteConfig.name}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `Tattoo Styles | ${siteConfig.name}`,
-    description: `Realism, Fine Line, Portraits and more. Discover our professional tattoo services in Costa Rica.`,
+    title: `Tattoo Services Costa Rica | ${siteConfig.name}`,
+    description: `Premium tattoo services for American travelers. Realism, Portraits, Fine Line. English-speaking, USD accepted.`,
     images: [siteConfig.ogImage],
   },
   alternates: {
@@ -49,8 +52,32 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const jsonLdBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${siteConfig.url}/services`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <AllServicesSchema />
       <Header />
       <main>
         <ServicesHero />
