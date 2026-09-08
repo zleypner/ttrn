@@ -2,12 +2,7 @@
 
 export const galleryImages = [
   // Realismo - 15 images
-  {
-    id: "realismo-1",
-    title: "Caballo Realista",
-    category: "Realismo",
-    image: "/images/realismo/caballo.webp",
-  },
+
   {
     id: "realismo-2",
     title: "Elefante",
@@ -26,18 +21,7 @@ export const galleryImages = [
     category: "Realismo",
     image: "/images/realismo/fenix.webp",
   },
-  {
-    id: "realismo-7",
-    title: "León Realista",
-    category: "Realismo",
-    image: "/images/realismo/leon-realista.webp",
-  },
-  {
-    id: "realismo-10",
-    title: "Perro Realista",
-    category: "Realismo",
-    image: "/images/realismo/perro-realista.webp",
-  },
+
   {
     id: "realismo-retrato-perro",
     title: "Retrato Perro",
@@ -86,12 +70,7 @@ export const galleryImages = [
     category: "Realismo",
     image: "/images/realismo/virgen-brazo.webp",
   },
-  {
-    id: "realismo-14",
-    title: "Realismo Detalle",
-    category: "Realismo",
-    image: "/images/realismo/realismo-tattoo-15.webp",
-  },
+
   {
     id: "realismo-16",
     title: "Realismo Sombreado",
@@ -286,13 +265,19 @@ export const galleryImages = [
     category: "Full Color",
     image: "/images/fullcolor/fullcolor.jpeg",
   },
+  {
+    id: "fullcolor-seahorse",
+    title: "Caballito de Mar Full Color",
+    category: "Full Color",
+    image: "/images/fullcolor/seahorse.jpeg",
+  },
 ] as const;
 
 export const featuredWorkImages = [
   {
     id: "f1",
     category: "Realismo",
-    image: "/images/realismo/leon-realista.webp",
+    image: "/images/realismo/fenix.webp",
     size: "large" as const,
   },
   {
@@ -304,7 +289,7 @@ export const featuredWorkImages = [
   {
     id: "f3",
     category: "Realismo",
-    image: "/images/realismo/leon-realista.webp",
+    image: "/images/realismo/dragon.jpeg",
     size: "medium" as const,
   },
   {
@@ -328,7 +313,7 @@ export const featuredWorkImages = [
 ] as const;
 
 export const styleImages = {
-  realism: "/images/realismo/leon-realista.webp",
+  realism: "/images/realismo/fenix.webp",
   portrait: "/images/retratos/gato.webp",
   line: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
   fullcolor: "/images/fullcolor/mario-bros.webp",
@@ -340,7 +325,7 @@ export const aboutImages = {
   artist2: "/images/perfil/rene2.png",
   artist3: "/images/perfil/rene3.png",
   studio1: "/images/realismo/fenix.webp",
-  studio2: "/images/realismo/leon-realista.webp",
+  studio2: "/images/realismo/mariposarealismo.jpeg",
   studio3: "/images/retratos/gato.webp",
   artistWorking: "/images/realismo/fenix.webp",
 } as const;

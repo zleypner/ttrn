@@ -60,7 +60,7 @@ const blogPosts = [
     subtitle: "The Ultimate Guide to Photorealistic Tattoos",
     description:
       "Discover why Costa Rica has become a premier destination for realism tattoos. Learn about techniques, pricing, and what makes our photorealistic work stand out.",
-    image: "/images/realismo/leon-realista.webp",
+    image: "/images/realismo/fenix.webp",
     category: "Realism Guide",
     readTime: "8 min read",
   },
@@ -80,7 +80,7 @@ const blogPosts = [
     subtitle: "Your Guide to Premium Tattoos in Costa Rica's Capital",
     description:
       "Planning a trip to San José? Find out why tourists from the US choose our studio for custom tattoos, and what to expect from your experience.",
-    image: "/images/realismo/leon-realista.webp",
+    image: "/images/realismo/dragon.jpeg",
     category: "Travel Guide",
     readTime: "6 min read",
   },
