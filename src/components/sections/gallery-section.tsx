@@ -133,13 +133,13 @@ function isValidFilter(value: string | null): value is FilterType {
  * Filters gallery items based on selected filter
  */
 function filterGalleryItems(
-  items: readonly typeof galleryImages,
+  items: typeof galleryImages,
   filter: FilterType
 ): TattooItem[] {
   // Map items to include computed style
   const mappedItems: TattooItem[] = items.map((item) => ({
     ...item,
-    style: item.style || mapCategoryToFilter(item.category),
+    style: (item as TattooItem).style || mapCategoryToFilter(item.category),
   }));
 
   if (filter === "realism") {
@@ -163,48 +163,21 @@ function GallerySectionInner() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Initialize filter from URL or default to "realism"
-  const getInitialFilter = useCallback((): FilterType => {
-    const urlStyle = searchParams.get(STYLE_PARAM);
-    if (isValidFilter(urlStyle)) {
-      return urlStyle;
-    }
-    return DEFAULT_FILTER;
-  }, [searchParams]);
+  // Get filter from URL or default
+  const urlStyle = searchParams.get(STYLE_PARAM);
+  const currentFilter: FilterType = isValidFilter(urlStyle)
+    ? urlStyle
+    : DEFAULT_FILTER;
 
-  const [selectedFilter, setSelectedFilter] =
-    useState<FilterType>(getInitialFilter());
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
-  const [isInitialized, setIsInitialized] = useState(false);
 
-  // Sync URL with filter state on mount and changes
-  useEffect(() => {
-    const urlStyle = searchParams.get(STYLE_PARAM);
+  // Selected filter derived from URL
+  const selectedFilter = currentFilter;
 
-    if (!isInitialized) {
-      // On initial mount, set URL if no param present
-      if (!urlStyle) {
-        const params = new URLSearchParams(searchParams.toString());
-        params.set(STYLE_PARAM, DEFAULT_FILTER);
-        router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-      }
-      setIsInitialized(true);
-      return;
-    }
-
-    // Keep state in sync with URL changes (e.g., browser back/forward)
-    if (isValidFilter(urlStyle) && urlStyle !== selectedFilter) {
-      setSelectedFilter(urlStyle);
-    }
-  }, [searchParams, pathname, router, selectedFilter, isInitialized]);
-
-  // Handle filter button click
+  // Handle filter button click - updates URL which triggers re-render with new filter
   const handleFilterChange = useCallback(
     (filter: FilterType) => {
-      setSelectedFilter(filter);
-
-      // Update URL without triggering navigation
       const params = new URLSearchParams(searchParams.toString());
       params.set(STYLE_PARAM, filter);
       router.replace(`${pathname}?${params.toString()}`, { scroll: false });
@@ -273,13 +246,21 @@ function GallerySectionInner() {
 
       switch (e.key) {
         case "ArrowLeft":
-          goToPrevious();
+          if (lightboxIndex !== null) {
+            setLightboxIndex(
+              lightboxIndex === 0 ? filteredItems.length - 1 : lightboxIndex - 1
+            );
+          }
           break;
         case "ArrowRight":
-          goToNext();
+          if (lightboxIndex !== null) {
+            setLightboxIndex(
+              lightboxIndex === filteredItems.length - 1 ? 0 : lightboxIndex + 1
+            );
+          }
           break;
         case "Escape":
-          closeLightbox();
+          setLightboxIndex(null);
           break;
       }
     };

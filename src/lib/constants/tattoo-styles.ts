@@ -34,12 +34,12 @@ export const tattooStyles: TattooStyle[] = [
     features: ["Líneas finas", "Trazos precisos", "Alta precisión"],
   },
   {
-    id: "tribal",
-    name: "Tribal",
+    id: "fullcolor",
+    name: "Full Color",
     description:
-      "Diseños tribales con líneas audaces y patrones tradicionales que representan fuerza y conexión cultural.",
-    image: styleImages.tribal,
-    features: ["Líneas audaces", "Patrones tradicionales", "Alta durabilidad"],
+      "Tatuajes vibrantes con colores intensos y saturados que capturan la esencia del arte pop y la cultura geek.",
+    image: styleImages.fullcolor,
+    features: ["Colores vibrantes", "Alta saturación", "Arte pop"],
   },
   {
     id: "japanese",

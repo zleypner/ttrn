@@ -125,24 +125,12 @@ export const galleryImages = [
     image: "/images/retratos/retrato-mascota.webp",
   },
 
-  // Line - 8 images
+  // Line - 5 images
   {
     id: "line-1",
     title: "Tatuaje de Línea Fina 1",
     category: "Line",
     image: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
-  },
-  {
-    id: "line-2",
-    title: "Tatuaje de Línea Fina 2",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.02.jpeg",
-  },
-  {
-    id: "line-3",
-    title: "Tatuaje de Línea Fina 3",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.05.jpeg",
   },
   {
     id: "line-9",
@@ -157,12 +145,6 @@ export const galleryImages = [
     image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.16.jpeg",
   },
   {
-    id: "line-11",
-    title: "Tatuaje de Línea Fina 11",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.17.jpeg",
-  },
-  {
     id: "line-12",
     title: "Tatuaje de Línea Fina 12",
     category: "Line",
@@ -175,25 +157,7 @@ export const galleryImages = [
     image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.23.jpeg",
   },
 
-  // Tribal - 3 images
-  {
-    id: "tribal-2",
-    title: "Blackwork Mano con Ojo",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-mano-ojo-1.webp",
-  },
-  {
-    id: "tribal-3",
-    title: "Blackwork Hombro Orgánico",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-hombro-organico-1.webp",
-  },
-  {
-    id: "tribal-4",
-    title: "Blackwork Mano Detalle",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-mano-ojo-3.webp",
-  },
+  // Tribal - 0 images (removed)
 
   // Japonés - 5 images
   {
@@ -221,18 +185,12 @@ export const galleryImages = [
     image: "/images/japones/japones-tattoo-3.webp",
   },
 
-  // Gray and Black - 4 images
+  // Gray and Black - 3 images
   {
     id: "grayblack-1",
     title: "Gray and Black Arte",
     category: "Gray and Black",
     image: "/images/grayandblack/grayblack-1.webp",
-  },
-  {
-    id: "grayblack-2",
-    title: "Gray and Black Detalle",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-2.webp",
   },
   {
     id: "grayblack-3",
@@ -247,18 +205,12 @@ export const galleryImages = [
     image: "/images/grayandblack/grayblack-4.webp",
   },
 
-  // Full Color - 5 images
+  // Full Color - 6 images
   {
     id: "fullcolor-1",
     title: "Full Color Vibrante",
     category: "Full Color",
     image: "/images/fullcolor/fullcolor-1.webp",
-  },
-  {
-    id: "fullcolor-4",
-    title: "Full Color Intenso",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-4.webp",
   },
   {
     id: "fullcolor-5",
@@ -279,7 +231,21 @@ export const galleryImages = [
     image: "/images/fullcolor/fullcolor-7.webp",
   },
 
-  // Otros - 4 images
+  // Full Color additions
+  {
+    id: "fullcolor-opm",
+    title: "One Punch Man",
+    category: "Full Color",
+    image: "/images/fullcolor/onepunchman.webp",
+  },
+  {
+    id: "fullcolor-mario",
+    title: "Mario Bros",
+    category: "Full Color",
+    image: "/images/fullcolor/mario-bros.webp",
+  },
+
+  // Otros - 2 images
   {
     id: "otros-1",
     title: "Tatuaje Brazo",
@@ -291,18 +257,6 @@ export const galleryImages = [
     title: "Tatuaje Espalda",
     category: "Otros",
     image: "/images/otros/tatuaje-espalda.webp",
-  },
-  {
-    id: "otros-3",
-    title: "Tatuaje Costado",
-    category: "Otros",
-    image: "/images/otros/tatuaje-costado.webp",
-  },
-  {
-    id: "otros-4",
-    title: "Tatuaje Pierna",
-    category: "Otros",
-    image: "/images/otros/tatuaje-pierna.webp",
   },
 ] as const;
 
@@ -316,7 +270,7 @@ export const featuredWorkImages = [
   {
     id: "f2",
     category: "Full Color",
-    image: "/images/fullcolor/fullcolor-4.webp",
+    image: "/images/fullcolor/mario-bros.webp",
     size: "large" as const,
   },
   {
@@ -349,7 +303,7 @@ export const styleImages = {
   realism: "/images/realismo/leon-realista.webp",
   portrait: "/images/retratos/gato.webp",
   line: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
-  tribal: "/images/tribal/blackwork-mano-ojo-1.webp",
+  fullcolor: "/images/fullcolor/mario-bros.webp",
   japanese: "/images/japones/dragon-japones-espalda.webp",
 } as const;
 
