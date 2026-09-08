@@ -17,9 +17,7 @@ import {
 } from "@/lib/animations/variants";
 
 // Filter realism images for portfolio preview
-const realismImages = galleryImages.filter(
-  (img) => img.category === "Realismo"
-);
+const realismImages = galleryImages.filter((img) => img.category === "Realism");
 
 const realismTypes = [
   {
