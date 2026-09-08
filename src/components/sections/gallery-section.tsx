@@ -20,9 +20,15 @@ import {
 // Type Definitions & Interfaces
 // =============================================================================
 
-/** Exactly 5 allowed gallery filter categories */
+/** Gallery filter categories based on portafolio folder structure */
 export type CategoryType =
-  "all" | "realism" | "full-color" | "tribal" | "others";
+  | "all"
+  | "realismo"
+  | "full-color"
+  | "micro-realism"
+  | "japones"
+  | "tribal"
+  | "otros";
 
 /** Structure for a tattoo gallery item */
 export interface TattooItem {
@@ -45,12 +51,12 @@ export interface FilterCategoryOption {
 // =============================================================================
 
 /** Default filter category when no valid URL param is specified */
-const DEFAULT_CATEGORY: CategoryType = "realism";
+const DEFAULT_CATEGORY: CategoryType = "realismo";
 
 /** URL search parameter key */
 const CATEGORY_PARAM = "category";
 
-/** The 5 mandatory filter categories */
+/** Filter categories based on portafolio folder structure */
 export const CATEGORY_OPTIONS: FilterCategoryOption[] = [
   {
     label: "All",
@@ -58,8 +64,8 @@ export const CATEGORY_OPTIONS: FilterCategoryOption[] = [
     description: "Browse full tattoo portfolio",
   },
   {
-    label: "Realism",
-    value: "realism",
+    label: "Realismo",
+    value: "realismo",
     description: "Photorealistic realism tattoos",
   },
   {
@@ -68,14 +74,24 @@ export const CATEGORY_OPTIONS: FilterCategoryOption[] = [
     description: "Vibrant full color tattoo pieces",
   },
   {
+    label: "Micro Realism",
+    value: "micro-realism",
+    description: "Detailed micro realism tattoos",
+  },
+  {
+    label: "Japonés",
+    value: "japones",
+    description: "Traditional Japanese style tattoos",
+  },
+  {
     label: "Tribal",
     value: "tribal",
     description: "Bold tribal and pattern tattoos",
   },
   {
-    label: "Others",
-    value: "others",
-    description: "Fine line, japanese, and other custom styles",
+    label: "Otros",
+    value: "otros",
+    description: "Other custom styles and designs",
   },
 ];
 
@@ -89,19 +105,17 @@ const VALID_CATEGORIES = new Set<CategoryType>(
 // =============================================================================
 
 /**
- * Maps raw gallery item categories to one of the 5 supported CategoryTypes.
+ * Maps raw gallery item categories to the supported CategoryTypes based on portafolio folders.
  */
 export function mapToCategoryType(category: string): CategoryType {
   const norm = category.toLowerCase().trim();
-  if (norm.includes("realism") || norm.includes("realismo")) return "realism";
-  if (
-    norm.includes("full color") ||
-    norm.includes("fullcolor") ||
-    norm.includes("color")
-  )
-    return "full-color";
-  if (norm.includes("tribal")) return "tribal";
-  return "others";
+  if (norm === "realismo") return "realismo";
+  if (norm === "full color") return "full-color";
+  if (norm === "micro realism") return "micro-realism";
+  if (norm === "japonés" || norm === "japones") return "japones";
+  if (norm === "tribal") return "tribal";
+  if (norm === "otros") return "otros";
+  return "otros";
 }
 
 /**
@@ -382,10 +396,10 @@ function GallerySectionInner() {
                 </p>
                 <button
                   type="button"
-                  onClick={() => handleCategoryChange("realism")}
+                  onClick={() => handleCategoryChange("realismo")}
                   className="text-olive hover:text-olive/80 mt-4 underline transition-colors"
                 >
-                  View Realism Tattoos
+                  View Realismo Tattoos
                 </button>
               </motion.div>
             )}

@@ -1,270 +1,237 @@
-// Local gallery images organized by category (Realismo and Retratos prioritized first)
+// Local gallery images organized by category based on portafolio folder structure
 
 export const galleryImages = [
-  // Realismo - 15 images
+  // Realismo - 11 images
+  {
+    id: "realismo-1",
+    title: "Fénix",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/fenix.webp",
+  },
   {
     id: "realismo-2",
     title: "Elefante",
     category: "Realismo",
-    image: "/images/realismo/elefante.webp",
+    image: "/images/portafolio/realismo/elefante.webp",
   },
   {
     id: "realismo-3",
-    title: "Elefante Detalle",
+    title: "Dragón Realista",
     category: "Realismo",
-    image: "/images/realismo/elefante2.webp",
+    image: "/images/portafolio/realismo/dragon.jpeg",
   },
   {
     id: "realismo-4",
-    title: "Fénix",
-    category: "Realismo",
-    image: "/images/realismo/fenix.webp",
-  },
-  {
-    id: "realismo-retrato-perro",
     title: "Retrato Perro",
     category: "Realismo",
-    image: "/images/realismo/retratoperro.webp",
+    image: "/images/portafolio/realismo/retratoperro.webp",
   },
   {
-    id: "realismo-dog-blackwork",
-    title: "Dog Blackwork Realista",
-    category: "Realismo",
-    image: "/images/realismo/dogblackwork.webp",
-  },
-  {
-    id: "realismo-dragon",
-    title: "Dragón Realista",
-    category: "Realismo",
-    image: "/images/realismo/dragon.jpeg",
-  },
-  {
-    id: "realismo-tattoo",
-    title: "Realismo",
-    category: "Realismo",
-    image: "/images/realismo/ealismo.jpeg",
-  },
-  {
-    id: "realismo-mariposa",
-    title: "Mariposa Realista",
-    category: "Realismo",
-    image: "/images/realismo/mariposarealismo.jpeg",
-  },
-  {
-    id: "realismo-seahorse",
-    title: "Caballito de Mar Realista",
-    category: "Realismo",
-    image: "/images/realismo/seahorse.jpeg",
-  },
-  {
-    id: "japones-5",
-    title: "Tigre Japonés",
-    category: "Japonés",
-    image: "/images/japones/tigre-japones.webp",
-  },
-  {
-    id: "realismo-13",
+    id: "realismo-5",
     title: "Virgen en Brazo",
     category: "Realismo",
-    image: "/images/realismo/virgen-brazo.webp",
+    image: "/images/portafolio/realismo/virgen-brazo.webp",
   },
   {
-    id: "realismo-16",
+    id: "realismo-6",
+    title: "Mariposa Realista",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/mariposarealismo.jpeg",
+  },
+  {
+    id: "realismo-7",
+    title: "Caballito de Mar",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/seahorse.jpeg",
+  },
+  {
+    id: "realismo-8",
+    title: "Realismo",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/ealismo.jpeg",
+  },
+  {
+    id: "realismo-9",
     title: "Realismo Sombreado",
     category: "Realismo",
-    image: "/images/realismo/realismo-tattoo-17.webp",
+    image: "/images/portafolio/realismo/realismo-tattoo-17.webp",
   },
   {
-    id: "realismo-17",
+    id: "realismo-10",
     title: "Realismo Fino",
     category: "Realismo",
-    image: "/images/realismo/realismo-tattoo-18.webp",
+    image: "/images/portafolio/realismo/realismo-tattoo-18.webp",
   },
   {
-    id: "realismo-18",
+    id: "realismo-11",
     title: "Realismo Completo",
     category: "Realismo",
-    image: "/images/realismo/realismo-tattoo-19.webp",
+    image: "/images/portafolio/realismo/realismo-tattoo-19.webp",
   },
-  // Retratos - 4 images
+  // Full Color - 8 images
   {
-    id: "retrato-1",
-    title: "Retrato de Gato",
-    category: "Retratos",
-    image: "/images/retratos/gato.webp",
-  },
-  {
-    id: "retrato-2",
-    title: "Retrato de Gato Detalle",
-    category: "Retratos",
-    image: "/images/retratos/gato2.webp",
-  },
-  // Line - 5 images
-  {
-    id: "line-1",
-    title: "Tatuaje de Línea Fina 1",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
+    id: "fullcolor-1",
+    title: "Full Color Vibrante",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor-1.webp",
   },
   {
-    id: "line-9",
-    title: "Tatuaje de Línea Fina 9",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.14.jpeg",
+    id: "fullcolor-2",
+    title: "Full Color Expresivo",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor-5.webp",
   },
   {
-    id: "line-10",
-    title: "Tatuaje de Línea Fina 10",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.16.jpeg",
+    id: "fullcolor-3",
+    title: "Full Color Dinámico",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor-6.webp",
   },
   {
-    id: "line-12",
-    title: "Tatuaje de Línea Fina 12",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.18.jpeg",
+    id: "fullcolor-4",
+    title: "Full Color Completo",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor-7.webp",
   },
   {
-    id: "line-16",
-    title: "Tatuaje de Línea Fina 16",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.23.jpeg",
-  },
-
-  // Tribal - 6 images
-  {
-    id: "tribal-1",
-    title: "Tatuaje Tribal Brazo",
-    category: "Tribal",
-    image: "/images/Tribal/tatuaje-brazo-1.webp",
+    id: "fullcolor-5",
+    title: "One Punch Man",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/onepunchman.webp",
   },
   {
-    id: "tribal-2",
-    title: "Tatuaje Tribal Espalda",
-    category: "Tribal",
-    image: "/images/Tribal/tatuaje-espalda.webp",
+    id: "fullcolor-6",
+    title: "Mario Bros",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/mario-bros.webp",
   },
   {
-    id: "tribal-3",
-    title: "Tatuaje Tribal 1",
-    category: "Tribal",
-    image: "/images/Tribal/WhatsApp Image 2026-09-06 at 00.41.23.jpeg",
+    id: "fullcolor-7",
+    title: "Full Color Arte",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor.jpeg",
   },
   {
-    id: "tribal-4",
-    title: "Tatuaje Tribal 2",
-    category: "Tribal",
-    image: "/images/Tribal/WhatsApp Image 2026-09-06 at 00.41.26.jpeg",
+    id: "fullcolor-8",
+    title: "Caballito de Mar Full Color",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/seahorse.jpeg",
+  },
+  // Micro Realism - 4 images
+  {
+    id: "micro-realism-1",
+    title: "Dog Blackwork",
+    category: "Micro Realism",
+    image: "/images/portafolio/micro-realism/dogblackwork.webp",
   },
   {
-    id: "tribal-5",
-    title: "Tatuaje Tribal 3",
-    category: "Tribal",
-    image: "/images/Tribal/WhatsApp Image 2026-09-06 at 00.41.26 copy.jpeg",
+    id: "micro-realism-2",
+    title: "Gray and Black Arte",
+    category: "Micro Realism",
+    image: "/images/portafolio/micro-realism/grayblack-1.webp",
   },
   {
-    id: "tribal-6",
-    title: "Tatuaje Tribal 4",
-    category: "Tribal",
-    image: "/images/Tribal/WhatsApp Image 2026-09-06 at 00.41.49.jpeg",
+    id: "micro-realism-3",
+    title: "Gray and Black Sombreado",
+    category: "Micro Realism",
+    image: "/images/portafolio/micro-realism/grayblack-3.webp",
   },
-
+  {
+    id: "micro-realism-4",
+    title: "Gray and Black Fino",
+    category: "Micro Realism",
+    image: "/images/portafolio/micro-realism/grayblack-4.webp",
+  },
   // Japonés - 5 images
   {
     id: "japones-1",
     title: "Dragón Japonés Espalda",
     category: "Japonés",
-    image: "/images/japones/dragon-japones-espalda.webp",
+    image: "/images/portafolio/japones/dragon-japones-espalda.webp",
   },
   {
     id: "japones-2",
     title: "Tatuaje Japonés",
     category: "Japonés",
-    image: "/images/japones/japones-tattoo-1.webp",
+    image: "/images/portafolio/japones/japones-tattoo-1.webp",
   },
   {
     id: "japones-3",
     title: "Tatuaje Japonés Detalle",
     category: "Japonés",
-    image: "/images/japones/japones-tattoo-2.webp",
+    image: "/images/portafolio/japones/japones-tattoo-2.webp",
   },
   {
     id: "japones-4",
     title: "Arte Japonés",
     category: "Japonés",
-    image: "/images/japones/japones-tattoo-3.webp",
-  },
-
-  // Gray and Black - 3 images
-  {
-    id: "grayblack-1",
-    title: "Gray and Black Arte",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-1.webp",
+    image: "/images/portafolio/japones/japones-tattoo-3.webp",
   },
   {
-    id: "grayblack-3",
-    title: "Gray and Black Sombreado",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-3.webp",
+    id: "japones-5",
+    title: "Tigre Japonés",
+    category: "Japonés",
+    image: "/images/portafolio/japones/tigre-japones.webp",
+  },
+  // Tribal - 6 images
+  {
+    id: "tribal-1",
+    title: "Tatuaje Tribal Brazo",
+    category: "Tribal",
+    image: "/images/portafolio/Tribal/tatuaje-brazo-1.webp",
   },
   {
-    id: "grayblack-4",
-    title: "Gray and Black Fino",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-4.webp",
-  },
-
-  // Full Color - 6 images
-  {
-    id: "fullcolor-1",
-    title: "Full Color Vibrante",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-1.webp",
+    id: "tribal-2",
+    title: "Tatuaje Tribal Espalda",
+    category: "Tribal",
+    image: "/images/portafolio/Tribal/tatuaje-espalda.webp",
   },
   {
-    id: "fullcolor-5",
-    title: "Full Color Expresivo",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-5.webp",
+    id: "tribal-3",
+    title: "Tatuaje Tribal 1",
+    category: "Tribal",
+    image:
+      "/images/portafolio/Tribal/WhatsApp Image 2026-09-06 at 00.41.23.jpeg",
   },
   {
-    id: "fullcolor-6",
-    title: "Full Color Dinámico",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-6.webp",
+    id: "tribal-4",
+    title: "Tatuaje Tribal 2",
+    category: "Tribal",
+    image:
+      "/images/portafolio/Tribal/WhatsApp Image 2026-09-06 at 00.41.26.jpeg",
   },
   {
-    id: "fullcolor-7",
-    title: "Full Color Completo",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor-7.webp",
-  },
-
-  // Full Color additions
-  {
-    id: "fullcolor-opm",
-    title: "One Punch Man",
-    category: "Full Color",
-    image: "/images/fullcolor/onepunchman.webp",
+    id: "tribal-5",
+    title: "Tatuaje Tribal 3",
+    category: "Tribal",
+    image:
+      "/images/portafolio/Tribal/WhatsApp Image 2026-09-06 at 00.41.26 copy.jpeg",
   },
   {
-    id: "fullcolor-mario",
-    title: "Mario Bros",
-    category: "Full Color",
-    image: "/images/fullcolor/mario-bros.webp",
+    id: "tribal-6",
+    title: "Tatuaje Tribal 4",
+    category: "Tribal",
+    image:
+      "/images/portafolio/Tribal/WhatsApp Image 2026-09-06 at 00.41.49.jpeg",
+  },
+  // Otros - 3 images
+  {
+    id: "otros-1",
+    title: "Corazón",
+    category: "Otros",
+    image: "/images/portafolio/otros/corazon.jpeg",
   },
   {
-    id: "fullcolor-arte",
-    title: "Full Color Arte",
-    category: "Full Color",
-    image: "/images/fullcolor/fullcolor.jpeg",
+    id: "otros-2",
+    title: "Retrato de Gato",
+    category: "Otros",
+    image: "/images/portafolio/otros/gato.webp",
   },
   {
-    id: "fullcolor-seahorse",
-    title: "Caballito de Mar Full Color",
-    category: "Full Color",
-    image: "/images/fullcolor/seahorse.jpeg",
+    id: "otros-3",
+    title: "Retrato de Gato Detalle",
+    category: "Otros",
+    image: "/images/portafolio/otros/gato2.webp",
   },
 ] as const;
 
@@ -272,60 +239,62 @@ export const featuredWorkImages = [
   {
     id: "f1",
     category: "Realismo",
-    image: "/images/realismo/fenix.webp",
+    image: "/images/portafolio/realismo/fenix.webp",
     size: "large" as const,
   },
   {
     id: "f2",
     category: "Full Color",
-    image: "/images/fullcolor/mario-bros.webp",
+    image: "/images/portafolio/fullcolor/mario-bros.webp",
     size: "large" as const,
   },
   {
     id: "f3",
     category: "Realismo",
-    image: "/images/realismo/dragon.jpeg",
+    image: "/images/portafolio/realismo/dragon.jpeg",
     size: "medium" as const,
   },
   {
     id: "f4",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-1.webp",
+    category: "Micro Realism",
+    image: "/images/portafolio/micro-realism/grayblack-1.webp",
     size: "medium" as const,
   },
   {
     id: "f5",
     category: "Full Color",
-    image: "/images/fullcolor/fullcolor-5.webp",
+    image: "/images/portafolio/fullcolor/fullcolor-5.webp",
     size: "small" as const,
   },
   {
     id: "f6",
-    category: "Gray and Black",
-    image: "/images/grayandblack/grayblack-4.webp",
+    category: "Micro Realism",
+    image: "/images/portafolio/micro-realism/grayblack-4.webp",
     size: "small" as const,
   },
 ] as const;
 
 export const styleImages = {
-  realism: "/images/realismo/fenix.webp",
-  portrait: "/images/otros/gato.webp",
-  line: "/images/otros/corazon.jpeg",
-  fullcolor: "/images/fullcolor/mario-bros.webp",
-  japanese: "/images/japones/dragon-japones-espalda.webp",
+  realism: "/images/portafolio/realismo/fenix.webp",
+  portrait: "/images/portafolio/otros/gato.webp",
+  line: "/images/portafolio/otros/corazon.jpeg",
+  fullcolor: "/images/portafolio/fullcolor/mario-bros.webp",
+  japanese: "/images/portafolio/japones/dragon-japones-espalda.webp",
+  microrealism: "/images/portafolio/micro-realism/grayblack-1.webp",
+  tribal: "/images/portafolio/Tribal/tatuaje-brazo-1.webp",
 } as const;
 
 export const aboutImages = {
   artist: "/images/perfil/rene111.png",
   artist2: "/images/perfil/rene2.png",
   artist3: "/images/perfil/rene3.png",
-  studio1: "/images/realismo/fenix.webp",
-  studio2: "/images/realismo/mariposarealismo.jpeg",
-  studio3: "/images/retratos/gato.webp",
-  artistWorking: "/images/realismo/fenix.webp",
+  studio1: "/images/portafolio/realismo/fenix.webp",
+  studio2: "/images/portafolio/realismo/mariposarealismo.jpeg",
+  studio3: "/images/portafolio/otros/gato.webp",
+  artistWorking: "/images/portafolio/realismo/fenix.webp",
 } as const;
 
-export const heroBackground = "/images/realismo/fenix.webp";
+export const heroBackground = "/images/portafolio/realismo/fenix.webp";
 
 export type GalleryImage = (typeof galleryImages)[number];
 export type FeaturedWorkImage = (typeof featuredWorkImages)[number];

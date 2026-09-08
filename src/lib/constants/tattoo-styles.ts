@@ -10,28 +10,12 @@ export interface TattooStyle {
 
 export const tattooStyles: TattooStyle[] = [
   {
-    id: "realism",
+    id: "realismo",
     name: "Realismo",
     description:
       "Reproducciones fotográficas de retratos, animales y objetos con un nivel de detalle excepcional.",
     image: styleImages.realism,
     features: ["Detalle fotográfico", "Texturas realistas", "Alta precisión"],
-  },
-  {
-    id: "portrait",
-    name: "Retratos",
-    description:
-      "Capturamos la esencia de tus seres queridos o íconos con un realismo impactante y emotivo.",
-    image: styleImages.portrait,
-    features: ["Expresiones vivas", "Semejanza exacta", "Emotividad"],
-  },
-  {
-    id: "line",
-    name: "Line",
-    description:
-      "Tatuajes de línea fina y trazos precisos con diseños delicados y minimalistas.",
-    image: styleImages.line,
-    features: ["Líneas finas", "Trazos precisos", "Alta precisión"],
   },
   {
     id: "fullcolor",
@@ -42,7 +26,15 @@ export const tattooStyles: TattooStyle[] = [
     features: ["Colores vibrantes", "Alta saturación", "Arte pop"],
   },
   {
-    id: "japanese",
+    id: "microrealism",
+    name: "Micro Realism",
+    description:
+      "Tatuajes de realismo en escala pequeña con detalles increíblemente finos y precisos.",
+    image: styleImages.microrealism,
+    features: ["Escala pequeña", "Detalles finos", "Alta precisión"],
+  },
+  {
+    id: "japones",
     name: "Japonés",
     description:
       "Arte tradicional japonés con dragones, koi, flores de cerezo y otros elementos icónicos de la cultura nipona.",
@@ -52,5 +44,21 @@ export const tattooStyles: TattooStyle[] = [
       "Simbolismo profundo",
       "Composiciones fluidas",
     ],
+  },
+  {
+    id: "tribal",
+    name: "Tribal",
+    description:
+      "Diseños tribales audaces con patrones geométricos y líneas fuertes inspirados en culturas ancestrales.",
+    image: styleImages.tribal,
+    features: ["Patrones geométricos", "Líneas fuertes", "Arte ancestral"],
+  },
+  {
+    id: "otros",
+    name: "Otros",
+    description:
+      "Estilos variados incluyendo línea fina, retratos y diseños personalizados únicos.",
+    image: styleImages.portrait,
+    features: ["Líneas finas", "Diseños únicos", "Personalización"],
   },
 ];
