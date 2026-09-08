@@ -133,7 +133,7 @@ export function RealismContent() {
                 Free Realism Consultation
               </a>
               <Link
-                href="/#gallery"
+                href="/gallery"
                 className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-8 py-4"
               >
                 View Full Portfolio
@@ -266,7 +266,7 @@ export function RealismContent() {
             className="mt-10 text-center"
           >
             <Link
-              href="/#gallery"
+              href="/gallery"
               className="btn-outline-gold inline-flex items-center gap-2 rounded-full px-8 py-4"
             >
               View Complete Gallery

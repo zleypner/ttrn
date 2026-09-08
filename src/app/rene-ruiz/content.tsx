@@ -209,7 +209,7 @@ export function ReneRuizContent() {
                     Let&apos;s Talk
                   </a>
                   <Link
-                    href="/#gallery"
+                    href="/gallery"
                     className="btn-outline-gold inline-flex items-center justify-center gap-2 rounded-full px-8 py-4"
                   >
                     View Portfolio

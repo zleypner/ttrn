@@ -2,7 +2,7 @@
 export const navigationLinks = [
   { href: "#home", label: "Home" },
   { href: "#styles", label: "Styles" },
-  { href: "#gallery", label: "Gallery" },
+  { href: "/gallery", label: "Gallery" },
   { href: "#process", label: "Process" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#faq", label: "FAQ" },

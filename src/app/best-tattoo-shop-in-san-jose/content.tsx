@@ -448,7 +448,7 @@ export function BestTattooShopContent() {
               sleeve projects, each tattoo is crafted with precision and care.
             </p>
             <Link
-              href="/#gallery"
+              href="/gallery"
               className="btn-gold inline-flex items-center gap-2 rounded-full px-8 py-4"
             >
               View Full Gallery

@@ -222,12 +222,6 @@ export const featuredWorkImages = [
     size: "small" as const,
   },
   {
-    id: "f-realismo-7",
-    category: "Realismo",
-    image: "/images/portafolio/realismo/seahorse.jpeg",
-    size: "small" as const,
-  },
-  {
     id: "f-realismo-8",
     category: "Realismo",
     image: "/images/portafolio/realismo/ealismo.jpeg",
