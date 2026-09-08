@@ -16,9 +16,9 @@ import {
   scrollViewport,
 } from "@/lib/animations/variants";
 
-// Filter realism and portrait images for portfolio preview
+// Filter realism images for portfolio preview
 const realismImages = galleryImages.filter(
-  (img) => img.category === "Realismo" || img.category === "Retratos"
+  (img) => img.category === "Realismo"
 );
 
 const realismTypes = [

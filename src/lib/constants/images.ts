@@ -256,20 +256,20 @@ export const featuredWorkImages = [
   },
   {
     id: "f4",
-    category: "Micro Realism",
-    image: "/images/portafolio/micro-realism/grayblack-1.webp",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/onepunchman.webp",
     size: "medium" as const,
   },
   {
     id: "f5",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor-5.webp",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/elefante.webp",
     size: "small" as const,
   },
   {
     id: "f6",
-    category: "Micro Realism",
-    image: "/images/portafolio/micro-realism/grayblack-4.webp",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor-5.webp",
     size: "small" as const,
   },
 ] as const;
