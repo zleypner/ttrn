@@ -208,40 +208,120 @@ export const galleryImages = [
 ] as const;
 
 export const featuredWorkImages = [
+  // Realismo - 11 images
   {
-    id: "f1",
+    id: "f-realismo-1",
     category: "Realismo",
     image: "/images/portafolio/realismo/fenix.webp",
     size: "large" as const,
   },
   {
-    id: "f2",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/mario-bros.webp",
-    size: "large" as const,
-  },
-  {
-    id: "f3",
+    id: "f-realismo-2",
     category: "Realismo",
     image: "/images/portafolio/realismo/dragon.jpeg",
     size: "medium" as const,
   },
   {
-    id: "f4",
+    id: "f-realismo-3",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/elefante.webp",
+    size: "medium" as const,
+  },
+  {
+    id: "f-realismo-4",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/mariposarealismo.jpeg",
+    size: "small" as const,
+  },
+  {
+    id: "f-realismo-5",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/retratoperro.webp",
+    size: "small" as const,
+  },
+  {
+    id: "f-realismo-6",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/virgen-brazo.webp",
+    size: "small" as const,
+  },
+  {
+    id: "f-realismo-7",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/seahorse.jpeg",
+    size: "small" as const,
+  },
+  {
+    id: "f-realismo-8",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/ealismo.jpeg",
+    size: "small" as const,
+  },
+  {
+    id: "f-realismo-9",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/realismo-tattoo-17.webp",
+    size: "small" as const,
+  },
+  {
+    id: "f-realismo-10",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/realismo-tattoo-18.webp",
+    size: "small" as const,
+  },
+  {
+    id: "f-realismo-11",
+    category: "Realismo",
+    image: "/images/portafolio/realismo/realismo-tattoo-19.webp",
+    size: "small" as const,
+  },
+  // Full Color - 8 images
+  {
+    id: "f-fullcolor-1",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/mario-bros.webp",
+    size: "large" as const,
+  },
+  {
+    id: "f-fullcolor-2",
     category: "Full Color",
     image: "/images/portafolio/fullcolor/onepunchman.webp",
     size: "medium" as const,
   },
   {
-    id: "f5",
-    category: "Realismo",
-    image: "/images/portafolio/realismo/elefante.webp",
+    id: "f-fullcolor-3",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor-1.webp",
+    size: "medium" as const,
+  },
+  {
+    id: "f-fullcolor-4",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor-5.webp",
     size: "small" as const,
   },
   {
-    id: "f6",
+    id: "f-fullcolor-5",
     category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor-5.webp",
+    image: "/images/portafolio/fullcolor/fullcolor-6.webp",
+    size: "small" as const,
+  },
+  {
+    id: "f-fullcolor-6",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor-7.webp",
+    size: "small" as const,
+  },
+  {
+    id: "f-fullcolor-7",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/fullcolor.jpeg",
+    size: "small" as const,
+  },
+  {
+    id: "f-fullcolor-8",
+    category: "Full Color",
+    image: "/images/portafolio/fullcolor/seahorse.jpeg",
     size: "small" as const,
   },
 ] as const;
