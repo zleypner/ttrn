@@ -27,22 +27,10 @@ export const galleryImages = [
     image: "/images/realismo/fenix.webp",
   },
   {
-    id: "realismo-6",
-    title: "León en Brazo",
-    category: "Realismo",
-    image: "/images/realismo/leon-brazo.webp",
-  },
-  {
     id: "realismo-7",
     title: "León Realista",
     category: "Realismo",
     image: "/images/realismo/leon-realista.webp",
-  },
-  {
-    id: "realismo-9",
-    title: "Ojo Realista",
-    category: "Realismo",
-    image: "/images/realismo/ojo-realista.webp",
   },
   {
     id: "realismo-10",
@@ -51,10 +39,40 @@ export const galleryImages = [
     image: "/images/realismo/perro-realista.webp",
   },
   {
-    id: "realismo-11",
-    title: "Perro",
+    id: "realismo-retrato-perro",
+    title: "Retrato Perro",
     category: "Realismo",
-    image: "/images/realismo/perro.webp",
+    image: "/images/realismo/retratoperro.webp",
+  },
+  {
+    id: "realismo-dog-blackwork",
+    title: "Dog Blackwork Realista",
+    category: "Realismo",
+    image: "/images/realismo/dogblackwork.webp",
+  },
+  {
+    id: "realismo-dragon",
+    title: "Dragón Realista",
+    category: "Realismo",
+    image: "/images/realismo/dragon.jpeg",
+  },
+  {
+    id: "realismo-tattoo",
+    title: "Realismo",
+    category: "Realismo",
+    image: "/images/realismo/ealismo.jpeg",
+  },
+  {
+    id: "realismo-mariposa",
+    title: "Mariposa Realista",
+    category: "Realismo",
+    image: "/images/realismo/mariposarealismo.jpeg",
+  },
+  {
+    id: "realismo-seahorse",
+    title: "Caballito de Mar Realista",
+    category: "Realismo",
+    image: "/images/realismo/seahorse.jpeg",
   },
   {
     id: "japones-5",
@@ -73,12 +91,6 @@ export const galleryImages = [
     title: "Realismo Detalle",
     category: "Realismo",
     image: "/images/realismo/realismo-tattoo-15.webp",
-  },
-  {
-    id: "realismo-15",
-    title: "Realismo Artístico",
-    category: "Realismo",
-    image: "/images/realismo/realismo-tattoo-16.webp",
   },
   {
     id: "realismo-16",
@@ -111,18 +123,6 @@ export const galleryImages = [
     title: "Retrato de Gato Detalle",
     category: "Retratos",
     image: "/images/retratos/gato2.webp",
-  },
-  {
-    id: "retrato-3",
-    title: "Retrato Familiar",
-    category: "Retratos",
-    image: "/images/retratos/retrato-familiar-2.webp",
-  },
-  {
-    id: "retrato-4",
-    title: "Retrato de Mascota",
-    category: "Retratos",
-    image: "/images/retratos/retrato-mascota.webp",
   },
 
   // Line - 5 images
@@ -157,7 +157,43 @@ export const galleryImages = [
     image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.23.jpeg",
   },
 
-  // Tribal - 0 images (removed)
+  // Tribal - 6 images
+  {
+    id: "tribal-1",
+    title: "Tatuaje Tribal Brazo",
+    category: "Tribal",
+    image: "/images/Tribal/tatuaje-brazo-1.webp",
+  },
+  {
+    id: "tribal-2",
+    title: "Tatuaje Tribal Espalda",
+    category: "Tribal",
+    image: "/images/Tribal/tatuaje-espalda.webp",
+  },
+  {
+    id: "tribal-3",
+    title: "Tatuaje Tribal 1",
+    category: "Tribal",
+    image: "/images/Tribal/WhatsApp Image 2026-09-06 at 00.41.23.jpeg",
+  },
+  {
+    id: "tribal-4",
+    title: "Tatuaje Tribal 2",
+    category: "Tribal",
+    image: "/images/Tribal/WhatsApp Image 2026-09-06 at 00.41.26.jpeg",
+  },
+  {
+    id: "tribal-5",
+    title: "Tatuaje Tribal 3",
+    category: "Tribal",
+    image: "/images/Tribal/WhatsApp Image 2026-09-06 at 00.41.26 copy.jpeg",
+  },
+  {
+    id: "tribal-6",
+    title: "Tatuaje Tribal 4",
+    category: "Tribal",
+    image: "/images/Tribal/WhatsApp Image 2026-09-06 at 00.41.49.jpeg",
+  },
 
   // Japonés - 5 images
   {
@@ -244,19 +280,11 @@ export const galleryImages = [
     category: "Full Color",
     image: "/images/fullcolor/mario-bros.webp",
   },
-
-  // Otros - 2 images
   {
-    id: "otros-1",
-    title: "Tatuaje Brazo",
-    category: "Otros",
-    image: "/images/otros/tatuaje-brazo-1.webp",
-  },
-  {
-    id: "otros-2",
-    title: "Tatuaje Espalda",
-    category: "Otros",
-    image: "/images/otros/tatuaje-espalda.webp",
+    id: "fullcolor-arte",
+    title: "Full Color Arte",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor.jpeg",
   },
 ] as const;
 
@@ -313,7 +341,7 @@ export const aboutImages = {
   artist3: "/images/perfil/rene3.png",
   studio1: "/images/realismo/fenix.webp",
   studio2: "/images/realismo/leon-realista.webp",
-  studio3: "/images/retratos/retrato-mascota.webp",
+  studio3: "/images/retratos/gato.webp",
   artistWorking: "/images/realismo/fenix.webp",
 } as const;
 
