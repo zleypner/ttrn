@@ -68,7 +68,7 @@ export const galleryImages = [
     category: "Realismo",
     image: "/images/portafolio/realismo/realismo-tattoo-19.webp",
   },
-  // Full Color - 8 images
+  // Full Color - 4 images
   {
     id: "fullcolor-1",
     title: "Full Color Vibrante",
@@ -77,42 +77,18 @@ export const galleryImages = [
   },
   {
     id: "fullcolor-2",
-    title: "Full Color Expresivo",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor-5.webp",
-  },
-  {
-    id: "fullcolor-3",
-    title: "Full Color Dinámico",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor-6.webp",
-  },
-  {
-    id: "fullcolor-4",
-    title: "Full Color Completo",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor-7.webp",
-  },
-  {
-    id: "fullcolor-5",
     title: "One Punch Man",
     category: "Full Color",
     image: "/images/portafolio/fullcolor/onepunchman.webp",
   },
   {
-    id: "fullcolor-6",
+    id: "fullcolor-3",
     title: "Mario Bros",
     category: "Full Color",
     image: "/images/portafolio/fullcolor/mario-bros.webp",
   },
   {
-    id: "fullcolor-7",
-    title: "Full Color Arte",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor.jpeg",
-  },
-  {
-    id: "fullcolor-8",
+    id: "fullcolor-4",
     title: "Caballito de Mar Full Color",
     category: "Full Color",
     image: "/images/portafolio/fullcolor/seahorse.jpeg",
@@ -275,7 +251,7 @@ export const featuredWorkImages = [
     image: "/images/portafolio/realismo/realismo-tattoo-19.webp",
     size: "small" as const,
   },
-  // Full Color - 8 images
+  // Full Color - 4 images
   {
     id: "f-fullcolor-1",
     category: "Full Color",
@@ -296,30 +272,6 @@ export const featuredWorkImages = [
   },
   {
     id: "f-fullcolor-4",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor-5.webp",
-    size: "small" as const,
-  },
-  {
-    id: "f-fullcolor-5",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor-6.webp",
-    size: "small" as const,
-  },
-  {
-    id: "f-fullcolor-6",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor-7.webp",
-    size: "small" as const,
-  },
-  {
-    id: "f-fullcolor-7",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor.jpeg",
-    size: "small" as const,
-  },
-  {
-    id: "f-fullcolor-8",
     category: "Full Color",
     image: "/images/portafolio/fullcolor/seahorse.jpeg",
     size: "small" as const,
