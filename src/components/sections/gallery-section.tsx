@@ -17,12 +17,12 @@ import {
 } from "@/lib/animations/variants";
 
 // =============================================================================
-// Type Definitions
+// Type Definitions & Interfaces
 // =============================================================================
 
-/** Available filter types for the gallery */
-export type FilterType =
-  "realism" | "black-and-grey" | "color-realism" | "micro-realism" | "other";
+/** Exactly 5 allowed gallery filter categories */
+export type CategoryType =
+  "all" | "realism" | "full-color" | "tribal" | "others";
 
 /** Structure for a tattoo gallery item */
 export interface TattooItem {
@@ -30,127 +30,117 @@ export interface TattooItem {
   title: string;
   category: string;
   image: string;
-  style?: FilterType;
+  categoryType?: CategoryType;
 }
 
-/** Filter button configuration */
-interface FilterButton {
+/** Filter button configuration specification */
+export interface FilterCategoryOption {
   label: string;
-  value: FilterType;
-  description?: string;
+  value: CategoryType;
+  description: string;
 }
 
 // =============================================================================
-// Constants
+// Constants & Configuration
 // =============================================================================
 
-/** Default filter when no URL param is present */
-const DEFAULT_FILTER: FilterType = "realism";
+/** Default filter category when no valid URL param is specified */
+const DEFAULT_CATEGORY: CategoryType = "realism";
 
 /** URL search parameter key */
-const STYLE_PARAM = "style";
+const CATEGORY_PARAM = "category";
 
-/** Filter button configurations - realism-focused with sub-categories */
-const FILTER_BUTTONS: FilterButton[] = [
+/** The 5 mandatory filter categories */
+export const CATEGORY_OPTIONS: FilterCategoryOption[] = [
   {
-    label: "Realism (All)",
+    label: "All",
+    value: "all",
+    description: "Browse full tattoo portfolio",
+  },
+  {
+    label: "Realism",
     value: "realism",
-    description: "All realism tattoo styles",
+    description: "Photorealistic realism tattoos",
   },
   {
-    label: "Black & Grey",
-    value: "black-and-grey",
-    description: "Monochromatic realism",
+    label: "Full Color",
+    value: "full-color",
+    description: "Vibrant full color tattoo pieces",
   },
   {
-    label: "Color Realism",
-    value: "color-realism",
-    description: "Vibrant photorealistic color work",
+    label: "Tribal",
+    value: "tribal",
+    description: "Bold tribal and pattern tattoos",
   },
   {
-    label: "Micro-Realism",
-    value: "micro-realism",
-    description: "Fine detail small-scale realism",
+    label: "Others",
+    value: "others",
+    description: "Fine line, japanese, and other custom styles",
   },
 ];
 
-/** Valid filter values for type checking */
-const VALID_FILTERS = new Set<FilterType>(
-  FILTER_BUTTONS.map((btn) => btn.value)
+/** Valid category set for strict type checking */
+const VALID_CATEGORIES = new Set<CategoryType>(
+  CATEGORY_OPTIONS.map((cat) => cat.value)
 );
 
 // =============================================================================
-// Utility Functions
+// Helper Functions
 // =============================================================================
 
 /**
- * Maps legacy category names to new FilterType values
+ * Maps raw gallery item categories to one of the 5 supported CategoryTypes.
  */
-function mapCategoryToFilter(category: string): FilterType {
-  const normalized = category.toLowerCase().trim();
-
-  // Map existing categories to new filter types
-  const categoryMap: Record<string, FilterType> = {
-    realismo: "realism",
-    realism: "realism",
-    "gray and black": "black-and-grey",
-    "black and grey": "black-and-grey",
-    "black & grey": "black-and-grey",
-    grayandblack: "black-and-grey",
-    "full color": "color-realism",
-    fullcolor: "color-realism",
-    color: "color-realism",
-    retratos: "micro-realism",
-    portraits: "micro-realism",
-    micro: "micro-realism",
-    "micro-realism": "micro-realism",
-    // Everything else maps to "other"
-    line: "other",
-    tribal: "other",
-    japonés: "other",
-    japones: "other",
-    japanese: "other",
-    otros: "other",
-    other: "other",
-  };
-
-  return categoryMap[normalized] || "other";
+export function mapToCategoryType(category: string): CategoryType {
+  const norm = category.toLowerCase().trim();
+  if (norm.includes("realism") || norm.includes("realismo")) return "realism";
+  if (
+    norm.includes("full color") ||
+    norm.includes("fullcolor") ||
+    norm.includes("color")
+  )
+    return "full-color";
+  if (norm.includes("tribal")) return "tribal";
+  return "others";
 }
 
 /**
- * Validates if a string is a valid FilterType
+ * Validates if a raw URL parameter is a valid CategoryType
  */
-function isValidFilter(value: string | null): value is FilterType {
-  return value !== null && VALID_FILTERS.has(value as FilterType);
+export function isValidCategory(value: string | null): value is CategoryType {
+  return value !== null && VALID_CATEGORIES.has(value as CategoryType);
 }
 
 /**
- * Filters gallery items based on selected filter
+ * Normalizes gallery items into TattooItem array with typed categoryType
  */
-function filterGalleryItems(
-  items: typeof galleryImages,
-  filter: FilterType
+export function normalizeGalleryItems(
+  items: typeof galleryImages
 ): TattooItem[] {
-  // Map items to include computed style
-  const mappedItems: TattooItem[] = items.map((item) => ({
-    ...item,
-    style: (item as TattooItem).style || mapCategoryToFilter(item.category),
+  return items.map((item) => ({
+    id: item.id,
+    title: item.title,
+    category: item.category,
+    image: item.image,
+    categoryType: mapToCategoryType(item.category),
   }));
+}
 
-  if (filter === "realism") {
-    // "Realism (All)" shows all realism-related styles
-    return mappedItems.filter((item) =>
-      ["realism", "black-and-grey", "color-realism", "micro-realism"].includes(
-        item.style!
-      )
-    );
+/**
+ * Filters items based on selected CategoryType
+ */
+export function filterTattoosByCategory(
+  items: TattooItem[],
+  selectedCategory: CategoryType
+): TattooItem[] {
+  if (selectedCategory === "all") {
+    return items;
   }
-
-  return mappedItems.filter((item) => item.style === filter);
+  return items.filter((item) => item.categoryType === selectedCategory);
 }
 
 // =============================================================================
-// Inner Component (with useSearchParams)
+// Inner Gallery Component (Uses App Router Navigation Hooks)
 // =============================================================================
 
 function GallerySectionInner() {
@@ -158,51 +148,39 @@ function GallerySectionInner() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Get filter from URL or default
-  const urlStyle = searchParams.get(STYLE_PARAM);
-  const currentFilter: FilterType = isValidFilter(urlStyle)
-    ? urlStyle
-    : DEFAULT_FILTER;
+  // Read URL category or default to 'realism'
+  const rawParam = searchParams.get(CATEGORY_PARAM);
+  const activeCategory: CategoryType = isValidCategory(rawParam)
+    ? rawParam
+    : DEFAULT_CATEGORY;
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
-  // Selected filter derived from URL
-  const selectedFilter = currentFilter;
-
-  // Handle filter button click - updates URL which triggers re-render with new filter
-  const handleFilterChange = useCallback(
-    (filter: FilterType) => {
+  // Automatically update URL query if ?category= is missing or invalid
+  useEffect(() => {
+    if (!isValidCategory(rawParam)) {
       const params = new URLSearchParams(searchParams.toString());
-      params.set(STYLE_PARAM, filter);
+      params.set(CATEGORY_PARAM, DEFAULT_CATEGORY);
+      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    }
+  }, [rawParam, pathname, router, searchParams]);
+
+  // Handle category filter button click with smooth URL replace
+  const handleCategoryChange = useCallback(
+    (category: CategoryType) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(CATEGORY_PARAM, category);
       router.replace(`${pathname}?${params.toString()}`, { scroll: false });
     },
     [searchParams, pathname, router]
   );
 
-  // Filter items based on current selection
-  const filteredItems = filterGalleryItems(galleryImages, selectedFilter);
+  // Normalize and filter tattoo items
+  const allTattoos = normalizeGalleryItems(galleryImages);
+  const filteredItems = filterTattoosByCategory(allTattoos, activeCategory);
 
-  // Listen for category change events from style cards (legacy support)
-  useEffect(() => {
-    const handleSetCategory = (event: CustomEvent<string>) => {
-      const mappedFilter = mapCategoryToFilter(event.detail);
-      handleFilterChange(mappedFilter);
-    };
-
-    window.addEventListener(
-      "setGalleryCategory",
-      handleSetCategory as EventListener
-    );
-    return () => {
-      window.removeEventListener(
-        "setGalleryCategory",
-        handleSetCategory as EventListener
-      );
-    };
-  }, [handleFilterChange]);
-
-  // Handle body scroll lock when lightbox is open
+  // Lock scroll during Lightbox modal display
   useEffect(() => {
     if (lightboxIndex !== null) {
       document.body.style.overflow = "hidden";
@@ -214,55 +192,37 @@ function GallerySectionInner() {
     };
   }, [lightboxIndex]);
 
-  // Lightbox handlers
+  // Lightbox Navigation
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
 
-  const goToPrevious = () => {
-    if (lightboxIndex !== null) {
-      setLightboxIndex(
-        lightboxIndex === 0 ? filteredItems.length - 1 : lightboxIndex - 1
+  const goToPrevious = useCallback(() => {
+    if (lightboxIndex !== null && filteredItems.length > 0) {
+      setLightboxIndex((prev) =>
+        prev === 0 ? filteredItems.length - 1 : (prev as number) - 1
       );
     }
-  };
+  }, [lightboxIndex, filteredItems.length]);
 
-  const goToNext = () => {
-    if (lightboxIndex !== null) {
-      setLightboxIndex(
-        lightboxIndex === filteredItems.length - 1 ? 0 : lightboxIndex + 1
+  const goToNext = useCallback(() => {
+    if (lightboxIndex !== null && filteredItems.length > 0) {
+      setLightboxIndex((prev) =>
+        prev === filteredItems.length - 1 ? 0 : (prev as number) + 1
       );
     }
-  };
+  }, [lightboxIndex, filteredItems.length]);
 
-  // Keyboard navigation for lightbox
+  // Lightbox Keyboard Shortcuts
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (lightboxIndex === null) return;
-
-      switch (e.key) {
-        case "ArrowLeft":
-          if (lightboxIndex !== null) {
-            setLightboxIndex(
-              lightboxIndex === 0 ? filteredItems.length - 1 : lightboxIndex - 1
-            );
-          }
-          break;
-        case "ArrowRight":
-          if (lightboxIndex !== null) {
-            setLightboxIndex(
-              lightboxIndex === filteredItems.length - 1 ? 0 : lightboxIndex + 1
-            );
-          }
-          break;
-        case "Escape":
-          setLightboxIndex(null);
-          break;
-      }
+      if (e.key === "ArrowLeft") goToPrevious();
+      if (e.key === "ArrowRight") goToNext();
+      if (e.key === "Escape") closeLightbox();
     };
-
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [lightboxIndex, filteredItems.length]);
+  }, [lightboxIndex, goToPrevious, goToNext]);
 
   const handleImageLoad = (id: string) => {
     setLoadedImages((prev) => new Set(prev).add(id));
@@ -272,15 +232,15 @@ function GallerySectionInner() {
     <section
       id="gallery"
       className="section-padding"
-      aria-label="Tattoo Gallery"
+      aria-label="Tattoo Portfolio Gallery"
     >
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Realism Tattoo Gallery"
-          subtitle="Explore my collection of photorealistic tattoo artistry. Each piece showcases meticulous attention to detail."
+          title="Tattoo Portfolio Gallery"
+          subtitle="Browse custom realism, full color, tribal, and specialty tattoo artwork by Rene Ruiz."
         />
 
-        {/* Filter Buttons */}
+        {/* Category Filter Buttons (5 Categories) */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -288,34 +248,32 @@ function GallerySectionInner() {
           variants={staggerContainer}
           className="mb-12 flex flex-wrap justify-center gap-2 sm:gap-3"
           role="tablist"
-          aria-label="Filter tattoo styles"
+          aria-label="Tattoo gallery categories"
         >
-          {FILTER_BUTTONS.map((button) => {
-            const isSelected = selectedFilter === button.value;
-            const isOther = button.value === "other";
+          {CATEGORY_OPTIONS.map((option) => {
+            const isSelected = activeCategory === option.value;
 
             return (
               <motion.button
-                key={button.value}
+                key={option.value}
+                type="button"
                 variants={staggerChild}
-                onClick={() => handleFilterChange(button.value)}
+                onClick={() => handleCategoryChange(option.value)}
                 role="tab"
                 aria-selected={isSelected}
+                aria-pressed={isSelected}
                 aria-controls="gallery-grid"
                 tabIndex={isSelected ? 0 : -1}
-                title={button.description}
+                title={option.description}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 sm:px-6",
+                  "rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 sm:px-6",
                   "focus:ring-olive/50 focus:ring-offset-background focus:ring-2 focus:ring-offset-2 focus:outline-none",
                   isSelected
-                    ? "btn-gold"
-                    : cn(
-                        "bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80",
-                        isOther && "opacity-70 hover:opacity-100"
-                      )
+                    ? "btn-gold shadow-gold/20 scale-105 shadow-lg"
+                    : "bg-secondary/80 text-muted-foreground hover:bg-secondary hover:text-foreground"
                 )}
               >
-                {button.label}
+                {option.label}
               </motion.button>
             );
           })}
@@ -326,7 +284,7 @@ function GallerySectionInner() {
           id="gallery-grid"
           layout
           role="tabpanel"
-          aria-label={`Showing ${filteredItems.length} ${selectedFilter} tattoos`}
+          aria-label={`Showing ${filteredItems.length} ${activeCategory} tattoos`}
           className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4"
         >
           <AnimatePresence mode="popLayout">
@@ -335,10 +293,10 @@ function GallerySectionInner() {
                 <motion.article
                   key={item.id}
                   layout
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0, scale: 0.85 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  exit={{ opacity: 0, scale: 0.85 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
                   onClick={() => openLightbox(index)}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
@@ -357,7 +315,7 @@ function GallerySectionInner() {
                   {/* Image */}
                   <Image
                     src={item.image}
-                    alt={`${item.title} - ${item.category} style realism tattoo by ${siteConfig.artistName}`}
+                    alt={`${item.title} - ${item.category} style tattoo by ${siteConfig.artistName}`}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className={cn(
@@ -388,7 +346,7 @@ function GallerySectionInner() {
                   {/* Hover Content */}
                   <div
                     className={cn(
-                      "absolute inset-0 flex flex-col items-center justify-center",
+                      "absolute inset-0 flex flex-col items-center justify-center p-4 text-center",
                       "opacity-0 transition-all duration-300 group-hover:opacity-100",
                       "scale-90 transform group-hover:scale-100"
                     )}
@@ -397,9 +355,10 @@ function GallerySectionInner() {
                     <div className="bg-olive/20 mb-3 rounded-full p-3 backdrop-blur-sm">
                       <ZoomIn size={24} className="text-olive" />
                     </div>
-                    <p className="text-olive text-sm font-medium">
-                      {item.category}
+                    <p className="text-foreground text-sm font-medium">
+                      {item.title}
                     </p>
+                    <p className="text-olive text-xs">{item.category}</p>
                   </div>
 
                   {/* Border */}
@@ -422,10 +381,11 @@ function GallerySectionInner() {
                   No tattoos found in this category.
                 </p>
                 <button
-                  onClick={() => handleFilterChange("realism")}
+                  type="button"
+                  onClick={() => handleCategoryChange("realism")}
                   className="text-olive hover:text-olive/80 mt-4 underline transition-colors"
                 >
-                  View all realism tattoos
+                  View Realism Tattoos
                 </button>
               </motion.div>
             )}
@@ -453,10 +413,10 @@ function GallerySectionInner() {
           className="mt-12 text-center"
         >
           <p className="text-muted-foreground mb-4">
-            Ready for your own custom realism tattoo?
+            Want a custom realism, full color, or tribal tattoo design?
           </p>
           <a
-            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I come from the website. I want more information about a realism tattoo")}`}
+            href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent("Hey, I'm visiting your website. I want more information about booking a tattoo")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cta inline-flex items-center gap-2 rounded-full px-8 py-3"
@@ -484,7 +444,7 @@ function GallerySectionInner() {
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.1 }}
                 onClick={closeLightbox}
                 className="bg-card/80 hover:bg-secondary focus:ring-olive/50 absolute top-4 right-4 z-10 rounded-full border border-white/10 p-3 transition-colors focus:ring-2 focus:outline-none"
                 aria-label="Close lightbox"
@@ -496,7 +456,7 @@ function GallerySectionInner() {
               <motion.button
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.1 }}
                 onClick={(e) => {
                   e.stopPropagation();
                   goToPrevious();
@@ -511,7 +471,7 @@ function GallerySectionInner() {
               <motion.button
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.1 }}
                 onClick={(e) => {
                   e.stopPropagation();
                   goToNext();
@@ -525,10 +485,10 @@ function GallerySectionInner() {
               {/* Image Container */}
               <motion.figure
                 key={lightboxIndex}
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                initial={{ opacity: 0, scale: 0.95, y: 15 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9, y: -20 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                exit={{ opacity: 0, scale: 0.95, y: -15 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
                 className="relative h-[80vh] w-full max-w-4xl px-4"
                 onClick={(e) => e.stopPropagation()}
               >
@@ -542,21 +502,21 @@ function GallerySectionInner() {
                 />
 
                 {/* Caption */}
-                <figcaption className="from-background/80 absolute right-0 bottom-0 left-0 bg-gradient-to-t to-transparent p-6">
-                  <p className="text-olive font-heading text-xl">
+                <figcaption className="from-background/90 via-background/50 absolute right-0 bottom-0 left-0 bg-gradient-to-t to-transparent p-6 text-center sm:text-left">
+                  <p className="font-heading text-olive text-xl">
                     {filteredItems[lightboxIndex].title}
                   </p>
                   <p className="text-muted-foreground text-sm">
-                    {filteredItems[lightboxIndex].category}
+                    Category: {filteredItems[lightboxIndex].category}
                   </p>
                 </figcaption>
               </motion.figure>
 
               {/* Counter */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.2 }}
                 className="bg-card/80 absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full border border-white/10 px-4 py-2 backdrop-blur-sm"
                 aria-live="polite"
               >
@@ -574,27 +534,9 @@ function GallerySectionInner() {
 }
 
 // =============================================================================
-// Main Export with Suspense Boundary
+// Main Export Component with Suspense Boundary
 // =============================================================================
 
-/**
- * Gallery Section Component
- *
- * Displays a filterable gallery of realism tattoos with URL synchronization.
- * Defaults to showing all realism styles on initial load.
- *
- * @example
- * ```tsx
- * <GallerySection />
- * ```
- *
- * URL Parameters:
- * - `?style=realism` - All realism tattoos (default)
- * - `?style=black-and-grey` - Black & grey realism
- * - `?style=color-realism` - Color realism tattoos
- * - `?style=micro-realism` - Micro/fine detail realism
- * - `?style=other` - Archive and other styles
- */
 export function GallerySection() {
   return (
     <Suspense
@@ -602,14 +544,14 @@ export function GallerySection() {
         <section id="gallery" className="section-padding">
           <div className="container-wide px-4 sm:px-6 lg:px-8">
             <SectionHeading
-              title="Realism Tattoo Gallery"
-              subtitle="Explore my collection of photorealistic tattoo artistry."
+              title="Tattoo Portfolio Gallery"
+              subtitle="Loading tattoo gallery..."
             />
             <div className="mb-12 flex flex-wrap justify-center gap-2 sm:gap-3">
-              {FILTER_BUTTONS.map((button) => (
+              {CATEGORY_OPTIONS.map((option) => (
                 <div
-                  key={button.value}
-                  className="bg-secondary h-10 w-24 animate-pulse rounded-full sm:w-32"
+                  key={option.value}
+                  className="bg-secondary h-10 w-24 animate-pulse rounded-full sm:w-28"
                 />
               ))}
             </div>
