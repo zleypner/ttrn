@@ -170,6 +170,7 @@ function GallerySectionInner() {
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
   // Automatically update URL query if ?category= is missing or invalid
   useEffect(() => {
@@ -194,6 +195,11 @@ function GallerySectionInner() {
   const allTattoos = normalizeGalleryItems(galleryImages);
   const filteredItems = filterTattoosByCategory(allTattoos, activeCategory);
 
+  // Filter out failed images from display
+  const displayItems = filteredItems.filter(
+    (item) => !failedImages.has(item.id)
+  );
+
   // Lock scroll during Lightbox modal display
   useEffect(() => {
     if (lightboxIndex !== null) {
@@ -211,20 +217,20 @@ function GallerySectionInner() {
   const closeLightbox = () => setLightboxIndex(null);
 
   const goToPrevious = useCallback(() => {
-    if (lightboxIndex !== null && filteredItems.length > 0) {
+    if (lightboxIndex !== null && displayItems.length > 0) {
       setLightboxIndex((prev) =>
-        prev === 0 ? filteredItems.length - 1 : (prev as number) - 1
+        prev === 0 ? displayItems.length - 1 : (prev as number) - 1
       );
     }
-  }, [lightboxIndex, filteredItems.length]);
+  }, [lightboxIndex, displayItems.length]);
 
   const goToNext = useCallback(() => {
-    if (lightboxIndex !== null && filteredItems.length > 0) {
+    if (lightboxIndex !== null && displayItems.length > 0) {
       setLightboxIndex((prev) =>
-        prev === filteredItems.length - 1 ? 0 : (prev as number) + 1
+        prev === displayItems.length - 1 ? 0 : (prev as number) + 1
       );
     }
-  }, [lightboxIndex, filteredItems.length]);
+  }, [lightboxIndex, displayItems.length]);
 
   // Lightbox Keyboard Shortcuts
   useEffect(() => {
@@ -240,6 +246,11 @@ function GallerySectionInner() {
 
   const handleImageLoad = (id: string) => {
     setLoadedImages((prev) => new Set(prev).add(id));
+  };
+
+  const handleImageError = (id: string) => {
+    setFailedImages((prev) => new Set(prev).add(id));
+    setLoadedImages((prev) => new Set(prev).add(id)); // Hide skeleton
   };
 
   return (
@@ -298,12 +309,12 @@ function GallerySectionInner() {
           id="gallery-grid"
           layout
           role="tabpanel"
-          aria-label={`Showing ${filteredItems.length} ${activeCategory} tattoos`}
+          aria-label={`Showing ${displayItems.length} ${activeCategory} tattoos`}
           className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4"
         >
           <AnimatePresence mode="popLayout">
-            {filteredItems.length > 0 ? (
-              filteredItems.map((item, index) => (
+            {displayItems.length > 0 ? (
+              displayItems.map((item, index) => (
                 <motion.article
                   key={item.id}
                   layout
@@ -338,6 +349,7 @@ function GallerySectionInner() {
                       loadedImages.has(item.id) ? "opacity-100" : "opacity-0"
                     )}
                     onLoad={() => handleImageLoad(item.id)}
+                    onError={() => handleImageError(item.id)}
                   />
 
                   {/* Skeleton Loader */}
@@ -407,14 +419,14 @@ function GallerySectionInner() {
         </motion.div>
 
         {/* Results Count */}
-        {filteredItems.length > 0 && (
+        {displayItems.length > 0 && (
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-muted-foreground mt-6 text-center text-sm"
           >
-            Showing {filteredItems.length} tattoo
-            {filteredItems.length !== 1 ? "s" : ""}
+            Showing {displayItems.length} tattoo
+            {displayItems.length !== 1 ? "s" : ""}
           </motion.p>
         )}
 
@@ -442,7 +454,7 @@ function GallerySectionInner() {
 
         {/* Lightbox Modal */}
         <AnimatePresence>
-          {lightboxIndex !== null && filteredItems[lightboxIndex] && (
+          {lightboxIndex !== null && displayItems[lightboxIndex] && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -452,7 +464,7 @@ function GallerySectionInner() {
               onClick={closeLightbox}
               role="dialog"
               aria-modal="true"
-              aria-label={`Viewing ${filteredItems[lightboxIndex].title}`}
+              aria-label={`Viewing ${displayItems[lightboxIndex].title}`}
             >
               {/* Close Button */}
               <motion.button
@@ -507,8 +519,8 @@ function GallerySectionInner() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <Image
-                  src={filteredItems[lightboxIndex].image}
-                  alt={`${filteredItems[lightboxIndex].title} - Full view`}
+                  src={displayItems[lightboxIndex].image}
+                  alt={`${displayItems[lightboxIndex].title} - Full view`}
                   fill
                   sizes="(max-width: 896px) 100vw, 896px"
                   className="object-contain"
@@ -518,10 +530,10 @@ function GallerySectionInner() {
                 {/* Caption */}
                 <figcaption className="from-background/90 via-background/50 absolute right-0 bottom-0 left-0 bg-gradient-to-t to-transparent p-6 text-center sm:text-left">
                   <p className="font-heading text-olive text-xl">
-                    {filteredItems[lightboxIndex].title}
+                    {displayItems[lightboxIndex].title}
                   </p>
                   <p className="text-muted-foreground text-sm">
-                    Category: {filteredItems[lightboxIndex].category}
+                    Category: {displayItems[lightboxIndex].category}
                   </p>
                 </figcaption>
               </motion.figure>
@@ -536,7 +548,7 @@ function GallerySectionInner() {
               >
                 <span className="text-muted-foreground text-sm">
                   {lightboxIndex + 1} <span className="text-olive">/</span>{" "}
-                  {filteredItems.length}
+                  {displayItems.length}
                 </span>
               </motion.div>
             </motion.div>
