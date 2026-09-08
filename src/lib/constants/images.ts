@@ -204,18 +204,6 @@ export const featuredWorkImages = [
     size: "medium" as const,
   },
   {
-    id: "f-realism-4",
-    category: "Realism",
-    image: "/images/portafolio/realismo/mariposarealismo.jpeg",
-    size: "small" as const,
-  },
-  {
-    id: "f-realism-5",
-    category: "Realism",
-    image: "/images/portafolio/realismo/retratoperro.webp",
-    size: "small" as const,
-  },
-  {
     id: "f-realism-6",
     category: "Realism",
     image: "/images/portafolio/realismo/virgen-brazo.webp",
