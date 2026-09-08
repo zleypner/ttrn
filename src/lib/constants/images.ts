@@ -251,24 +251,12 @@ export const featuredWorkImages = [
     image: "/images/portafolio/realismo/realismo-tattoo-19.webp",
     size: "small" as const,
   },
-  // Full Color - 3 images
+  // Full Color - 1 image
   {
     id: "f-fullcolor-1",
     category: "Full Color",
     image: "/images/portafolio/fullcolor/mario-bros.webp",
     size: "large" as const,
-  },
-  {
-    id: "f-fullcolor-2",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/onepunchman.webp",
-    size: "medium" as const,
-  },
-  {
-    id: "f-fullcolor-3",
-    category: "Full Color",
-    image: "/images/portafolio/fullcolor/fullcolor-1.webp",
-    size: "medium" as const,
   },
 ] as const;
 
