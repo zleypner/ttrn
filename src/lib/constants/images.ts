@@ -173,7 +173,7 @@ export const galleryImages = [
     category: "Japonés",
     image: "/images/portafolio/japones/tigre-japones.webp",
   },
-  // Tribal - 6 images
+  // Tribal - 2 images
   {
     id: "tribal-1",
     title: "Tatuaje Tribal Brazo",
@@ -185,34 +185,6 @@ export const galleryImages = [
     title: "Tatuaje Tribal Espalda",
     category: "Tribal",
     image: "/images/portafolio/Tribal/tatuaje-espalda.webp",
-  },
-  {
-    id: "tribal-3",
-    title: "Tatuaje Tribal 1",
-    category: "Tribal",
-    image:
-      "/images/portafolio/Tribal/WhatsApp Image 2026-09-06 at 00.41.23.jpeg",
-  },
-  {
-    id: "tribal-4",
-    title: "Tatuaje Tribal 2",
-    category: "Tribal",
-    image:
-      "/images/portafolio/Tribal/WhatsApp Image 2026-09-06 at 00.41.26.jpeg",
-  },
-  {
-    id: "tribal-5",
-    title: "Tatuaje Tribal 3",
-    category: "Tribal",
-    image:
-      "/images/portafolio/Tribal/WhatsApp Image 2026-09-06 at 00.41.26 copy.jpeg",
-  },
-  {
-    id: "tribal-6",
-    title: "Tatuaje Tribal 4",
-    category: "Tribal",
-    image:
-      "/images/portafolio/Tribal/WhatsApp Image 2026-09-06 at 00.41.49.jpeg",
   },
   // Otros - 3 images
   {
