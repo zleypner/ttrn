@@ -1,7 +1,7 @@
 // Local gallery images organized by category (Realismo and Retratos prioritized first)
 
 export const galleryImages = [
-  // Realismo - 16 images
+  // Realismo - 15 images
   {
     id: "realismo-1",
     title: "Caballo Realista",
@@ -57,10 +57,10 @@ export const galleryImages = [
     image: "/images/realismo/perro.webp",
   },
   {
-    id: "realismo-12",
-    title: "Tigre",
-    category: "Realismo",
-    image: "/images/realismo/tigre.webp",
+    id: "japones-5",
+    title: "Tigre Japonés",
+    category: "Japonés",
+    image: "/images/japones/tigre-japones.webp",
   },
   {
     id: "realismo-13",
@@ -195,7 +195,7 @@ export const galleryImages = [
     image: "/images/tribal/blackwork-mano-ojo-3.webp",
   },
 
-  // Japonés - 4 images
+  // Japonés - 5 images
   {
     id: "japones-1",
     title: "Dragón Japonés Espalda",
@@ -310,7 +310,7 @@ export const featuredWorkImages = [
   {
     id: "f1",
     category: "Realismo",
-    image: "/images/realismo/tigre.webp",
+    image: "/images/realismo/leon-realista.webp",
     size: "large" as const,
   },
   {
@@ -346,7 +346,7 @@ export const featuredWorkImages = [
 ] as const;
 
 export const styleImages = {
-  realism: "/images/realismo/tigre.webp",
+  realism: "/images/realismo/leon-realista.webp",
   portrait: "/images/retratos/gato.webp",
   line: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
   tribal: "/images/tribal/blackwork-mano-ojo-1.webp",
@@ -357,7 +357,7 @@ export const aboutImages = {
   artist: "/images/perfil/rene111.png",
   artist2: "/images/perfil/rene2.png",
   artist3: "/images/perfil/rene3.png",
-  studio1: "/images/realismo/tigre.webp",
+  studio1: "/images/realismo/fenix.webp",
   studio2: "/images/realismo/leon-realista.webp",
   studio3: "/images/retratos/retrato-mascota.webp",
   artistWorking: "/images/realismo/fenix.webp",

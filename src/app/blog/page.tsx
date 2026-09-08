@@ -80,7 +80,7 @@ const blogPosts = [
     subtitle: "Your Guide to Premium Tattoos in Costa Rica's Capital",
     description:
       "Planning a trip to San José? Find out why tourists from the US choose our studio for custom tattoos, and what to expect from your experience.",
-    image: "/images/realismo/tigre.webp",
+    image: "/images/realismo/leon-realista.webp",
     category: "Travel Guide",
     readTime: "6 min read",
   },
