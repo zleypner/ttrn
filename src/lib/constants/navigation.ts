@@ -14,7 +14,7 @@ export const navigationLinks = [
 export const pageLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/#gallery", label: "Gallery" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/services", label: "Services" },
   { href: "/blog", label: "Blog" },
   { href: "/#contact", label: "Contact" },
@@ -34,7 +34,7 @@ export const footerLinks = {
     { href: "/best-tattoo-shop-in-san-jose", label: "San José Guide" },
   ],
   sections: [
-    { href: "/#gallery", label: "Gallery" },
+    { href: "/gallery", label: "Gallery" },
     { href: "/#process", label: "Process" },
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/#contact", label: "Contact" },
