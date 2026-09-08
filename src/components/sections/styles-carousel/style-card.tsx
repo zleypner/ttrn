@@ -10,10 +10,10 @@ import type { TattooStyle } from "@/lib/constants/tattoo-styles";
 // Map style IDs to gallery category names
 const styleToCategory: Record<string, string> = {
   tribal: "Tribal",
-  realism: "Realismo",
-  portrait: "Retratos",
-  japanese: "Japonés",
-  line: "Line",
+  realism: "Realism",
+  portrait: "Other",
+  japanese: "Japanese",
+  line: "Other",
 };
 
 interface StyleCardProps {
@@ -56,6 +56,7 @@ export function StyleCard({ style, isActive = false }: StyleCardProps) {
           src={style.image}
           alt={style.name}
           fill
+          loading="lazy"
           sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 30vw"
           className={cn(
             "object-cover transition-all duration-700",
@@ -119,7 +120,7 @@ export function StyleCard({ style, isActive = false }: StyleCardProps) {
             "transition-all duration-300"
           )}
         >
-          <span>Ver trabajos</span>
+          <span>View Work</span>
           <ArrowRight
             size={16}
             className="transition-transform group-hover:translate-x-1"

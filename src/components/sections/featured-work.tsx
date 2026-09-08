@@ -56,6 +56,7 @@ export function FeaturedWork() {
                 src={work.image}
                 alt={work.category}
                 fill
+                loading="lazy"
                 sizes={
                   work.size === "large"
                     ? "(max-width: 768px) 100vw, 50vw"

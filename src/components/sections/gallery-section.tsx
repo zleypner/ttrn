@@ -342,6 +342,7 @@ function GallerySectionInner() {
                     src={item.image}
                     alt={`${item.title} - ${item.category} style tattoo by ${siteConfig.artistName}`}
                     fill
+                    loading="lazy"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className={cn(
                       "object-cover transition-all duration-500",
