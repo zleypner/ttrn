@@ -72,11 +72,6 @@ const FILTER_BUTTONS: FilterButton[] = [
     value: "micro-realism",
     description: "Fine detail small-scale realism",
   },
-  {
-    label: "Archive / Other",
-    value: "other",
-    description: "Other styles and archived work",
-  },
 ];
 
 /** Valid filter values for type checking */
