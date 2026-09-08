@@ -2,7 +2,6 @@
 
 export const galleryImages = [
   // Realismo - 15 images
-
   {
     id: "realismo-2",
     title: "Elefante",
@@ -21,7 +20,6 @@ export const galleryImages = [
     category: "Realismo",
     image: "/images/realismo/fenix.webp",
   },
-
   {
     id: "realismo-retrato-perro",
     title: "Retrato Perro",
@@ -70,7 +68,6 @@ export const galleryImages = [
     category: "Realismo",
     image: "/images/realismo/virgen-brazo.webp",
   },
-
   {
     id: "realismo-16",
     title: "Realismo Sombreado",
@@ -89,7 +86,6 @@ export const galleryImages = [
     category: "Realismo",
     image: "/images/realismo/realismo-tattoo-19.webp",
   },
-
   // Retratos - 4 images
   {
     id: "retrato-1",
@@ -103,7 +99,6 @@ export const galleryImages = [
     category: "Retratos",
     image: "/images/retratos/gato2.webp",
   },
-
   // Line - 5 images
   {
     id: "line-1",
@@ -314,8 +309,8 @@ export const featuredWorkImages = [
 
 export const styleImages = {
   realism: "/images/realismo/fenix.webp",
-  portrait: "/images/retratos/gato.webp",
-  line: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
+  portrait: "/images/otros/gato.webp",
+  line: "/images/otros/corazon.jpeg",
   fullcolor: "/images/fullcolor/mario-bros.webp",
   japanese: "/images/japones/dragon-japones-espalda.webp",
 } as const;
