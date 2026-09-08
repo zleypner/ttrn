@@ -10,55 +10,55 @@ export interface TattooStyle {
 
 export const tattooStyles: TattooStyle[] = [
   {
-    id: "realismo",
-    name: "Realismo",
+    id: "realism",
+    name: "Realism",
     description:
-      "Reproducciones fotográficas de retratos, animales y objetos con un nivel de detalle excepcional.",
+      "Photographic reproductions of portraits, animals, and objects with exceptional detail.",
     image: styleImages.realism,
-    features: ["Detalle fotográfico", "Texturas realistas", "Alta precisión"],
+    features: [
+      "Photo-realistic detail",
+      "Realistic textures",
+      "High precision",
+    ],
   },
   {
     id: "fullcolor",
     name: "Full Color",
     description:
-      "Tatuajes vibrantes con colores intensos y saturados que capturan la esencia del arte pop y la cultura geek.",
+      "Vibrant tattoos with intense, saturated colors capturing the essence of pop art and geek culture.",
     image: styleImages.fullcolor,
-    features: ["Colores vibrantes", "Alta saturación", "Arte pop"],
+    features: ["Vibrant colors", "High saturation", "Pop art"],
   },
   {
     id: "microrealism",
     name: "Micro Realism",
     description:
-      "Tatuajes de realismo en escala pequeña con detalles increíblemente finos y precisos.",
+      "Small-scale realism tattoos with incredibly fine and precise details.",
     image: styleImages.microrealism,
-    features: ["Escala pequeña", "Detalles finos", "Alta precisión"],
+    features: ["Small scale", "Fine details", "High precision"],
   },
   {
-    id: "japones",
-    name: "Japonés",
+    id: "japanese",
+    name: "Japanese",
     description:
-      "Arte tradicional japonés con dragones, koi, flores de cerezo y otros elementos icónicos de la cultura nipona.",
+      "Traditional Japanese art featuring dragons, koi, cherry blossoms, and other iconic elements of Japanese culture.",
     image: styleImages.japanese,
-    features: [
-      "Arte tradicional",
-      "Simbolismo profundo",
-      "Composiciones fluidas",
-    ],
+    features: ["Traditional art", "Deep symbolism", "Flowing compositions"],
   },
   {
     id: "tribal",
     name: "Tribal",
     description:
-      "Diseños tribales audaces con patrones geométricos y líneas fuertes inspirados en culturas ancestrales.",
+      "Bold tribal designs with geometric patterns and strong lines inspired by ancestral cultures.",
     image: styleImages.tribal,
-    features: ["Patrones geométricos", "Líneas fuertes", "Arte ancestral"],
+    features: ["Geometric patterns", "Strong lines", "Ancestral art"],
   },
   {
-    id: "otros",
-    name: "Otros",
+    id: "other",
+    name: "Other",
     description:
-      "Estilos variados incluyendo línea fina, retratos y diseños personalizados únicos.",
+      "Various styles including fine line, portraits, and unique custom designs.",
     image: styleImages.portrait,
-    features: ["Líneas finas", "Diseños únicos", "Personalización"],
+    features: ["Fine lines", "Unique designs", "Customization"],
   },
 ];

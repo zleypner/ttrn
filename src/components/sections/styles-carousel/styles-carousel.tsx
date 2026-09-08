@@ -64,11 +64,11 @@ export function StylesCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="estilos" className="section-padding overflow-hidden">
+    <section id="styles" className="section-padding overflow-hidden">
       <div className="container-wide px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Estilos de Tatuaje"
-          subtitle="Cada estilo tiene su propia esencia. Descubre cuál refleja mejor tu visión personal."
+          title="Tattoo Styles"
+          subtitle="Each style has its own essence. Discover which one best reflects your personal vision."
         />
 
         {/* Carousel Container */}
@@ -103,7 +103,7 @@ export function StylesCarousel() {
                 "hover:bg-olive/10 hover:border-olive",
                 "disabled:cursor-not-allowed disabled:opacity-30"
               )}
-              aria-label="Anterior"
+              aria-label="Previous"
             >
               <ChevronLeft size={24} className="text-olive" />
             </button>
@@ -120,7 +120,7 @@ export function StylesCarousel() {
                       ? "bg-olive w-8"
                       : "bg-olive/30 hover:bg-olive/50"
                   )}
-                  aria-label={`Ir a slide ${index + 1}`}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
             </div>
@@ -133,7 +133,7 @@ export function StylesCarousel() {
                 "hover:bg-olive/10 hover:border-olive",
                 "disabled:cursor-not-allowed disabled:opacity-30"
               )}
-              aria-label="Siguiente"
+              aria-label="Next"
             >
               <ChevronRight size={24} className="text-olive" />
             </button>

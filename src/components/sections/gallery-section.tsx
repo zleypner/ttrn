@@ -23,12 +23,12 @@ import {
 /** Gallery filter categories based on portafolio folder structure */
 export type CategoryType =
   | "all"
-  | "realismo"
+  | "realism"
   | "full-color"
   | "micro-realism"
-  | "japones"
+  | "japanese"
   | "tribal"
-  | "otros";
+  | "other";
 
 /** Structure for a tattoo gallery item */
 export interface TattooItem {
@@ -51,7 +51,7 @@ export interface FilterCategoryOption {
 // =============================================================================
 
 /** Default filter category when no valid URL param is specified */
-const DEFAULT_CATEGORY: CategoryType = "realismo";
+const DEFAULT_CATEGORY: CategoryType = "realism";
 
 /** URL search parameter key */
 const CATEGORY_PARAM = "category";
@@ -64,8 +64,8 @@ export const CATEGORY_OPTIONS: FilterCategoryOption[] = [
     description: "Browse full tattoo portfolio",
   },
   {
-    label: "Realismo",
-    value: "realismo",
+    label: "Realism",
+    value: "realism",
     description: "Photorealistic realism tattoos",
   },
   {
@@ -79,8 +79,8 @@ export const CATEGORY_OPTIONS: FilterCategoryOption[] = [
     description: "Detailed micro realism tattoos",
   },
   {
-    label: "Japonés",
-    value: "japones",
+    label: "Japanese",
+    value: "japanese",
     description: "Traditional Japanese style tattoos",
   },
   {
@@ -89,8 +89,8 @@ export const CATEGORY_OPTIONS: FilterCategoryOption[] = [
     description: "Bold tribal and pattern tattoos",
   },
   {
-    label: "Otros",
-    value: "otros",
+    label: "Other",
+    value: "other",
     description: "Other custom styles and designs",
   },
 ];
@@ -109,13 +109,13 @@ const VALID_CATEGORIES = new Set<CategoryType>(
  */
 export function mapToCategoryType(category: string): CategoryType {
   const norm = category.toLowerCase().trim();
-  if (norm === "realismo") return "realismo";
+  if (norm === "realism") return "realism";
   if (norm === "full color") return "full-color";
   if (norm === "micro realism") return "micro-realism";
-  if (norm === "japonés" || norm === "japones") return "japones";
+  if (norm === "japanese") return "japanese";
   if (norm === "tribal") return "tribal";
-  if (norm === "otros") return "otros";
-  return "otros";
+  if (norm === "other") return "other";
+  return "other";
 }
 
 /**
@@ -408,10 +408,10 @@ function GallerySectionInner() {
                 </p>
                 <button
                   type="button"
-                  onClick={() => handleCategoryChange("realismo")}
+                  onClick={() => handleCategoryChange("realism")}
                   className="text-olive hover:text-olive/80 mt-4 underline transition-colors"
                 >
-                  View Realismo Tattoos
+                  View Realism Tattoos
                 </button>
               </motion.div>
             )}
