@@ -74,8 +74,10 @@ function StatCounter({
 
         {/* Value */}
         <p className="font-heading text-accent-red mb-2 text-4xl font-bold sm:text-5xl md:text-6xl">
-          {count.toLocaleString()}
-          <span>{stat.suffix}</span>
+          <span translate="no" className="notranslate">
+            {count.toLocaleString()}
+            {stat.suffix}
+          </span>
         </p>
 
         {/* Label */}

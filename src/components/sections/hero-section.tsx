@@ -32,7 +32,9 @@ function AnimatedStat({
   return (
     <div className="text-center">
       <p className="text-olive text-2xl font-bold sm:text-3xl md:text-4xl">
-        {count.toLocaleString()}+
+        <span translate="no" className="notranslate">
+          {count.toLocaleString()}+
+        </span>
       </p>
       <p className="text-muted-foreground text-xs tracking-wider uppercase sm:text-sm">
         {label}

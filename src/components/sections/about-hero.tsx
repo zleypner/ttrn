@@ -158,7 +158,9 @@ export function AboutHero() {
             >
               <div className="text-center">
                 <p className="font-heading text-accent-red text-2xl font-bold">
-                  {siteConfig.stats.happyClients.toLocaleString()}+
+                  <span translate="no" className="notranslate">
+                    {siteConfig.stats.happyClients.toLocaleString()}+
+                  </span>
                 </p>
                 <p className="text-muted-foreground text-xs tracking-wider uppercase">
                   Clients
@@ -166,7 +168,9 @@ export function AboutHero() {
               </div>
               <div className="border-x border-white/10 text-center">
                 <p className="font-heading text-accent-red text-2xl font-bold">
-                  {siteConfig.stats.tattoosCompleted.toLocaleString()}+
+                  <span translate="no" className="notranslate">
+                    {siteConfig.stats.tattoosCompleted.toLocaleString()}+
+                  </span>
                 </p>
                 <p className="text-muted-foreground text-xs tracking-wider uppercase">
                   Tattoos

@@ -185,7 +185,9 @@ export function ReneRuizContent() {
                   ].map((stat) => (
                     <div key={stat.label}>
                       <p className="font-heading text-olive text-3xl font-bold">
-                        {stat.value}
+                        <span translate="no" className="notranslate">
+                          {stat.value}
+                        </span>
                       </p>
                       <p className="text-muted-foreground text-sm tracking-wider uppercase">
                         {stat.label}

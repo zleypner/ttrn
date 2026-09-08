@@ -108,9 +108,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} ${inter.variable} h-full antialiased`}
+      translate="no"
+      className={`${cinzel.variable} ${inter.variable} notranslate h-full antialiased`}
     >
       <head>
+        <meta name="google" content="notranslate" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <CombinedSchemas />

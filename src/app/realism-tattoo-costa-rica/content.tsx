@@ -160,7 +160,9 @@ export function RealismContent() {
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <p className="font-heading text-olive text-2xl font-bold sm:text-3xl">
-                    {stat.value}
+                    <span translate="no" className="notranslate">
+                      {stat.value}
+                    </span>
                   </p>
                   <p className="text-muted-foreground text-xs tracking-wider uppercase">
                     {stat.label}
