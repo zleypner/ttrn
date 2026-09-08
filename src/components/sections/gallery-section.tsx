@@ -15,7 +15,11 @@ import {
   scrollViewport,
 } from "@/lib/animations/variants";
 
-const categories = [
+// Main page categories (limited to showcase specialties)
+const mainPageCategories = ["All", "Realismo", "Gray and Black", "Full Color"];
+
+// All available categories (for full gallery views)
+const allCategories = [
   "All",
   "Realismo",
   "Retratos",
@@ -27,15 +31,34 @@ const categories = [
   "Otros",
 ];
 
-export function GallerySection() {
+interface GallerySectionProps {
+  showAllCategories?: boolean;
+}
+
+export function GallerySection({
+  showAllCategories = false,
+}: GallerySectionProps) {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
+  // Use limited categories for main page, all categories for full gallery
+  const categories = showAllCategories ? allCategories : mainPageCategories;
+
+  // Filter images based on available categories
+  const availableImages = showAllCategories
+    ? galleryImages
+    : galleryImages.filter((item) =>
+        mainPageCategories.some(
+          (cat) =>
+            cat.toLowerCase() === item.category.toLowerCase() || cat === "All"
+        )
+      );
+
   const filteredItems =
     selectedCategory === "All"
-      ? galleryImages
-      : galleryImages.filter(
+      ? availableImages
+      : availableImages.filter(
           (item) =>
             item.category.toLowerCase() === selectedCategory.toLowerCase()
         );

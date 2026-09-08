@@ -315,8 +315,8 @@ export const featuredWorkImages = [
   },
   {
     id: "f2",
-    category: "Retratos",
-    image: "/images/retratos/gato.webp",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-4.webp",
     size: "large" as const,
   },
   {
@@ -327,20 +327,20 @@ export const featuredWorkImages = [
   },
   {
     id: "f4",
-    category: "Retratos",
-    image: "/images/retratos/retrato-mascota.webp",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-1.webp",
     size: "medium" as const,
   },
   {
     id: "f5",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
+    category: "Full Color",
+    image: "/images/fullcolor/fullcolor-5.webp",
     size: "small" as const,
   },
   {
     id: "f6",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-mano-ojo-1.webp",
+    category: "Gray and Black",
+    image: "/images/grayandblack/grayblack-4.webp",
     size: "small" as const,
   },
 ] as const;
