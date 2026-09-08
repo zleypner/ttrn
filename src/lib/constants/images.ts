@@ -1,7 +1,7 @@
 // Local gallery images organized by category (Realismo and Retratos prioritized first)
 
 export const galleryImages = [
-  // Realismo - 17 images
+  // Realismo - 16 images
   {
     id: "realismo-1",
     title: "Caballo Realista",
@@ -37,12 +37,6 @@ export const galleryImages = [
     title: "León Realista",
     category: "Realismo",
     image: "/images/realismo/leon-realista.webp",
-  },
-  {
-    id: "realismo-8",
-    title: "Medusa en Antebrazo",
-    category: "Realismo",
-    image: "/images/realismo/medusa-antebrazo-1.webp",
   },
   {
     id: "realismo-9",
@@ -131,7 +125,7 @@ export const galleryImages = [
     image: "/images/retratos/retrato-mascota.webp",
   },
 
-  // Line - 13 images
+  // Line - 8 images
   {
     id: "line-1",
     title: "Tatuaje de Línea Fina 1",
@@ -149,12 +143,6 @@ export const galleryImages = [
     title: "Tatuaje de Línea Fina 3",
     category: "Line",
     image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.05.jpeg",
-  },
-  {
-    id: "line-4",
-    title: "Tatuaje de Línea Fina 4",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.06.jpeg",
   },
   {
     id: "line-9",
@@ -181,43 +169,13 @@ export const galleryImages = [
     image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.18.jpeg",
   },
   {
-    id: "line-13",
-    title: "Tatuaje de Línea Fina 13",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.19.jpeg",
-  },
-  {
-    id: "line-14",
-    title: "Tatuaje de Línea Fina 14",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.20.jpeg",
-  },
-  {
-    id: "line-15",
-    title: "Tatuaje de Línea Fina 15",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.21.jpeg",
-  },
-  {
     id: "line-16",
     title: "Tatuaje de Línea Fina 16",
     category: "Line",
     image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.23.jpeg",
   },
-  {
-    id: "line-17",
-    title: "Tatuaje de Línea Fina 17",
-    category: "Line",
-    image: "/images/line/WhatsApp Image 2026-08-17 at 21.49.24.jpeg",
-  },
 
-  // Tribal - 4 images
-  {
-    id: "tribal-1",
-    title: "Blackwork Antebrazo Llamas",
-    category: "Tribal",
-    image: "/images/tribal/blackwork-antebrazo-llamas.webp",
-  },
+  // Tribal - 3 images
   {
     id: "tribal-2",
     title: "Blackwork Mano con Ojo",
@@ -388,7 +346,7 @@ export const featuredWorkImages = [
 ] as const;
 
 export const styleImages = {
-  realism: "/images/realismo/medusa-antebrazo-1.webp",
+  realism: "/images/realismo/tigre.webp",
   portrait: "/images/retratos/gato.webp",
   line: "/images/line/WhatsApp Image 2026-08-17 at 21.48.56.jpeg",
   tribal: "/images/tribal/blackwork-mano-ojo-1.webp",
@@ -399,7 +357,7 @@ export const aboutImages = {
   artist: "/images/perfil/rene111.png",
   artist2: "/images/perfil/rene2.png",
   artist3: "/images/perfil/rene3.png",
-  studio1: "/images/realismo/medusa-antebrazo-1.webp",
+  studio1: "/images/realismo/tigre.webp",
   studio2: "/images/realismo/leon-realista.webp",
   studio3: "/images/retratos/retrato-mascota.webp",
   artistWorking: "/images/realismo/fenix.webp",
