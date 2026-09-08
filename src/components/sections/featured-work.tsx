@@ -140,11 +140,8 @@ export function FeaturedWork() {
             <WhatsAppIcon size={18} />
             Inquire About These Designs
           </a>
-          <button
-            onClick={() => {
-              const element = document.querySelector("#gallery");
-              if (element) element.scrollIntoView({ behavior: "smooth" });
-            }}
+          <a
+            href="/gallery"
             className={cn(
               "btn-outline-gold inline-flex items-center gap-2 rounded-full px-8 py-3",
               "hover:shadow-[0_0_30px_rgba(194,154,88,0.2)]",
@@ -153,7 +150,7 @@ export function FeaturedWork() {
           >
             View Full Gallery
             <ArrowUpRight size={18} />
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
