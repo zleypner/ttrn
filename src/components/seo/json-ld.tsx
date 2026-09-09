@@ -106,9 +106,45 @@ export function LocalBusinessSchema() {
         name: "United States",
         description: "Serving American tourists visiting Costa Rica",
       },
+      {
+        "@type": "Country",
+        name: "United Kingdom",
+        description: "Serving British tourists visiting Costa Rica",
+      },
+      {
+        "@type": "Country",
+        name: "Germany",
+        description: "Serving German tourists visiting Costa Rica",
+      },
+      {
+        "@type": "Country",
+        name: "France",
+        description: "Serving French tourists visiting Costa Rica",
+      },
+      {
+        "@type": "Country",
+        name: "Spain",
+        description: "Serving Spanish tourists visiting Costa Rica",
+      },
+      {
+        "@type": "Country",
+        name: "Canada",
+        description: "Serving Canadian tourists visiting Costa Rica",
+      },
+      {
+        "@type": "Country",
+        name: "Netherlands",
+        description: "Serving Dutch tourists visiting Costa Rica",
+      },
+      {
+        "@type": "Country",
+        name: "Australia",
+        description: "Serving Australian tourists visiting Costa Rica",
+      },
     ],
     knowsLanguage: ["en", "es"],
-    slogan: "Costa Rica's Premier Realism Tattoo Artist for American Travelers",
+    slogan:
+      "Costa Rica's Premier Realism Tattoo Artist for International Travelers",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Tattoo Services",

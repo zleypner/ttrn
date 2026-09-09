@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     default: `Realism Tattoo Artist Costa Rica | ${siteConfig.artistName} | English Speaking`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: `${siteConfig.artistName} - Costa Rica's premier realism tattoo artist for American travelers. English-speaking, USD accepted. Specializing in photorealistic portraits, black & grey, fine line. Near San José airport. ${siteConfig.stats.yearsExperience}+ years experience.`,
+  description: `${siteConfig.artistName} - Costa Rica's premier realism tattoo artist for international travelers from USA, UK & Europe. English-speaking, USD & cards accepted. Specializing in photorealistic portraits, black & grey, fine line. Near San José airport. ${siteConfig.stats.yearsExperience}+ years, ${siteConfig.stats.countriesServed}+ countries served.`,
   keywords: [...siteConfig.keywords],
   authors: [{ name: siteConfig.artistName }],
   creator: siteConfig.artistName,
@@ -51,23 +51,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    alternateLocale: ["en_GB", "en_AU", "en_CA"],
     url: siteConfig.url,
     siteName: siteConfig.name,
     title: `Realism Tattoo Artist Costa Rica | ${siteConfig.artistName}`,
-    description: `Costa Rica's #1 tattoo artist for American travelers. English-speaking, USD accepted. Photorealistic portraits, black & grey, fine line. Book your tattoo vacation today.`,
+    description: `Costa Rica's #1 tattoo artist for international travelers from USA, UK & Europe. English-speaking, USD & cards accepted. Photorealistic portraits, black & grey, fine line. Book your tattoo vacation today.`,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - Luxury Body Art`,
+        alt: `${siteConfig.name} - Premium Tattoo Studio Costa Rica`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: `Realism Tattoo Artist Costa Rica | ${siteConfig.artistName}`,
-    description: `Costa Rica's #1 tattoo artist for American travelers. English-speaking, USD accepted. Book your tattoo vacation today.`,
+    description: `Costa Rica's #1 tattoo artist for travelers from USA, UK & Europe. English-speaking. Book your tattoo vacation today.`,
     images: [siteConfig.ogImage],
     creator: `@${siteConfig.contact.instagram}`,
   },
@@ -75,7 +76,11 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
     languages: {
       "en-US": siteConfig.url,
+      "en-GB": siteConfig.url,
+      "en-AU": siteConfig.url,
+      "en-CA": siteConfig.url,
       en: siteConfig.url,
+      "x-default": siteConfig.url,
     },
   },
   manifest: "/manifest.json",
@@ -97,6 +102,14 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
     "apple-mobile-web-app-title": siteConfig.name,
+    // International SEO targeting
+    "content-language": "en",
+    audience: "International",
+    distribution: "Global",
+    coverage: "Worldwide",
+    target: "USA, UK, Germany, France, Spain, Canada, Australia, Netherlands",
+    "revisit-after": "7 days",
+    rating: "General",
   },
 };
 
